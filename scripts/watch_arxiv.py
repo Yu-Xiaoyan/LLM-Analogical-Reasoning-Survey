@@ -34,6 +34,8 @@ UA = {"User-Agent": "awesome-analogical-reasoning/1.0 (paper list maintenance)"}
 # Facet -> arXiv query. Keys are only used to label the triage output.
 FACETS = {
     "core": 'all:"analogical reasoning"',
+    "title-analogy": '(ti:"analogy" OR ti:"analogies" OR ti:"analogical" OR ti:"by analogy")',
+    "analogy-rag-rl": '(abs:"analogy" OR abs:"analogical") AND (abs:"retrieval-augmented" OR abs:"reinforcement" OR abs:"fine-tuning" OR abs:"post-training")',
     "analogy-llm": 'abs:"analogy" AND (abs:"language model" OR abs:"LLM")',
     "structure-mapping": 'abs:"structure mapping" OR abs:"structure-mapping"',
     "relational": 'abs:"relational reasoning" AND abs:"abstraction"',
@@ -57,13 +59,12 @@ NOISE = re.compile(
 )
 
 
-def query(search: str, start_date: str, end_date: str, limit: int = 100) -> list[dict]:
-    window = f"submittedDate:[{start_date}0000 TO {end_date}0000]"
+def _fetch(search: str, window: str, start: int, page: int) -> bytes | None:
     params = urllib.parse.urlencode(
         {
             "search_query": f"({search}) AND {window}",
-            "start": 0,
-            "max_results": limit,
+            "start": start,
+            "max_results": page,
             "sortBy": "submittedDate",
             "sortOrder": "descending",
         }
@@ -72,16 +73,51 @@ def query(search: str, start_date: str, end_date: str, limit: int = 100) -> list
     for attempt in range(3):
         try:
             with urllib.request.urlopen(request, timeout=60, context=ssl_context()) as response:
-                raw = response.read()
-            break
+                return response.read()
         except Exception as exc:  # noqa: BLE001
             print(f"  retry {attempt + 1}/3: {type(exc).__name__}", file=sys.stderr)
             time.sleep(5)
+    return None
+
+
+def query(
+    search: str, start_date: str, end_date: str, limit: int = 2000, page: int = 100
+) -> list[dict]:
+    """Page through every hit, rather than taking the first screenful.
+
+    This used to issue one request with max_results=100 and stop. Because
+    results come back newest-first, a noisy query — "analogy" also matches
+    analog circuits, planetary analogs and quantum analogues — would blow past
+    the cap and silently truncate the *older* end of the window. That is how
+    arXiv:2606.13680 went missing from an eight-month sweep: the title query
+    filled its quota with analog-circuit papers before reaching June.
+
+    arXiv reports no total count on this endpoint, so exhaustion is detected by
+    a short page. Hitting `limit` is reported loudly instead of passing for a
+    complete result.
+    """
+    window = f"submittedDate:[{start_date}0000 TO {end_date}0000]"
+    entries: list[ET.Element] = []
+    start = 0
+    while start < limit:
+        raw = _fetch(search, window, start, min(page, limit - start))
+        if raw is None:
+            break
+        batch = ET.fromstring(raw).findall("a:entry", ATOM)
+        entries.extend(batch)
+        if len(batch) < page:
+            break
+        start += page
+        time.sleep(3)
     else:
-        return []
+        print(
+            f"  !! hit the {limit}-result cap — narrow the facet or raise --limit,"
+            " results are truncated",
+            file=sys.stderr,
+        )
 
     out = []
-    for entry in ET.fromstring(raw).findall("a:entry", ATOM):
+    for entry in entries:
         title = entry.findtext("a:title", default="", namespaces=ATOM)
         categories = [c.get("term") for c in entry.findall("a:category", ATOM)]
         primary = entry.find("{http://arxiv.org/schemas/atom}primary_category")
@@ -126,7 +162,8 @@ def main() -> int:
     parser.add_argument("--since", default=(today - dt.timedelta(days=90)).strftime("%Y-%m"))
     parser.add_argument("--until", default=(today + dt.timedelta(days=1)).strftime("%Y-%m"))
     parser.add_argument("--out", default="candidates.yaml")
-    parser.add_argument("--limit", type=int, default=100)
+    parser.add_argument("--limit", type=int, default=2000,
+                        help="max results per facet before reporting truncation")
     parser.add_argument("--sleep", type=float, default=3.0)
     args = parser.parse_args()
 

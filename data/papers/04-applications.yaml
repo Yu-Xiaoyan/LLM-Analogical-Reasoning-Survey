@@ -317,3 +317,72 @@
   gap_reason: >
     §6's knowledge-graph subsection has two entries and stops at 2023; this is
     directly relevant 2025 work.
+
+# ---- Second sweep (2026-08-21): recovered after fixing the pagination
+# ---- truncation in watch_arxiv.py. See that script's query() docstring.
+
+- id: kim2026analogical
+  title: Analogical Trajectory Transfer
+  authors: Junho Kim et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: visual-embodied
+  links:
+    paper: https://arxiv.org/abs/2605.14393
+  in_survey: false
+
+- id: palattuparambil2026aspectanalogical
+  title: 'ASPECT:Analogical Semantic Policy Execution via Language Conditioned Transfer'
+  authors: Ajsal Shereef Palattuparambil et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: visual-embodied
+  links:
+    paper: https://arxiv.org/abs/2604.08355
+  in_survey: false
+
+- id: barakat2026teaching
+  title: 'Teaching Through Analogies: A Modular Pipeline for Educational Analogy Generation'
+  authors: Mariam Barakat
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: education
+  links:
+    paper: https://arxiv.org/abs/2605.24211
+  in_survey: false
+
+- id: noviello2026anvil
+  title: 'ANVIL: Analogies and Videos for Lecturers'
+  authors: Yuri Noviello et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: education
+  links:
+    paper: https://arxiv.org/abs/2605.16295
+  in_survey: false
+
+- id: li2026beyond
+  title: 'Beyond Input-Output: Rethinking Creativity through Design-by-Analogy in Human-AI Collaboration'
+  authors: Xuechen Li et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-02
+  subsection: creativity-design
+  links:
+    paper: https://arxiv.org/abs/2602.09423
+  in_survey: false
+
+- id: fang2026graphwalker
+  title: 'GraphWalker: Patient Analogy Meets Information Gain for Clinical Reasoning with Large Language Models'
+  authors: Yue Fang et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: science
+  links:
+    paper: https://arxiv.org/abs/2604.06684
+  in_survey: false

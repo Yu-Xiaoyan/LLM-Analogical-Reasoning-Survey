@@ -403,3 +403,52 @@
   gap_reason: >
     The survey cites Turney (2006) on relational similarity; this is the
     mapping engine built from it, and the corpus-based counterpart to SME.
+
+# ---- Second sweep (2026-08-21): recovered after fixing the pagination
+# ---- truncation in watch_arxiv.py. See that script's query() docstring.
+
+- id: xiao2026learning
+  tldr: Trains the retriever on expected *reasoning* benefit rather than semantic overlap, then does RL fine-tuning on the retrieved analogues — so the model gets the example whose solution strategy transfers, not the one whose words match. +7.1 points on AIME 2025 over GRPO for Qwen3-1.7B. The most direct instantiation yet of the structure-aware retrieval proposed in §7.2.2.
+  tags: [must-read]
+  title: Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning
+  authors: Zilin Xiao et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-06
+  subsection: retrieval-memory
+  links:
+    paper: https://arxiv.org/abs/2606.13680
+  in_survey: false
+
+- id: lu2026chairo
+  title: 'CHAIRO: Contextual Hierarchical Analogical Induction and Reasoning Optimization for LLMs'
+  authors: Haotian Lu et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: analogical-prompting
+  links:
+    paper: https://arxiv.org/abs/2604.10502
+  in_survey: false
+
+- id: lyu2026routing
+  title: 'Routing by Analogy: kNN-Augmented Expert Assignment for Mixture-of-Experts'
+  authors: Boxuan Lyu et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-01
+  subsection: retrieval-memory
+  links:
+    paper: https://arxiv.org/abs/2601.02144
+  in_survey: false
+
+- id: kim2026compositional
+  title: Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning
+  authors: Junseok Kim et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: relational-modeling
+  links:
+    paper: https://arxiv.org/abs/2605.20609
+  in_survey: false

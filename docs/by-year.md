@@ -2,7 +2,7 @@
 
 # Papers by year
 
-## 2026 (32)
+## 2026 (49)
 
 - ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis** `🔥 2026-07`  
   *Yongqiang Chen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
@@ -28,6 +28,14 @@
   *Ruichen Xu, Wenjing Yan and Ying-Jun Angela Zhang* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
   > A theoretical account of when transformers can implement analogical mapping at all — pairs naturally with Minegishi et al. as the theory side of the same question.
 
+- ⭐ **Large Language Models provide support for the parallelogram theory of analogy** `🔥 2026-03`  
+  *Qiawen Ella Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.19066)  
+  > Finds that LLM behaviour on proportional analogies tracks the parallelogram model of human analogy — evidence bearing directly on §4.1's question of whether relations are represented as displacements in a vector space.
+
+- ⭐ **Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning** `🔥 2026-06`  
+  *Zilin Xiao et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.13680)  
+  > Trains the retriever on expected *reasoning* benefit rather than semantic overlap, then does RL fine-tuning on the retrieved analogues — so the model gets the example whose solution strategy transfers, not the one whose words match. +7.1 points on AIME 2025 over GRPO for Qwen3-1.7B. The most direct instantiation yet of the structure-aware retrieval proposed in §7.2.2.
+
 - ⭐ **Modelling Analogies and Analogical Reasoning: Connecting Cognitive Science Theory and NLP Research**  
   *Molly R. Petersen, Claire E. Stevenson and Lonneke van der Plas* — TACL 2026 · [paper](https://aclanthology.org/2026.tacl-1.32/)  
   > The closest neighbour to this survey — surveys analogy from the cognitive science side and maps those theories onto NLP tasks. Complementary rather than overlapping: it is theory-first, this survey is LLM-first. (Cited as the 2025 preprint in the survey; now published in TACL 2026.)
@@ -46,6 +54,18 @@
 - **ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation** `🔥 2026-07`  
   *Ahmed Haj Ahmed and Alvin Grissom* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
 
+- **ANVIL: Analogies and Videos for Lecturers** `🔥 2026-04`  
+  *Yuri Noviello et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.16295)
+
+- **ASPECT:Analogical Semantic Policy Execution via Language Conditioned Transfer** `🔥 2026-04`  
+  *Ajsal Shereef Palattuparambil et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.08355)
+
+- **Analogical Trajectory Transfer** `🔥 2026-05`  
+  *Junho Kim et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.14393)
+
+- **Beyond Input-Output: Rethinking Creativity through Design-by-Analogy in Human-AI Collaboration** `🔥 2026-02`  
+  *Xuechen Li et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.09423)
+
 - **Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design** `🔥 2026-05`  
   *Claire R. Leibowicz* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.19045)
 
@@ -54,6 +74,12 @@
 
 - **CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation** `🔥 2026-04`  
   *Bingzhe Wu, Haotian Lu and Yuchen Mou* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10504)
+
+- **CHAIRO: Contextual Hierarchical Analogical Induction and Reasoning Optimization for LLMs** `🔥 2026-04`  
+  *Haotian Lu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10502)
+
+- **Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning** `🔥 2026-05`  
+  *Junseok Kim et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.20609)
 
 - **DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs** `🔥 2026-04`  
   *Jiachen Zhang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
@@ -64,8 +90,20 @@
 - **Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios** `🔥 2026-05`  
   *Zuoyu Zhang and Yancheng Zhu* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
 
+- **FrameNet Semantic Role Classification by Analogy** `🔥 2026-03`  
+  *Van-Duy Ngo et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.19825)
+
+- **From numerical proportions to analogical proportions between probabilities** `🔥 2026-06`  
+  *Henri Prade* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.23029)
+
+- **GraphWalker: Patient Analogy Meets Information Gain for Clinical Reasoning with Large Language Models** `🔥 2026-04`  
+  *Yue Fang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06684)
+
 - **Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer** `🔥 2026-04`  
   *Liangru Xiang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
+
+- **Learning Like Humans: Analogical Concept Learning for Generalized Category Discovery** `🔥 2026-03`  
+  *Jizhou Han et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.19918)
 
 - **Linear Representations of Hierarchical Concepts in Language Models** `🔥 2026-04`  
   *Masaki Sakata et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
@@ -85,20 +123,35 @@
 - **Relational Knowledge Distillation Using Fine-tuned Function Vectors** `🔥 2026-01`  
   *Andrea Kang, Yingnian Wu and Hongjing Lu* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.08169)
 
+- **Routing by Analogy: kNN-Augmented Expert Assignment for Mixture-of-Experts** `🔥 2026-01`  
+  *Boxuan Lyu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.02144)
+
+- **Spanning the Visual Analogy Space with a Weight Basis of LoRAs** `🔥 2026-02`  
+  *Hila Manor et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.15727)
+
 - **StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning** `🔥 2026-05`  
   *Xixiang He et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
 
 - **Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI** `🔥 2026-06`  
   *Ayan Pendharkar* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.09026)
 
+- **Structural Ranking of the Cognitive Plausibility of Computational Models of Analogy and Metaphors with the Minimal Cognitive Grid** `🔥 2026-05`  
+  *Alessio Donvito* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.01359)
+
 - **Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning** `🔥 2026-04`  
   *Mohit Vaishnav and Tanel Tammet* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.21346)
+
+- **Teaching Through Analogies: A Modular Pipeline for Educational Analogy Generation** `🔥 2026-05`  
+  *Mariam Barakat* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.24211)
 
 - **TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning** `🔥 2026-07`  
   *Binnan Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.29586)
 
 - **Uneven Evolution of Cognition Across Generations of Generative AI Models** `🔥 2026-05`  
   *Isaac Galatzer-Levy et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
+
+- **VIRAL: Visual In-Context Reasoning via Analogy in Diffusion Transformers** `🔥 2026-02`  
+  *Zhiwen Li et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.03210)
 
 - **Verbalizable Representations Form a Global Workspace in Language Models** `🔥 2026-07`  
   *Wes Gurnee et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)

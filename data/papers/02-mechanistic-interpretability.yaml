@@ -374,3 +374,19 @@
   gap_reason: >
     Pairs with Minegishi et al. (2026) as the second independent mechanistic
     result of the year; together they are enough to rewrite §4.2.
+
+# ---- Second sweep (2026-08-21): recovered after fixing the pagination
+# ---- truncation in watch_arxiv.py. See that script's query() docstring.
+
+- id: liu2026large
+  tldr: Finds that LLM behaviour on proportional analogies tracks the parallelogram model of human analogy — evidence bearing directly on §4.1's question of whether relations are represented as displacements in a vector space.
+  tags: [must-read]
+  title: Large Language Models provide support for the parallelogram theory of analogy
+  authors: Qiawen Ella Liu et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-03
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2603.19066
+  in_survey: false

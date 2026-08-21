@@ -301,7 +301,7 @@ _Involves vision or other non-text modalities._
 - **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision**  
   *Jiayuan Mao et al.* — ICLR 2019 · [paper](https://arxiv.org/abs/1904.12584)
 
-## `must-read` (53)
+## `must-read` (55)
 
 _Papers we would hand to someone entering the field._
 
@@ -328,6 +328,14 @@ _Papers we would hand to someone entering the field._
 - ⭐ **Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers** `🔥 2026-03`  
   *Ruichen Xu, Wenjing Yan and Ying-Jun Angela Zhang* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
   > A theoretical account of when transformers can implement analogical mapping at all — pairs naturally with Minegishi et al. as the theory side of the same question.
+
+- ⭐ **Large Language Models provide support for the parallelogram theory of analogy** `🔥 2026-03`  
+  *Qiawen Ella Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.19066)  
+  > Finds that LLM behaviour on proportional analogies tracks the parallelogram model of human analogy — evidence bearing directly on §4.1's question of whether relations are represented as displacements in a vector space.
+
+- ⭐ **Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning** `🔥 2026-06`  
+  *Zilin Xiao et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.13680)  
+  > Trains the retriever on expected *reasoning* benefit rather than semantic overlap, then does RL fine-tuning on the retrieved analogues — so the model gets the example whose solution strategy transfers, not the one whose words match. +7.1 points on AIME 2025 over GRPO for Qwen3-1.7B. The most direct instantiation yet of the structure-aware retrieval proposed in §7.2.2.
 
 - ⭐ **Modelling Analogies and Analogical Reasoning: Connecting Cognitive Science Theory and NLP Research**  
   *Molly R. Petersen, Claire E. Stevenson and Lonneke van der Plas* — TACL 2026 · [paper](https://aclanthology.org/2026.tacl-1.32/)  

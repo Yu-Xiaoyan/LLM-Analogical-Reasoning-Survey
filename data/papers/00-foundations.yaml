@@ -308,3 +308,17 @@
   gap_reason: >
     Copycat. Shows that Mitchell's critiques in §3.1–3.2 rest on thirty years
     of building analogy systems, not on a reaction to LLMs.
+
+# ---- Second sweep (2026-08-21): recovered after fixing the pagination
+# ---- truncation in watch_arxiv.py. See that script's query() docstring.
+
+- id: donvito2026structural
+  title: Structural Ranking of the Cognitive Plausibility of Computational Models of Analogy and Metaphors with the Minimal Cognitive Grid
+  authors: Alessio Donvito
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: theory
+  links:
+    paper: https://arxiv.org/abs/2605.01359
+  in_survey: false

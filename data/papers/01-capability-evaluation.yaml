@@ -1000,3 +1000,61 @@
   gap_reason: >
     Measures sample efficiency and rule transfer, which is what §3.5's
     "fragile rule generalisation" claim needs to be quantitative.
+
+# ---- Second sweep (2026-08-21): recovered after fixing the pagination
+# ---- truncation in watch_arxiv.py. See that script's query() docstring.
+
+- id: prade2026from
+  title: From numerical proportions to analogical proportions between probabilities
+  authors: Henri Prade
+  venue: arXiv
+  year: 2026
+  date: 2026-06
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2606.23029
+  in_survey: false
+
+- id: ngo2026framenet
+  title: FrameNet Semantic Role Classification by Analogy
+  authors: Van-Duy Ngo et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-03
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2603.19825
+  in_survey: false
+
+- id: manor2026spanning
+  title: Spanning the Visual Analogy Space with a Weight Basis of LoRAs
+  authors: Hila Manor et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-02
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2602.15727
+  in_survey: false
+
+- id: li2026viral
+  title: 'VIRAL: Visual In-Context Reasoning via Analogy in Diffusion Transformers'
+  authors: Zhiwen Li et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-02
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2602.03210
+  in_survey: false
+
+- id: han2026learning
+  title: 'Learning Like Humans: Analogical Concept Learning for Generalized Category Discovery'
+  authors: Jizhou Han et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-03
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2603.19918
+  in_survey: false
