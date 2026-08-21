@@ -88,7 +88,7 @@ If this list or the survey is useful to you, please cite:
   title   = {Large Language Models Meet Analogical Reasoning:
              A Systematic Survey and Perspectives},
   author  = {Yu, Xiaoyan and Ma, Yunshan and Su, Huichen and Sui, Dianbo and
-             Zhu, Liehuang and Chua, Tat-Seng},
+             Chua, Tat-Seng},
   journal = {arXiv preprint arXiv:PLACEHOLDER},
   year    = {2026}
 }
