@@ -120,13 +120,49 @@ def dress(ax) -> None:
     ax.xaxis.set_major_locator(MaxNLocator(integer=True, nbins=6))
 
 
-def mark_partial(ax, partial, years) -> None:
-    """Shade any year whose data is still accruing, so the dip is not read as decline."""
+def split_partial(years: list[int], values: list[float], partial: set[int]):
+    """Separate complete years from the still-accruing one.
+
+    Returns (complete_years, complete_values, tail_years, tail_values) where the
+    tail repeats the last complete point so the dashed segment joins up.
+
+    A partial year plotted as another point on the same solid line reads as a
+    decline — the eye takes the downward slope before it takes any shading or
+    footnote. Counts for a partial year are not comparable to full ones, so
+    they get a visually different mark instead.
+    """
+    complete = [y for y in years if y not in partial]
+    tail = [y for y in years if y in partial]
+    if not tail:
+        return years, values, [], []
+    index = {y: v for y, v in zip(years, values)}
+    cvals = [index[y] for y in complete]
+    join = [complete[-1]] + tail if complete else tail
+    return complete, cvals, join, [index[y] for y in join]
+
+
+def draw_partial_tail(ax, tail_years, tail_values, color) -> None:
+    """Dashed connector plus a hollow marker — 'measured differently', not 'lower'."""
+    if len(tail_years) < 2:
+        return
+    ax.plot(
+        tail_years, tail_values,
+        color=color, linewidth=1.4, linestyle=(0, (2.5, 2)), zorder=3,
+    )
+    ax.plot(
+        tail_years[-1], tail_values[-1],
+        marker="o", markersize=4.5, markerfacecolor="white",
+        markeredgecolor=color, markeredgewidth=1.5, zorder=4,
+    )
+
+
+def note_partial(ax, partial, years, label="Jan–Aug only") -> None:
     for year in sorted(partial):
         if year in years:
-            ax.axvspan(year - 0.5, year + 0.5, color="#f0f0ee", zorder=0, linewidth=0)
-            ax.text(
-                year, ax.get_ylim()[1] * 0.97, "partial ",
+            ax.annotate(
+                label,
+                (year, ax.get_ylim()[1]),
+                textcoords="offset points", xytext=(2, -2),
                 ha="right", va="top", fontsize=5.8, color=MUTED, rotation=90,
             )
 
@@ -156,21 +192,23 @@ def main() -> int:
     # -- A. volume -----------------------------------------------------------
     ax = axes[0]
     counts = [head[y]["hits"] for y in years]
-    ax.fill_between(years, counts, color=ACCENT, alpha=0.13, linewidth=0, zorder=2)
-    ax.plot(years, counts, color=ACCENT, linewidth=2, zorder=3, solid_capstyle="round")
-    ax.plot(years[-1], counts[-1], "o", color=ACCENT, markersize=4.5, zorder=4)
-    ax.set_ylim(0, max(counts) * 1.22)
+    cy, cv, ty, tv = split_partial(years, counts, partial)
+    ax.fill_between(cy, cv, color=ACCENT, alpha=0.13, linewidth=0, zorder=2)
+    ax.plot(cy, cv, color=ACCENT, linewidth=2, zorder=3, solid_capstyle="round")
+    ax.plot(cy[-1], cv[-1], "o", color=ACCENT, markersize=4.5, zorder=4)
+    draw_partial_tail(ax, ty, tv, ACCENT)
+    ax.set_ylim(0, max(counts) * 1.3)
     dress(ax)
     ax.set_title("A   Volume", color=INK)
     ax.set_ylabel("submissions", color=MUTED, fontsize=7)
-    peak = max(range(len(years)), key=lambda i: counts[i])
+    peak = max(range(len(cy)), key=lambda i: cv[i])
     ax.annotate(
-        f"{counts[peak]}",
-        (years[peak], counts[peak]),
+        f"{cv[peak]}",
+        (cy[peak], cv[peak]),
         textcoords="offset points", xytext=(0, 6),
         ha="center", fontsize=7, color=INK, fontweight="bold",
     )
-    mark_partial(ax, partial, years)
+    note_partial(ax, partial, years)
 
     # -- B. share ------------------------------------------------------------
     # The corrective panel. Reviewers will read A as "the field is booming";
@@ -187,15 +225,16 @@ def main() -> int:
     ax.set_ylabel("per 10,000", color=MUTED, fontsize=7)
     ax.annotate(
         f"mean {mean:.1f}",
-        (years[0], mean), textcoords="offset points", xytext=(1, 6),
-        ha="left", va="bottom", fontsize=6.2, color=ACCENT,
+        (years[-1], mean), textcoords="offset points", xytext=(-1, 6),
+        ha="right", va="bottom", fontsize=6.2, color=ACCENT,
     )
     ax.annotate(
         "no trend — the topic grows\nwith its field, not faster",
         (years[len(years) // 2], max(shares) * 1.58),
         ha="center", va="top", fontsize=6.4, color=MUTED, style="italic",
     )
-    mark_partial(ax, partial, years)
+    # No partial-year treatment here on purpose: numerator and denominator
+    # cover the same window, so the ratio stays comparable across years.
 
     # -- C. growth by facet, indexed ----------------------------------------
     # Absolute counts all rise together, so indexing to the base year is what
@@ -211,11 +250,15 @@ def main() -> int:
         if not base:
             continue
         vals = [100.0 * series[facet][y]["hits"] / base for y in fyears]
+        cy, cv, ty, tv = split_partial(fyears, vals, partial)
         ax.plot(
-            fyears, vals,
+            cy, cv,
             color=FACET_COLOR[facet], linewidth=1.7, zorder=3, solid_capstyle="round",
         )
-        ends.append((vals[-1], fyears[-1], facet))
+        draw_partial_tail(ax, ty, tv, FACET_COLOR[facet])
+        last_x = ty[-1] if ty else cy[-1]
+        last_y = tv[-1] if tv else cv[-1]
+        ends.append((last_y, last_x, facet))
     ax.axhline(100, color=GRID, linewidth=0.8, zorder=1)
     dress(ax)
     ax.set_title("C   Growth by facet", color=INK)
@@ -247,7 +290,6 @@ def main() -> int:
     # so the locator does not invent a 2028 to fill the gutter.
     ax.set_xlim(min(years) - 0.3, max(years) + 2.5)
     ax.set_xticks([y for y in years if y % 2 == 0])
-    mark_partial(ax, partial, years)
 
     out = pathlib.Path(args.out)
     out.parent.mkdir(exist_ok=True)

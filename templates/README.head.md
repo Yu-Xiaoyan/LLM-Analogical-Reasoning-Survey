@@ -62,8 +62,12 @@ facet, while the mechanism facet's share held constant. The field has shifted
 from *studying* the capability to *using* it, and mechanistic understanding has
 not kept pace.
 
+2026 covers January–August only, so its counts are not comparable to a full
+year: in **A** and **C** it is drawn as a hollow marker on a dashed segment
+rather than as another point on the line. **B** keeps it as a normal point —
+numerator and denominator span the same window, so the ratio is unaffected.
 Counts are arXiv-only, so ACL-Anthology-only and cognitive-science venues are
-undercounted; facets are keyword proxies scoped to `cs.*`; 2026 is partial.
+undercounted, and facets are keyword proxies scoped to `cs.*`.
 Reproduce with `make trends`. Raw counts: [`data/trends.csv`](data/trends.csv).
 
 ## Other views
