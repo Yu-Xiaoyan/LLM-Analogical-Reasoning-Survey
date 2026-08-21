@@ -363,12 +363,12 @@
 
 - id: survey2026abstraction
   title: A Survey on the Abstraction and Reasoning Corpus
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Severin Bratus et al.
   venue: Trans. Mach. Learn. Res.
   year: 2026
   subsection: surveys
   links:
-    paper: 
+    paper: https://doi.org/10.36227/techrxiv.177223087.76639882/v1
   in_survey: false
   proposed_addition: true
   priority: P2
@@ -378,7 +378,7 @@
 
 - id: analogical2025reasoning
   title: Analogical reasoning as a core AGI capability
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Erez Firt
   venue: AI and Ethics
   year: 2025
   subsection: scope
@@ -392,8 +392,9 @@
     useful for §2.3's motivation.
 
 - id: whither2025symbols
+  date: 2025-08
   title: "Whither symbols in the era of advanced neural networks?"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Thomas L. Griffiths et al.
   venue: Trends in Cognitive Sciences
   year: 2025
   subsection: theory
@@ -405,3 +406,6 @@
   gap_reason: >
     Revisits the symbolic/connectionist question the survey inherits from
     Fodor & Pylyshyn.
+
+# ---- Citation-graph triage, round 2 (scripts/cited_by.py).
+

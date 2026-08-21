@@ -466,8 +466,9 @@
 # ---- citations of the anchors in data/anchors.yaml, not by keyword.
 
 - id: visual2025symbolic
+  date: 2025-06
   title: "Visual symbolic mechanisms: Emergent symbol processing in vision language models"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Rim Assouel et al.
   venue: arXiv.org
   year: 2025
   subsection: relational-representation
@@ -479,3 +480,64 @@
   gap_reason: >
     Carries the symbol-abstraction circuit into vision-language models,
     extending Yang et al. (2025) to the multimodal case §3.2 cares about.
+
+# ---- Citation-graph triage, round 2 (scripts/cited_by.py).
+
+- id: algorithmic2025primitives
+  date: 2025-10
+  title: Algorithmic Primitives and Compositional Geometry of Reasoning in Language Models
+  authors: Samuel Lippl et al.
+  venue: arXiv.org
+  year: 2025
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2510.15987
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Compositional structure of the representations that §4.1 asks about, at
+    the level of algorithmic primitives.
+
+- id: behavioural2025vs
+  date: 2025-06
+  title: "Behavioural vs. Representational Systematicity in End-to-End Models: An Opinionated Survey"
+  authors: Ivan Vegner et al.
+  venue: Annual Meeting of the Association for Computational Linguistics
+  year: 2025
+  subsection: relational-invariance
+  links:
+    paper: https://arxiv.org/abs/2506.04461
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Distinguishes systematic behaviour from systematic representation —
+    exactly the ambiguity §4.2 runs into.
+
+- id: implicit2025incontext
+  date: 2025-03
+  title: "Implicit In-Context Learning: Evidence from Artificial Language Experiments"
+  authors: Xiaomeng Ma and Qihui Xu
+  venue: arXiv.org
+  year: 2025
+  subsection: process-decomposability
+  links:
+    paper: https://arxiv.org/abs/2503.24190
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Artificial-language evidence on what in-context generalisation actually
+    acquires.
+
+- id: abstract2026representational
+  title: Abstract representational geometry supports inference in large language models
+  authors: Yunan Zeng and Yuwang Wang
+  venue: arXiv.org
+  year: 2026
+  date: 2026-06
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2606.23345
+  in_survey: false

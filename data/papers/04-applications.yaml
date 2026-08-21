@@ -639,7 +639,7 @@
 
 - id: analogykg2026automatic
   title: "Analogy2kg: An automatic pipeline for deriving knowledge graphs from long-text analogies"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Kara Combs et al.
   venue: Knowledge-Based Systems
   year: 2026
   subsection: knowledge-graph

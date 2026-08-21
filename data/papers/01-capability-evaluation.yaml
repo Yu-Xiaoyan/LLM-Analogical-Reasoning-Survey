@@ -1190,7 +1190,7 @@
 
 - id: evaluating2026abstraction
   title: On Evaluating Abstraction and Analogy in Humans and Machines
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Melanie Mitchell
   venue: Current Directions in Psychological Science
   year: 2026
   subsection: perceptual
@@ -1204,8 +1204,9 @@
     methodological frame §3 assumes without stating.
 
 - id: ai2025models
+  date: 2025-10
   title: "Do AI Models Perform Human-like Abstract Reasoning Across Modalities?"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Claas Beger et al.
   venue: arXiv.org
   year: 2025
   subsection: perceptual
@@ -1220,7 +1221,7 @@
 
 - id: assessing2025relational
   title: Assessing the Relational Abilities of Large Language Models and Large Reasoning Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Matthias Raemaekers, Martin Finn and Jan De Houwer
   venue: Behavioral Science
   year: 2025
   subsection: semantic
@@ -1235,7 +1236,7 @@
 
 - id: small2025models
   title: Small Models Big Challenges Comparing Abstract and Long Context Analogy Accuracy in Distilled and ~4B Parameter Language Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Dionisius Hendi Krisnanto et al.
   venue: 2025 International Seminar on Application for Technology of Information and Communication (iSemantic)
   year: 2025
   subsection: symbolic
@@ -1250,7 +1251,7 @@
 
 - id: learning2026proportional
   title: "Learning Proportional Analogies: Lightweight Neural Network vs Large Language Models"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Stergos Afantenos et al.
   venue: International Conference on Agents and Artificial Intelligence
   year: 2026
   subsection: semantic
@@ -1264,8 +1265,9 @@
     scale baseline §3.3 is missing.
 
 - id: visanalog2026diagnostic
+  date: 2026-05
   title: "VisAnalog: A Diagnostic Suite for Visual Concept Transfer on Natural Images"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Zhaonan Li et al.
   venue: arXiv.org
   year: 2026
   subsection: benchmarks
@@ -1279,8 +1281,9 @@
     a gap between ARC-style grids and real scenes.
 
 - id: large2026language
+  date: 2026-02
   title: "Can Large Language Models Generalize Procedures Across Representations?"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Fangru Lin et al.
   venue: arXiv.org
   year: 2026
   subsection: structural
@@ -1292,3 +1295,151 @@
   gap_reason: >
     Procedure transfer across representations — structural analogy tested on
     process rather than narrative.
+
+# ---- Citation-graph triage, round 2 (scripts/cited_by.py).
+
+- id: high2025variability
+  title: "High variability in LLMs’ analogical reasoning"
+  authors: Andrea Gregor de Varda, Chiara Saponaro and Marco Marelli
+  venue: Nature Human Behaviour
+  year: 2025
+  subsection: failure-modes
+  links:
+    paper: https://doi.org/10.1038/s41562-025-02224-3
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Run-to-run variance on the same analogy items, which undercuts every
+    single-run score the survey reports and belongs beside §3.5's failure
+    modes.
+
+- id: anascore2025understanding
+  title: "AnaScore: Understanding Semantic Parallelism in Proportional Analogies"
+  authors: Liyan Wang, Haotong Wang and Yves Lepage
+  venue: North American Chapter of the Association for Computational Linguistics
+  year: 2025
+  subsection: semantic
+  links:
+    paper: https://doi.org/10.18653/v1/2025.naacl-long.54
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    A scoring method for semantic parallelism in A:B::C:D, giving §3.3 a
+    measure rather than accuracy alone.
+
+- id: llms2025recognize
+  title: "Can LLMs Recognize Their Own Analogical Hallucinations? Evaluating Uncertainty Estimation for Analogical Reasoning"
+  authors: Zheng Chen et al.
+  venue: Proceedings of the 3rd Workshop on Towards Knowledgeable Foundation Models (KnowFM)
+  year: 2025
+  subsection: failure-modes
+  links:
+    paper: https://doi.org/10.18653/v1/2025.knowllm-1.8
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Calibration on analogical tasks — whether a model knows when its mapping
+    is wrong, which §3.5's input-output inconsistency implies but never
+    tests.
+
+- id: prototypical2025relational
+  title: "From Prototypical to Relational: How LLMs Navigate Complex Analogies"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: International Conference on Natural Language Generation
+  year: 2025
+  subsection: semantic
+  links:
+    paper: 
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Traces the shift from attribute matching to relational matching as
+    analogies get harder, the transition §3.3 to §3.4 assumes.
+
+- id: testing2025spatial
+  title: Testing Spatial Intuitions of Humans and Large Language and Multimodal Models in Analogies
+  authors: Ivo Bueno et al.
+  venue: Proceedings of the 2nd Workshop on Analogical Abstraction in Cognition, Perception, and Language (Analogy-Angle II)
+  year: 2025
+  subsection: perceptual
+  links:
+    paper: https://doi.org/10.18653/v1/2025.analogyangle-1.9
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Spatial analogies against a human baseline; §3.2 covers grids and
+    objects but not spatial relations.
+
+- id: comprehensive2025behavioral
+  title: A Comprehensive Behavioral Dataset for the Abstraction and Reasoning Corpus
+  authors: Solim LeGris et al.
+  venue: Scientific Data
+  year: 2025
+  subsection: benchmarks
+  links:
+    paper: https://doi.org/10.1038/s41597-025-05687-1
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Human behavioural traces on ARC — the human-process data §4.4's step-by-
+    step comparisons need.
+
+- id: dont2025throw
+  date: 2025-06
+  title: "Don't throw the baby out with the bathwater: How and why deep learning for ARC"
+  authors: Jack Cole and Mohamed Osman
+  venue: arXiv.org
+  year: 2025
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2506.14276
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Argues the case for learned approaches on ARC, balancing the neuro-
+    symbolic framing §5.2 leans toward.
+
+- id: nsa2025neurosymbolic
+  date: 2025-01
+  title: "NSA: Neuro-symbolic ARC Challenge"
+  authors: Paweł Batorski, Jannik Brinkmann and Paul Swoboda
+  venue: The European Symposium on Artificial Neural Networks
+  year: 2025
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2501.04424
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Neuro-symbolic ARC solver; concrete counterpart to §5.2's knowledge-
+    enhanced methods.
+
+- id: arctgi2026humanvalidated
+  title: "ARC-TGI: Human-Validated Task Generators with Reasoning Chain Templates for ARC-AGI"
+  authors: Jens Lehmann et al.
+  venue: Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2
+  year: 2026
+  date: 2026-03
+  subsection: benchmarks
+  links:
+    paper: https://arxiv.org/abs/2603.05099
+  in_survey: false
+
+- id: riddle2026riddle
+  title: "The Riddle Riddle: Testing Flexible Reasoning in Large Language Models and Humans"
+  authors: Bella Fascendini et al.
+  venue: arXiv.org
+  year: 2026
+  date: 2026-06
+  subsection: symbolic
+  links:
+    paper: https://arxiv.org/abs/2606.27103
+  in_survey: false
