@@ -9,7 +9,6 @@ data/ and re-run this script.
 
 from __future__ import annotations
 
-import datetime as dt
 import re
 import urllib.parse
 
@@ -171,11 +170,16 @@ def build_benchmarks(benchmarks: list[dict]) -> list[str]:
 
 
 def build_stats(papers: list[dict], benchmarks: list[dict]) -> str:
+    """Counts only — deliberately no build date.
+
+    CI rebuilds and fails the job if the result differs from what is committed,
+    so anything time-dependent here would break the build one day later. The
+    "Last Commit" shields badge in the header covers freshness instead.
+    """
     new = sum(1 for p in papers if not p.get("in_survey", True))
     return (
         f"**{len(papers)}** papers · **{len(benchmarks)}** benchmarks · "
-        f"**{new}** added since the survey · "
-        f"last updated {dt.date.today().isoformat()}"
+        f"**{new}** added since the survey"
     )
 
 
