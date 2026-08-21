@@ -4,27 +4,27 @@
 
 ## 2026 (32)
 
-- ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis** `NEW`  
+- ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis** `🔥 2026-07`  
   *Yongqiang Chen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
   > Agentic retrieval of historical analogues for forecasting — the clearest instance so far of the "structure-aware retrieval" direction proposed in §7.2.2 of the survey.
 
-- ⭐ **Analogical Reasoning as a Doctor: A Foundation Model for Gastrointestinal Endoscopy Diagnosis** `NEW`  
+- ⭐ **Analogical Reasoning as a Doctor: A Foundation Model for Gastrointestinal Endoscopy Diagnosis** `🔥 2026-04`  
   *Peixi Peng et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05649)  
   > Builds case-to-case analogical matching into a clinical foundation model — the clinical-diagnostics vertical named in §7.2.1 of the survey, now with an actual system behind it.
 
-- ⭐ **CARV: A Diagnostic Benchmark for Compositional Analogical Reasoning in Multimodal LLMs** `NEW`  
+- ⭐ **CARV: A Diagnostic Benchmark for Compositional Analogical Reasoning in Multimodal LLMs** `🔥 2026-03`  
   *Yongkang Du, Xiaohan Zou, Minhao Cheng and Lu Lin* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.27958)  
   > Extends visual analogy from single pairs to composition over multiple pairs (5.5k samples); Gemini-2.5 Pro reaches 40.4% against 100% human, with failures traced to decomposing visual change into symbolic rules.
 
-- ⭐ **Emergent Analogical Reasoning in Transformers** `NEW`  
+- ⭐ **Emergent Analogical Reasoning in Transformers** `🔥 2026-02`  
   *Gouki Minegishi, Jingyuan Feng, Hiroki Furuta, Takeshi Kojima, Yusuke Iwasawa and Yutaka Matsuo* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.01992)  
   > Formalises analogy as a functor between categories and shows, on synthetic tasks, that it emerges from two identifiable mechanisms — geometric alignment of relational structure in embedding space plus application of the functor — with the same signatures visible in pretrained LLMs. The most direct mechanistic answer to §4 published since the survey.
 
-- ⭐ **Enhancing Structural Mapping with LLM-derived Abstractions for Analogical Reasoning in Narratives** `NEW`  
+- ⭐ **Enhancing Structural Mapping with LLM-derived Abstractions for Analogical Reasoning in Narratives** `🔥 2026-03`  
   *Mohammadhossein Khojasteh et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.29997)  
   > Uses the LLM to produce the abstraction layer and then does explicit structure mapping on top of it — a direct engineering answer to the ARN finding that models default to lexical overlap on narratives.
 
-- ⭐ **Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers** `NEW`  
+- ⭐ **Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers** `🔥 2026-03`  
   *Ruichen Xu, Wenjing Yan and Ying-Jun Angela Zhang* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
   > A theoretical account of when transformers can implement analogical mapping at all — pairs naturally with Minegishi et al. as the theory side of the same question.
 
@@ -32,81 +32,81 @@
   *Molly R. Petersen, Claire E. Stevenson and Lonneke van der Plas* — TACL 2026 · [paper](https://aclanthology.org/2026.tacl-1.32/)  
   > The closest neighbour to this survey — surveys analogy from the cognitive science side and maps those theories onto NLP tasks. Complementary rather than overlapping: it is theory-first, this survey is LLM-first. (Cited as the 2025 preprint in the survey; now published in TACL 2026.)
 
-- ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning** `NEW`  
+- ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning** `🔥 2026-04`  
   *Philipp Hellwig et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
   > Training-dynamics evidence that analogical behaviour is scaffolded on an earlier-acquired copying circuit — a concrete developmental story for how the capability arises rather than a static probe.
 
-- ⭐ **Unlocking LLM Creativity in Science through Analogical Reasoning** `NEW`  
+- ⭐ **Unlocking LLM Creativity in Science through Analogical Reasoning** `🔥 2026-05`  
   *Andrew Shen, Shaul Druckmann and James Zou* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.11258)  
   > Positions analogy as the operative mechanism behind LLM scientific ideation — the 2026 successor to Ding et al. (2023) on creative cross-domain association.
 
-- **A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds** `NEW`  
+- **A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds** `🔥 2026-08`  
   *Pierre-Alexandre Murena and Marcelo Hartmann* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.14220)
 
-- **ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation** `NEW`  
+- **ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation** `🔥 2026-07`  
   *Ahmed Haj Ahmed and Alvin Grissom* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
 
-- **Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design** `NEW`  
+- **Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design** `🔥 2026-05`  
   *Claire R. Leibowicz* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.19045)
 
-- **Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans** `NEW`  
+- **Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans** `🔥 2026-07`  
   *Jasmin Thelen and Oliver Wilhelm* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.11263)
 
-- **CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation** `NEW`  
+- **CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation** `🔥 2026-04`  
   *Bingzhe Wu, Haotian Lu and Yuchen Mou* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10504)
 
-- **DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs** `NEW`  
+- **DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs** `🔥 2026-04`  
   *Jiachen Zhang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
 
 - **Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models** `PROPOSED · P2`  
   *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.07794)
 
-- **Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios** `NEW`  
+- **Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios** `🔥 2026-05`  
   *Zuoyu Zhang and Yancheng Zhu* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
 
-- **Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer** `NEW`  
+- **Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer** `🔥 2026-04`  
   *Liangru Xiang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
 
-- **Linear Representations of Hierarchical Concepts in Language Models** `NEW`  
+- **Linear Representations of Hierarchical Concepts in Language Models** `🔥 2026-04`  
   *Masaki Sakata et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
 
-- **MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs** `NEW`  
+- **MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs** `🔥 2026-01`  
   *Ghazal Kalhor and Behnam Bahrak* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.22050)
 
-- **Metaphor-Induced Algorithmic Steering: Cross-Domain Procedural Transfer in LLM Code Generation** `NEW`  
+- **Metaphor-Induced Algorithmic Steering: Cross-Domain Procedural Transfer in LLM Code Generation** `🔥 2026-07`  
   *Zhibo Hu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.28683)
 
-- **On the Diversity of Analogy Making in Large Language Models** `NEW`  
+- **On the Diversity of Analogy Making in Large Language Models** `🔥 2026-08`  
   *Yuanhao Shen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.03233)
 
-- **Proportional Analogies on Probability Distributions via Bayesian Updating** `NEW`  
+- **Proportional Analogies on Probability Distributions via Bayesian Updating** `🔥 2026-08`  
   *Pierre-Alexandre Murena* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.11724)
 
-- **Relational Knowledge Distillation Using Fine-tuned Function Vectors** `NEW`  
+- **Relational Knowledge Distillation Using Fine-tuned Function Vectors** `🔥 2026-01`  
   *Andrea Kang, Yingnian Wu and Hongjing Lu* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.08169)
 
-- **StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning** `NEW`  
+- **StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning** `🔥 2026-05`  
   *Xixiang He et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
 
-- **Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI** `NEW`  
+- **Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI** `🔥 2026-06`  
   *Ayan Pendharkar* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.09026)
 
-- **Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning** `NEW`  
+- **Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning** `🔥 2026-04`  
   *Mohit Vaishnav and Tanel Tammet* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.21346)
 
-- **TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning** `NEW`  
+- **TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning** `🔥 2026-07`  
   *Binnan Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.29586)
 
-- **Uneven Evolution of Cognition Across Generations of Generative AI Models** `NEW`  
+- **Uneven Evolution of Cognition Across Generations of Generative AI Models** `🔥 2026-05`  
   *Isaac Galatzer-Levy et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
 
-- **Verbalizable Representations Form a Global Workspace in Language Models** `NEW`  
+- **Verbalizable Representations Form a Global Workspace in Language Models** `🔥 2026-07`  
   *Wes Gurnee et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
 
-- **What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems** `NEW`  
+- **What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems** `🔥 2026-08`  
   *Emanuele Ratti and Lena Zuchowski* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.18186)
 
-- **When Models Know More Than They Say: Probing Analogical Reasoning in LLMs** `NEW`  
+- **When Models Know More Than They Say: Probing Analogical Reasoning in LLMs** `🔥 2026-04`  
   *Hope McGovern et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
 
 ## 2025 (34)

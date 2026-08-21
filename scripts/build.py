@@ -60,8 +60,9 @@ def render_paper(paper: dict, show_new: bool = True) -> list[str]:
     if paper.get("proposed_addition"):
         priority = paper.get("priority")
         new = f" `PROPOSED · {priority}`" if priority else " `PROPOSED`"
-    elif show_new and not paper.get("in_survey", True):
-        new = " `NEW`"
+    elif show_new and is_new(paper):
+        when = paper.get("date") or paper.get("year")
+        new = f" `🔥 {when}`"
     venue = paper.get("venue") or "n/a"
     year = paper.get("year", "")
     head = f"- {star}**{paper['title']}**{new}  "
@@ -106,29 +107,44 @@ def is_new(paper: dict) -> bool:
     return not paper.get("in_survey", True) and not paper.get("proposed_addition")
 
 
-def build_new_feed(papers: list[dict]) -> list[str]:
+def build_new_feed(taxonomy: dict, papers: list[dict]) -> list[str]:
+    """A dated index of post-survey work — not a second copy of the entries.
+
+    Every one of these papers is filed in its taxonomy section below, badged
+    with its date. Repeating them here in full made the README's first screen a
+    duplicate of its second, which buried the taxonomy.
+    """
     new = [p for p in papers if is_new(p)]
     new.sort(key=lambda p: (p.get("date") or f"{p.get('year', 0)}-00"), reverse=True)
+
+    sub_title = {}
+    for section in taxonomy["sections"]:
+        for sub in section["subsections"]:
+            sub_title[sub["key"]] = sub["title"]
+
     out = [
         "## 🔥 New since the survey",
         "",
-        "Papers that appeared **after** the survey was finalised (January 2026). "
-        "This feed is the working set for the next revision — "
-        f"currently **{len(new)}** entries.",
+        f"**{len(new)}** papers published after the survey was finalised "
+        "(January 2026). They are filed in the taxonomy below like everything "
+        "else and badged with their date — this is just the dated index.",
         "",
     ]
     if not new:
-        out += ["_Nothing yet._", ""]
-        return out
-    current = None
+        return out + ["_Nothing yet._", ""]
+
+    out += ["| | Paper | Filed under |", "| --- | --- | --- |"]
     for paper in new:
-        month = paper.get("date") or str(paper.get("year"))
-        if month != current:
-            current = month
-            out.append(f"**{month}**")
-            out.append("")
-        out += render_paper(paper, show_new=False)
-        out.append("")
+        links = paper.get("links") or {}
+        url = links.get("paper") or fallback_link(paper)
+        star = "⭐ " if "must-read" in (paper.get("tags") or []) else ""
+        where = sub_title.get(paper["subsection"], paper["subsection"])
+        out.append(
+            f"| `{paper.get('date') or paper.get('year')}` "
+            f"| {star}[{paper['title']}]({url}) "
+            f"| [{where}](#{anchor(where)}) |"
+        )
+    out.append("")
     return out
 
 
@@ -350,7 +366,7 @@ def main() -> None:
     body += build_toc(taxonomy, papers)
     body.append("---")
     body.append("")
-    body += build_new_feed(papers)
+    body += build_new_feed(taxonomy, papers)
     body.append("---")
     body.append("")
     body += build_proposed(taxonomy, papers)
