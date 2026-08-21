@@ -21,6 +21,10 @@ links:      ## check every URL resolves (catches dead links, not wrong ones)
 watch:      ## find new arXiv candidates from the last 90 days -> candidates.yaml
 	python3 scripts/watch_arxiv.py
 
+trends:     ## re-measure arXiv publication trends and redraw figures/trends.*
+	python3 scripts/trends.py --from 2014
+	python3 scripts/plot_trends.py
+
 bootstrap:  ## first run: resolve everything, verify it, rebuild
 	python3 scripts/fetch_meta.py
 	python3 scripts/fetch_meta.py --verify

@@ -1,22 +1,31 @@
 #!/usr/bin/env python3
-"""Resolve missing paper metadata against arXiv and Semantic Scholar.
+"""Resolve and verify paper metadata against public bibliographic APIs.
 
-Fills in `authors`, `venue`, `year` and `links.paper` for entries that are
-incomplete, and verifies the ones that already have an arXiv link.
+Fills in `authors`, `venue`, `year` and `links.paper` where they are missing,
+and — with --verify — checks that the links we already have point at the paper
+we claim they do.
 
     python scripts/fetch_meta.py --dry-run        # show what would change
     python scripts/fetch_meta.py                  # write back to data/papers/
+    python scripts/fetch_meta.py --verify         # title-check existing links
     python scripts/fetch_meta.py --only anon2026adage
 
 Rules:
-  - Entries whose `links.paper` is an arXiv URL are resolved by ID (exact).
-  - Everything else is looked up by title on Semantic Scholar; a match is only
-    accepted when the normalised titles agree, so a near-miss never silently
-    overwrites a correct entry.
+  - An entry whose `links.paper` is already an arXiv URL is resolved by ID.
+  - Everything else is looked up by title through `resolve_by_title`, which
+    tries Crossref, then arXiv, then OpenAlex, then Semantic Scholar.
+  - **A match is only ever accepted when the normalised titles are identical.**
+    That is what keeps a near-miss from silently pointing an entry at the wrong
+    paper — the failure mode that link checking cannot catch, because a wrong
+    identifier still returns HTTP 200.
   - Existing non-empty values are never overwritten unless --force is given.
+    Authors are only filled in when absent, since a hand-written author list is
+    usually better than the abbreviation this would generate.
 
-Set S2_API_KEY in the environment if you have one; the public endpoint is
-heavily rate-limited (roughly 1 request/second unauthenticated).
+Environment:
+  OPENALEX_MAILTO   identifies you to OpenAlex/Crossref for their faster,
+                    more permissive "polite pool". Recommended.
+  S2_API_KEY        optional; the public Semantic Scholar endpoint 429s readily.
 """
 
 from __future__ import annotations
@@ -32,27 +41,165 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-from common import load_papers, patch_entry
+from common import load_papers, patch_entry, ssl_context
 
 ARXIV_API = "http://export.arxiv.org/api/query"
+OPENALEX_API = "https://api.openalex.org/works"
+CROSSREF_API = "https://api.crossref.org/works"
 S2_API = "https://api.semanticscholar.org/graph/v1/paper/search"
 ATOM = {"a": "http://www.w3.org/2005/Atom"}
-UA = {"User-Agent": "awesome-analogical-reasoning/1.0 (paper list maintenance)"}
+UA = {"User-Agent": "llm-analogical-reasoning-survey/1.0 (paper list maintenance)"}
+# OpenAlex gives you the faster "polite pool" if you identify yourself.
+MAILTO = os.environ.get("OPENALEX_MAILTO", "")
 
 
 def normalise(title: str) -> str:
     return re.sub(r"\W+", "", str(title).lower())
 
 
-def get(url: str, headers: dict | None = None) -> bytes | None:
+def get(url: str, headers: dict | None = None, retries: int = 3) -> bytes | None:
+    """GET with exponential backoff on rate limiting.
+
+    The unauthenticated Semantic Scholar endpoint 429s readily, so a bare
+    request fails often enough to make a bulk resolve useless without this.
+    """
     request = urllib.request.Request(url, headers={**UA, **(headers or {})})
-    try:
-        with urllib.request.urlopen(request, timeout=45) as response:
-            return response.read()
-    except urllib.error.HTTPError as exc:
-        print(f"  HTTP {exc.code} for {url}", file=sys.stderr)
-    except Exception as exc:  # noqa: BLE001
-        print(f"  {type(exc).__name__} for {url}", file=sys.stderr)
+    delay = 5.0
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(request, timeout=45, context=ssl_context()) as response:
+                return response.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code in (429, 503) and attempt < retries - 1:
+                print(f"  HTTP {exc.code}, retrying in {delay:.0f}s", file=sys.stderr)
+                time.sleep(delay)
+                delay *= 2
+                continue
+            print(f"  HTTP {exc.code} for {url}", file=sys.stderr)
+            return None
+        except Exception as exc:  # noqa: BLE001
+            print(f"  {type(exc).__name__} for {url}", file=sys.stderr)
+            return None
+    return None
+
+
+def canonical_url(doi: str | None, arxiv_id: str | None, fallback: str | None) -> str | None:
+    """Prefer a stable, human-readable landing page over a DOI redirect."""
+    if arxiv_id:
+        return f"https://arxiv.org/abs/{arxiv_id}"
+    if doi:
+        doi = doi.replace("https://doi.org/", "")
+        if doi.startswith("10.18653/v1/"):  # ACL Anthology
+            return f"https://aclanthology.org/{doi[len('10.18653/v1/'):]}/"
+        match = re.match(r"10\.48550/arxiv\.(\S+)", doi, re.IGNORECASE)  # arXiv's own DOIs
+        if match:
+            return f"https://arxiv.org/abs/{match.group(1)}"
+        return f"https://doi.org/{doi}"
+    return fallback
+
+
+def from_crossref(title: str) -> dict | None:
+    """Resolve by title against Crossref — authoritative for anything with a DOI."""
+    query = {"query.bibliographic": title, "rows": "5", "select": "title,author,DOI,issued,container-title"}
+    if MAILTO:
+        query["mailto"] = MAILTO
+    raw = get(f"{CROSSREF_API}?{urllib.parse.urlencode(query)}")
+    if not raw:
+        return None
+    for hit in (json.loads(raw).get("message", {}).get("items") or []):
+        found = (hit.get("title") or [""])[0]
+        if normalise(found) != normalise(title):
+            continue  # only ever accept an exact title match
+        authors = [
+            " ".join(filter(None, [a.get("given"), a.get("family")])) or a.get("name", "")
+            for a in (hit.get("author") or [])
+        ]
+        parts = (hit.get("issued") or {}).get("date-parts") or [[None]]
+        container = (hit.get("container-title") or [None])[0]
+        return {
+            "title": found,
+            "authors": [a for a in authors if a],
+            "year": parts[0][0],
+            "venue": container,
+            "url": canonical_url(hit.get("DOI"), None, None),
+        }
+    return None
+
+
+def from_arxiv_title(title: str) -> dict | None:
+    """Resolve a preprint by exact title against the arXiv API."""
+    escaped = re.sub(r'["\\]', " ", title)
+    params = urllib.parse.urlencode(
+        {"search_query": f'ti:"{escaped}"', "max_results": 5}
+    )
+    raw = get(f"{ARXIV_API}?{params}")
+    if not raw:
+        return None
+    for entry in ET.fromstring(raw).findall("a:entry", ATOM):
+        found = " ".join((entry.findtext("a:title", default="", namespaces=ATOM)).split())
+        if normalise(found) != normalise(title):
+            continue
+        url = entry.findtext("a:id", default="", namespaces=ATOM)
+        arxiv_id = url.split("/abs/")[-1].split("v")[0]
+        published = entry.findtext("a:published", default="", namespaces=ATOM)
+        return {
+            "title": found,
+            "authors": [
+                a.findtext("a:name", default="", namespaces=ATOM)
+                for a in entry.findall("a:author", ATOM)
+            ],
+            "year": int(published[:4]) if published else None,
+            "date": published[:7] if published else None,
+            "url": f"https://arxiv.org/abs/{arxiv_id}",
+        }
+    return None
+
+
+def resolve_by_title(title: str) -> dict | None:
+    """Try each source in turn. Order is by reliability, not by speed.
+
+    Crossref first because a DOI is the canonical published record; arXiv next
+    for preprints that never got one; OpenAlex and Semantic Scholar last, both
+    because their coverage overlaps the first two and because their public
+    endpoints rate-limit hard.
+    """
+    for source in (from_crossref, from_arxiv_title, from_openalex, from_s2):
+        meta = source(title)
+        if meta and meta.get("url"):
+            return meta
+    return None
+
+
+def from_openalex(title: str) -> dict | None:
+    """Resolve by title against OpenAlex — best coverage, no API key needed."""
+    query = {"filter": f"title.search:{title}", "per-page": "5"}
+    if MAILTO:
+        query["mailto"] = MAILTO
+    raw = get(f"{OPENALEX_API}?{urllib.parse.urlencode(query)}")
+    if not raw:
+        return None
+    for hit in (json.loads(raw).get("results") or []):
+        if normalise(hit.get("display_name") or "") != normalise(title):
+            continue  # only ever accept an exact title match
+        arxiv_id = None
+        for location in hit.get("locations") or []:
+            landing = (location.get("landing_page_url") or "")
+            match = re.search(r"arxiv\.org/abs/([0-9]{4}\.[0-9]{4,5})", landing)
+            if match:
+                arxiv_id = match.group(1)
+                break
+        source = ((hit.get("primary_location") or {}).get("source") or {})
+        venue = source.get("display_name")
+        return {
+            "title": hit.get("display_name"),
+            "authors": [
+                (a.get("author") or {}).get("display_name", "")
+                for a in (hit.get("authorships") or [])
+            ],
+            "year": hit.get("publication_year"),
+            "venue": None if venue in (None, "arXiv (Cornell University)") else venue,
+            "url": canonical_url(hit.get("doi"), arxiv_id, hit.get("id")),
+        }
     return None
 
 
@@ -125,7 +272,13 @@ def short_authors(names: list[str]) -> str:
         return names[0]
     if len(names) == 2:
         return f"{names[0]} and {names[1]}"
+    if len(names) == 3:
+        return f"{names[0]}, {names[1]} and {names[2]}"
     return f"{names[0]} et al."
+
+
+def authors_missing(paper: dict) -> bool:
+    return not paper.get("authors") or str(paper["authors"]).startswith("TBD")
 
 
 def needs_work(paper: dict) -> bool:
@@ -164,7 +317,7 @@ def verify(papers: list[dict], sleep: float) -> int:
                 print(f"     listed:   {paper['title']}")
                 print(f"     arXiv is: {meta['title']}")
         else:
-            meta = from_s2(paper["title"])
+            meta = resolve_by_title(paper["title"])
             time.sleep(sleep)
             if not meta or not meta.get("url"):
                 unchecked += 1
@@ -210,14 +363,20 @@ def main() -> int:
     for paper in targets:
         print(f"{paper['id']}: {paper['title'][:70]}")
         arxiv_id = arxiv_id_of(paper)
-        meta = from_arxiv(arxiv_id) if arxiv_id else from_s2(paper["title"])
+        meta = (
+            from_arxiv(arxiv_id)
+            if arxiv_id
+            else resolve_by_title(paper["title"])
+        )
         time.sleep(args.sleep)
         if not meta:
             print("  no match\n")
             continue
 
         updates: dict[str, object] = {}
-        if meta.get("authors") and (args.force or needs_work(paper)):
+        # Only touch authors when we have none. A hand-written "A, B and C" is
+        # better than what a re-resolve would collapse it to.
+        if meta.get("authors") and (args.force or authors_missing(paper)):
             updates["authors"] = short_authors(meta["authors"])
         for field in ("year", "venue", "date"):
             if meta.get(field) and (args.force or not paper.get(field)):

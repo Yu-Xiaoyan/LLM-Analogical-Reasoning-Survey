@@ -24,10 +24,11 @@
   year: 2014
   subsection: relational-representation
   links:
-    paper:
+    paper: https://doi.org/10.3115/v1/w14-1618
   in_survey: true
 
 - id: allen2019analogies
+  date: 2019-01
   title: "Analogies Explained: Towards Understanding Word Embeddings"
   authors: Carl Allen and Timothy Hospedales
   venue: ICML
@@ -35,7 +36,7 @@
   subsection: relational-representation
   tags: [must-read]
   links:
-    paper:
+    paper: https://arxiv.org/abs/1901.09813
   in_survey: true
   tldr: >
     Derives why the parallelogram works from the PMI factorisation, showing
@@ -62,7 +63,7 @@
   subsection: relational-invariance
   tags: [must-read]
   links:
-    paper:
+    paper: https://doi.org/10.52202/068431-1262
     code:
   in_survey: true
   tldr: >
@@ -71,6 +72,7 @@
     on, which is what makes "is the relation explicitly represented?" testable.
 
 - id: lake2018generalization
+  date: 2017-10
   title: "Generalization Without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks"
   authors: Brenden Lake and Marco Baroni
   venue: ICML
@@ -78,7 +80,7 @@
   subsection: relational-invariance
   tags: [must-read, negative-result]
   links:
-    paper:
+    paper: https://arxiv.org/abs/1711.00350
   in_survey: true
   tldr: >
     The systematicity challenge in its modern form — networks reliably capture
@@ -90,6 +92,7 @@
 #  here via tags rather than duplicated.)
 
 - id: yuksekgonul2023bags
+  date: 2022-10
   title: When and Why Vision-Language Models Behave Like Bags-of-Words, and What to Do About It?
   authors: Mert Yuksekgonul et al.
   venue: ICLR
@@ -97,7 +100,7 @@
   subsection: structural-sensitivity
   tags: [multimodal, negative-result]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2210.01936
   in_survey: true
 
 # ---------------------------------------------- process decomposability --
@@ -109,7 +112,7 @@
   subsection: process-decomposability
   tags: [must-read]
   links:
-    paper:
+    paper: https://doi.org/10.52202/068431-1800
   in_survey: true
   tldr: >
     The prompting result that made "does the computation decompose into steps?"
@@ -123,7 +126,7 @@
   year: 2023
   subsection: process-decomposability
   links:
-    paper:
+    paper: https://doi.org/10.52202/075280-0517
     code:
   in_survey: true
 
@@ -135,7 +138,7 @@
   subsection: process-decomposability
   tags: [must-read, cognitive-science]
   links:
-    paper:
+    paper: https://www.semanticscholar.org/paper/dc42b4eeee05c616335a83d67ac95f323cea49c2
   in_survey: true
   tldr: >
     Compares model intermediate activations against human incremental analogy
@@ -180,7 +183,7 @@
 
 - id: anon2026featureresemblance
   title: "Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Ruichen Xu, Wenjing Yan and Ying-Jun Angela Zhang
   venue: arXiv
   year: 2026
   date: 2026-03
@@ -196,7 +199,7 @@
 
 - id: anon2026copying
   title: "Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Philipp Hellwig et al.
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -212,7 +215,7 @@
 
 - id: anon2026functionvectors
   title: Relational Knowledge Distillation Using Fine-tuned Function Vectors
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Andrea Kang, Yingnian Wu and Hongjing Lu
   venue: arXiv
   year: 2026
   date: 2026-01
@@ -223,7 +226,7 @@
 
 - id: anon2026hierarchicalconcepts
   title: Linear Representations of Hierarchical Concepts in Language Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Masaki Sakata et al.
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -234,7 +237,7 @@
 
 - id: anon2026globalworkspace
   title: Verbalizable Representations Form a Global Workspace in Language Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Wes Gurnee et al.
   venue: arXiv
   year: 2026
   date: 2026-07
@@ -242,3 +245,132 @@
   links:
     paper: https://arxiv.org/abs/2607.15495
   in_survey: false
+
+# =========================================================================
+# Proposed for the next revision — from the coverage audit (2026-08-21).
+# This is the largest gap in the survey: §4 asks whether a mapped relation has
+# an explicit, localisable representation, and the literature that answers that
+# question causally is absent.
+# =========================================================================
+
+- id: todd2024function
+  title: Function Vectors in Large Language Models
+  authors: Eric Todd et al.
+  venue: ICLR
+  year: 2024
+  subsection: relational-representation
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2310.15213
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    §4.1 asks whether the mapped relation admits an explicit, localisable
+    representation. This answers yes, causally, and the survey does not cite it.
+  tldr: >
+    A small set of mid-layer attention heads encodes an input-output relation
+    as a single transportable vector; inject it into an unrelated zero-shot
+    context and the model performs the relation. Localisation plus causal
+    intervention, which correlational probing cannot deliver.
+
+- id: hendel2023incontext
+  title: In-Context Learning Creates Task Vectors
+  authors: Roee Hendel, Mor Geva and Amir Globerson
+  venue: EMNLP Findings
+  year: 2023
+  subsection: relational-representation
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2310.15916
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Independent, contemporaneous confirmation of the same mechanism; citing
+    both is what makes the finding safe to build on.
+  tldr: >
+    Demonstrations compress into a single task vector that parameterises the
+    model's behaviour — the same result as function vectors, reached from the
+    in-context-learning side.
+
+- id: olsson2022incontext
+  title: In-context Learning and Induction Heads
+  authors: Catherine Olsson et al.
+  venue: Transformer Circuits Thread
+  year: 2022
+  subsection: process-decomposability
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2209.11895
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    The mechanism §4.4 needs, and the prerequisite for the 2026 finding that
+    analogical behaviour is scaffolded on a copying circuit.
+  tldr: >
+    Identifies heads that complete patterns by copying from earlier context,
+    and shows they appear exactly when in-context learning does — the concrete
+    circuit behind pattern completion.
+
+- id: anon2025whichheads
+  title: Which Attention Heads Matter for In-Context Learning?
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: ICML
+  year: 2025
+  subsection: relational-representation
+  links:
+    paper:
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Separates induction heads from function-vector heads and finds the former
+    often mature into the latter — a developmental account that §4 can use.
+
+- id: webb2021emergent
+  title: Emergent Symbols through Binding in a Neural Network
+  authors: Taylor Webb, Ishan Sinha and Jonathan D. Cohen
+  venue: ICLR
+  year: 2021
+  subsection: relational-invariance
+  links:
+    paper: https://arxiv.org/abs/2012.07172
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Webb was building abstract-rule architectures before the LLM claim; this
+    is where the 2023 position comes from, and it grounds §4.2.
+
+- id: crouse2021neural
+  title: Neural Analogical Matching
+  authors: Maxwell Crouse et al.
+  venue: AAAI
+  year: 2021
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2004.03573
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    A neural implementation of SME — the bridge between §4's representational
+    questions and §5.2's neuro-symbolic methods.
+
+- id: anon2026structuredreps
+  title: Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-02
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2602.07794
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Pairs with Minegishi et al. (2026) as the second independent mechanistic
+    result of the year; together they are enough to rewrite §4.2.

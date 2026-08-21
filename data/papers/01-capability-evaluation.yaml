@@ -21,7 +21,7 @@
   subsection: symbolic
   tags: [must-read, cognitive-science]
   links:
-    paper:
+    paper: https://doi.org/10.1038/s41562-023-01659-w
     code:
   in_survey: true
   tldr: >
@@ -60,6 +60,7 @@
     degrade sharply — the strongest evidence that the ability is non-robust.
 
 - id: lewis2024counterfactual
+  date: 2024-02
   title: Using Counterfactual Tasks to Evaluate the Generality of Analogical Reasoning in Large Language Models
   authors: Martha Anne Lewis and Melanie Mitchell
   venue: CoRR
@@ -67,7 +68,7 @@
   subsection: symbolic
   tags: [negative-result]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2402.08955
   in_survey: true
 
 - id: stevenson2024generalize
@@ -89,7 +90,7 @@
   subsection: symbolic
   tags: [cognitive-science]
   links:
-    paper:
+    paper: https://aclanthology.org/2025.conll-1.40/
   in_survey: true
 
 - id: li2025rule
@@ -110,17 +111,18 @@
   year: 2023
   subsection: symbolic
   links:
-    paper:
+    paper: https://aclanthology.org/2023.acl-long.109/
   in_survey: true
 
 - id: hu2024auxiliary
+  date: 2024-04
   title: Auxiliary Task Demands Mask the Capabilities of Smaller Language Models
   authors: Jennifer Hu and Michael Frank
   venue: COLM
   year: 2024
   subsection: symbolic
   links:
-    paper:
+    paper: https://arxiv.org/abs/2404.02418
   in_survey: true
 
 - id: devarda2025emergent
@@ -141,7 +143,7 @@
   subsection: symbolic
   tags: [negative-result]
   links:
-    paper:
+    paper: https://doi.org/10.1177/29498732261419316
   in_survey: true
 
 - id: opielka2025analogical
@@ -167,7 +169,7 @@
   subsection: symbolic
   tags: [must-read, negative-result]
   links:
-    paper:
+    paper: https://aclanthology.org/2025.findings-acl.1230/
   in_survey: true
   tldr: >
     Self-generated "relevant" exemplars help no more than random ones on many
@@ -175,6 +177,7 @@
 
 # -------------------------------------------------------------- perceptual --
 - id: yiu2025kiva
+  date: 2024-07
   title: "KiVA: Kid-Inspired Visual Analogies for Testing Large Multimodal Models"
   authors: Eunice Yiu et al.
   venue: ICLR
@@ -182,7 +185,7 @@
   subsection: perceptual
   tags: [must-read, benchmark, multimodal, cognitive-science]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2407.17773
     code:
   in_survey: true
   tldr: >
@@ -191,6 +194,7 @@
     the transformation correctly in text while failing to execute it visually.
 
 - id: malkinski2024reasoning
+  date: 2024-11
   title: "Reasoning Limitations of Multimodal Large Language Models: A Case Study of Bongard Problems"
   authors: Mikołaj Małkiński, Szymon Pawlonka and Jacek Mańdziuk
   venue: ICML
@@ -198,10 +202,11 @@
   subsection: perceptual
   tags: [multimodal, negative-result]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2411.01173
   in_survey: true
 
 - id: moskvichev2023conceptarc
+  date: 2023-05
   title: "The ConceptARC Benchmark: Evaluating Understanding and Generalization in the ARC Domain"
   authors: Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell
   venue: TMLR
@@ -209,7 +214,7 @@
   subsection: perceptual
   tags: [must-read, benchmark, multimodal]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2305.07141
     data:
   in_survey: true
   tldr: >
@@ -225,7 +230,7 @@
   subsection: perceptual
   tags: [benchmark, multimodal]
   links:
-    paper:
+    paper: https://doi.org/10.1109/cvpr.2019.00546
     data:
   in_survey: true
 
@@ -237,7 +242,7 @@
   subsection: perceptual
   tags: [must-read, position]
   links:
-    paper:
+    paper: https://aclanthology.org/2025.conll-1.11/
   in_survey: true
   tldr: >
     Shows the "abstract reasoner or not" question is partly ill-posed: tuning
@@ -267,6 +272,7 @@
   in_survey: true
 
 - id: ahrabian2024curious
+  date: 2024-01
   title: The Curious Case of Nonverbal Abstract Reasoning with Multi-Modal Large Language Models
   authors: Kian Ahrabian et al.
   venue: COLM
@@ -274,7 +280,7 @@
   subsection: perceptual
   tags: [multimodal, negative-result]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2401.12117
   in_survey: true
 
 - id: camposampiero2025perceptual
@@ -290,6 +296,7 @@
 
 # ---------------------------------------------------------------- semantic --
 - id: wijesiriwardene2025knowledgeprompts
+  date: 2024-12
   title: "KnowledgePrompts: Exploring the Abilities of Large Language Models to Solve Proportional Analogies via Knowledge-Enhanced Prompting"
   authors: Thilini Wijesiriwardene et al.
   venue: COLING
@@ -297,7 +304,7 @@
   subsection: semantic
   tags: [benchmark]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2412.00869
   in_survey: true
 
 - id: li2018analogical
@@ -308,7 +315,7 @@
   subsection: semantic
   tags: [benchmark]
   links:
-    paper:
+    paper: https://aclanthology.org/p18-2023/
   in_survey: true
 
 - id: boisson2024metaphors
@@ -319,7 +326,7 @@
   subsection: semantic
   tags: [must-read]
   links:
-    paper:
+    paper: https://aclanthology.org/2024.conll-1.28/
   in_survey: true
   tldr: >
     Finds a divergence between implicit probability (perplexity) and explicit
@@ -333,7 +340,7 @@
   year: 2024
   subsection: semantic
   links:
-    paper:
+    paper: https://aclanthology.org/2024.emnlp-main.346/
   in_survey: true
 
 - id: blainmontesano2024evaluating
@@ -347,13 +354,14 @@
   in_survey: true
 
 - id: afantenos2024proportions
+  date: 2023-10
   title: "Analogical Proportions and Creativity: A Preliminary Study"
   authors: Stergos Afantenos, Henri Prade, Gilles Richard and Leonardo Cortez-Bernades
   venue: ICCC
   year: 2024
   subsection: semantic
   links:
-    paper:
+    paper: https://arxiv.org/abs/2310.13500
   in_survey: true
 
 # -------------------------------------------------------------- structural --
@@ -374,7 +382,7 @@
   year: 2025
   subsection: structural
   links:
-    paper:
+    paper: https://doi.org/10.1109/tcds.2025.3559771
   in_survey: true
 
 - id: sourati2024arn
@@ -415,7 +423,7 @@
   year: 2023
   subsection: structural
   links:
-    paper:
+    paper: https://doi.org/10.1145/3591196.3593516
   in_survey: true
 
 - id: gjerde2025exploring
@@ -440,13 +448,14 @@
   in_survey: true
 
 - id: latif2024systematic
+  date: 2024-10
   title: A Systematic Assessment of OpenAI o1-Preview for Higher Order Thinking in Education
   authors: Ehsan Latif et al.
   venue: CoRR
   year: 2024
   subsection: structural
   links:
-    paper:
+    paper: https://arxiv.org/abs/2410.21287
   in_survey: true
 
 - id: yiu2025relational
@@ -480,7 +489,7 @@
   subsection: failure-modes
   tags: [negative-result]
   links:
-    paper:
+    paper: https://aclanthology.org/n18-2039/
   in_survey: true
 
 - id: linzen2016issues
@@ -534,7 +543,7 @@
   subsection: benchmarks
   tags: [benchmark]
   links:
-    paper:
+    paper: https://aclanthology.org/n16-2002/
   in_survey: true
 
 - id: gao2014wordrep
@@ -571,7 +580,7 @@
   subsection: benchmarks
   tags: [benchmark]
   links:
-    paper:
+    paper: https://aclanthology.org/2023.findings-acl.218/
   in_survey: true
 
 - id: ye2024analobench
@@ -582,7 +591,7 @@
   subsection: benchmarks
   tags: [must-read, benchmark]
   links:
-    paper:
+    paper: https://aclanthology.org/2024.emnlp-main.725/
     code:
   in_survey: true
   tldr: >
@@ -622,7 +631,7 @@
   subsection: benchmarks
   tags: [benchmark]
   links:
-    paper:
+    paper: https://aclanthology.org/2024.naacl-long.329/
   in_survey: true
 
 # =========================================================================
@@ -647,7 +656,7 @@
 
 - id: anon2026adage
   title: "ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Ahmed Haj Ahmed and Alvin Grissom
   venue: arXiv
   year: 2026
   date: 2026-07
@@ -659,7 +668,7 @@
 
 - id: anon2026diversity
   title: On the Diversity of Analogy Making in Large Language Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Yuanhao Shen et al.
   venue: arXiv
   year: 2026
   date: 2026-08
@@ -670,7 +679,7 @@
 
 - id: anon2026probing
   title: "When Models Know More Than They Say: Probing Analogical Reasoning in LLMs"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Hope McGovern et al.
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -681,7 +690,7 @@
 
 - id: anon2026causaltransfer
   title: "Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Liangru Xiang et al.
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -693,7 +702,7 @@
 
 - id: anon2026dircr
   title: "DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Jiachen Zhang et al.
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -705,7 +714,7 @@
 
 - id: anon2026stembind
   title: "StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Xixiang He et al.
   venue: arXiv
   year: 2026
   date: 2026-05
@@ -717,7 +726,7 @@
 
 - id: anon2026symbolicgrounding
   title: Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Mohit Vaishnav and Tanel Tammet
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -729,7 +738,7 @@
 
 - id: anon2026tracevit
   title: "TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Binnan Liu et al.
   venue: arXiv
   year: 2026
   date: 2026-07
@@ -741,7 +750,7 @@
 
 - id: anon2026arcagihumans
   title: "Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Jasmin Thelen and Oliver Wilhelm
   venue: arXiv
   year: 2026
   date: 2026-07
@@ -753,7 +762,7 @@
 
 - id: anon2026griddescriptors
   title: Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Ayan Pendharkar
   venue: arXiv
   year: 2026
   date: 2026-06
@@ -764,7 +773,7 @@
 
 - id: anon2026cognitionevolution
   title: Uneven Evolution of Cognition Across Generations of Generative AI Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Isaac Galatzer-Levy et al.
   venue: arXiv
   year: 2026
   date: 2026-05
@@ -776,7 +785,7 @@
 
 - id: anon2026riemannian
   title: A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Pierre-Alexandre Murena and Marcelo Hartmann
   venue: arXiv
   year: 2026
   date: 2026-08
@@ -787,7 +796,7 @@
 
 - id: anon2026bayesian
   title: Proportional Analogies on Probability Distributions via Bayesian Updating
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Pierre-Alexandre Murena
   venue: arXiv
   year: 2026
   date: 2026-08
@@ -798,7 +807,7 @@
 
 - id: anon2026masalbench
   title: "MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Ghazal Kalhor and Behnam Bahrak
   venue: arXiv
   year: 2026
   date: 2026-01
@@ -807,3 +816,187 @@
   links:
     paper: https://arxiv.org/abs/2601.22050
   in_survey: false
+
+# =========================================================================
+# Proposed for the next revision — from the coverage audit (2026-08-21).
+# =========================================================================
+
+- id: webb2025evidence
+  title: Evidence from Counterfactual Tasks Supports Emergent Analogical Reasoning in Large Language Models
+  authors: Taylor Webb, Keith J. Holyoak and Hongjing Lu
+  venue: PNAS Nexus
+  year: 2025
+  subsection: symbolic
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2404.13070
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    §3.1 stages the emergence debate as claim-then-rebuttal and stops there.
+    This is the authors' reply, and it moves the conclusion from "the ability
+    is illusory" to "it is sensitive to the execution medium".
+  tldr: >
+    Answers the counterfactual critiques: models do generalise to arbitrarily
+    permuted alphabets once allowed to write and run code, so the failures
+    localise to mental execution rather than to the mapping itself.
+
+- id: mitchell2023comparing
+  title: Comparing Humans, GPT-4, and GPT-4V on Abstraction and Reasoning Tasks
+  authors: Melanie Mitchell, Alessandro B. Palmarini and Arseny Moskvichev
+  venue: arXiv
+  year: 2023
+  subsection: perceptual
+  tags: [must-read, multimodal, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2311.09247
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    The survey cites ConceptARC but not the headline evaluation its own
+    authors ran on it — including the finding that the multimodal model does
+    worse than the text-only one.
+  tldr: >
+    Better prompting lifts GPT-4 well above earlier reported ARC scores yet
+    still far below humans, and GPT-4V underperforms GPT-4 — evidence that
+    vision hurts rather than helps on grid abstraction.
+
+- id: yilmaz2025voila
+  title: "VOILA: Evaluation of MLLMs for Perceptual Understanding and Analogical Reasoning"
+  authors: Nilay Yilmaz et al.
+  venue: ICLR
+  year: 2025
+  subsection: benchmarks
+  tags: [must-read, benchmark, multimodal, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2503.00043
+    code: https://github.com/nlylmz/Voila
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Missing from Table 1 despite predating the survey. It is the strongest
+    perceptual-analogy counter-evidence because it requires generating the
+    completion rather than selecting it, closing the multiple-choice shortcut.
+  tldr: >
+    Open-ended visual analogy at up to 6.4M items: the model must generate the
+    image completing the analogy. Best model 13–29% against 70% for humans.
+
+- id: rogers2017problems
+  title: The (Too Many) Problems of Analogical Reasoning with Word Vectors
+  authors: Anna Rogers, Aleksandr Drozd and Bofang Li
+  venue: "*SEM"
+  year: 2017
+  subsection: failure-modes
+  tags: [must-read, negative-result]
+  links:
+    paper: https://aclanthology.org/S17-1017/
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    The most-cited statement of the vector-offset critique; §3.5 and §4.1 cite
+    Linzen, Schluter and Fournier but skip it.
+  tldr: >
+    Vector-offset analogy accuracy tracks the similarity of the source pair
+    rather than the relation, so the benchmark measures proximity, not
+    relational knowledge.
+
+- id: drozd2016word
+  title: "Word Embeddings, Analogies, and Machine Learning: Beyond King - Man + Woman = Queen"
+  authors: Aleksandr Drozd, Anna Gladkova and Satoshi Matsuoka
+  venue: COLING
+  year: 2016
+  subsection: failure-modes
+  links:
+    paper: https://aclanthology.org/C16-1332/
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    The constructive half of the critique — 3CosAvg and LRCos partly answer
+    the similarity dependence, so citing only the critique overstates how
+    unsolved it is.
+
+- id: opielka2024arc
+  title: Do Large Language Models Solve ARC Visual Analogies Like People Do?
+  authors: Gustaw Opiełka et al.
+  venue: arXiv
+  year: 2024
+  subsection: perceptual
+  tags: [cognitive-science, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2403.09734
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Direct human-vs-model error analysis on ARC; the prequel to Opiełka et al.
+    (2025), which the survey already cites twice.
+
+- id: nie2020bongard
+  title: "Bongard-LOGO: A New Benchmark for Human-Level Concept Learning and Reasoning"
+  authors: Weili Nie et al.
+  venue: NeurIPS
+  year: 2020
+  subsection: benchmarks
+  tags: [benchmark, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2010.00763
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    §3.2 cites an MLLM evaluation on Bongard problems without citing the
+    dataset that evaluation runs on.
+
+- id: chollet2025arcagi2
+  title: "ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems"
+  authors: François Chollet et al.
+  venue: arXiv
+  year: 2025
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/2505.11831
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    The survey anchors on Chollet (2019) for what ARC measures; the benchmark
+    has since been recalibrated, and any current SOTA claim needs v2.
+
+- id: jiang2022bongardhoi
+  title: "Bongard-HOI: Benchmarking Few-Shot Visual Reasoning for Human-Object Interactions"
+  authors: Huaizu Jiang et al.
+  venue: CVPR
+  year: 2022
+  subsection: benchmarks
+  tags: [benchmark, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2205.13803
+    code: https://github.com/NVlabs/Bongard-HOI
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Extends the Bongard paradigm to natural images, bridging §3.2 and the
+    embodied applications in §6.
+
+- id: zerroug2022benchmark
+  title: A Benchmark for Compositional Visual Reasoning
+  authors: Aimen Zerroug et al.
+  venue: NeurIPS
+  year: 2022
+  subsection: benchmarks
+  tags: [benchmark, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2206.05379
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Measures sample efficiency and rule transfer, which is what §3.5's
+    "fragile rule generalisation" claim needs to be quantitative.

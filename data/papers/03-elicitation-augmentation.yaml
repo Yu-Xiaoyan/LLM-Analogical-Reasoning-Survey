@@ -9,10 +9,11 @@
   year: 2020
   subsection: analogical-prompting
   links:
-    paper:
+    paper: https://doi.org/10.65525/svup.9788199778009.2026.224-230
   in_survey: true
 
 - id: yasunaga2024analogical
+  date: 2023-10
   title: Large Language Models as Analogical Reasoners
   authors: Michihiro Yasunaga et al.
   venue: ICLR
@@ -20,7 +21,7 @@
   subsection: analogical-prompting
   tags: [must-read]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2310.01714
   in_survey: true
   tldr: >
     Analogical prompting — have the model self-generate relevant exemplars
@@ -29,6 +30,7 @@
     (2025), which questions whether the "relevance" is doing the work.
 
 - id: yu2024thought
+  date: 2023-10
   title: "Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models"
   authors: Junchi Yu, Ran He and Zhitao Ying
   venue: ICLR
@@ -36,7 +38,7 @@
   subsection: analogical-prompting
   tags: [must-read]
   links:
-    paper:
+    paper: https://arxiv.org/abs/2310.03965
     code:
   in_survey: true
   tldr: >
@@ -61,7 +63,7 @@
   year: 2024
   subsection: analogical-prompting
   links:
-    paper:
+    paper: https://doi.org/10.1609/aaai.v38i16.29720
   in_survey: true
 
 # -------------------------------------------------- retrieval & memory --
@@ -72,7 +74,7 @@
   year: 2023
   subsection: retrieval-memory
   links:
-    paper:
+    paper: https://aclanthology.org/2023.emnlp-main.507/
   in_survey: true
 
 - id: li2023making
@@ -82,7 +84,7 @@
   year: 2023
   subsection: retrieval-memory
   links:
-    paper:
+    paper: https://aclanthology.org/2023.acl-long.291/
   in_survey: true
 
 - id: xu2023knn
@@ -96,13 +98,14 @@
   in_survey: true
 
 - id: lewis2020retrieval
+  date: 2020-05
   title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
   authors: Patrick Lewis et al.
   venue: NeurIPS
   year: 2020
   subsection: retrieval-memory
   links:
-    paper:
+    paper: https://arxiv.org/abs/2005.11401
   in_survey: true
 
 - id: edge2024local
@@ -122,7 +125,7 @@
   year: 2025
   subsection: retrieval-memory
   links:
-    paper:
+    paper: https://aclanthology.org/2025.findings-acl.238/
   in_survey: true
 
 # ----------------------------------------------------- relational modeling --
@@ -133,7 +136,7 @@
   year: 2006
   subsection: relational-modeling
   links:
-    paper:
+    paper: https://doi.org/10.1162/coli.2006.32.3.379
   in_survey: true
 
 - id: ushio2021bert
@@ -160,17 +163,18 @@
   subsection: relational-modeling
   tags: [cognitive-science]
   links:
-    paper:
+    paper: https://doi.org/10.1073/pnas.1814779116
   in_survey: true
 
 - id: santoro2017simple
+  date: 2017-06
   title: A Simple Neural Network Module for Relational Reasoning
   authors: Adam Santoro et al.
   venue: NeurIPS
   year: 2017
   subsection: relational-modeling
   links:
-    paper:
+    paper: https://arxiv.org/abs/1706.01427
   in_survey: true
 
 # ---------------------------------------------------- knowledge-enhanced --
@@ -181,7 +185,7 @@
   year: 2015
   subsection: knowledge-enhanced
   links:
-    paper:
+    paper: https://doi.org/10.1609/aaai.v29i1.9400
   in_survey: true
 
 - id: wijesiriwardene2023neurosymbolic
@@ -192,7 +196,7 @@
   subsection: knowledge-enhanced
   tags: [position]
   links:
-    paper:
+    paper: https://doi.org/10.1109/mis.2023.3305862
   in_survey: true
 
 - id: yuan2024analogykb
@@ -230,7 +234,7 @@
   subsection: knowledge-enhanced
   tags: [multimodal]
   links:
-    paper:
+    paper: https://doi.org/10.1007/978-981-96-7008-6_4
   in_survey: true
 
 - id: lippolis2025enhancing
@@ -250,7 +254,7 @@
 
 - id: anon2026structuralmapping
   title: Enhancing Structural Mapping with LLM-derived Abstractions for Analogical Reasoning in Narratives
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Mohammadhossein Khojasteh et al.
   venue: arXiv
   year: 2026
   date: 2026-03
@@ -266,7 +270,7 @@
 
 - id: anon2026deepresearch
   title: "Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Yongqiang Chen et al.
   venue: arXiv
   year: 2026
   date: 2026-07
@@ -282,7 +286,7 @@
 
 - id: anon2026caro
   title: "CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Bingzhe Wu, Haotian Lu and Yuchen Mou
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -293,7 +297,7 @@
 
 - id: anon2026metaphorsteering
   title: "Metaphor-Induced Algorithmic Steering: Cross-Domain Procedural Transfer in LLM Code Generation"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Zhibo Hu et al.
   venue: arXiv
   year: 2026
   date: 2026-07
@@ -304,7 +308,7 @@
 
 - id: anon2026agentsafety
   title: "Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Zuoyu Zhang and Yancheng Zhu
   venue: arXiv
   year: 2026
   date: 2026-05
@@ -313,3 +317,89 @@
   links:
     paper: https://arxiv.org/abs/2605.03242
   in_survey: false
+
+# =========================================================================
+# Proposed for the next revision — from the coverage audit (2026-08-21).
+# =========================================================================
+
+- id: ushio2021distilling
+  title: Distilling Relation Embeddings from Pretrained Language Models
+  authors: Asahi Ushio, Jose Camacho-Collados and Steven Schockaert
+  venue: EMNLP
+  year: 2021
+  subsection: relational-modeling
+  tags: [must-read]
+  links:
+    paper: https://aclanthology.org/2021.emnlp-main.712/
+    code: https://github.com/asahi417/relbert
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    RelBERT is the central implementation of §5.2's "elevate relations to
+    first-class units", and the survey cites only the same authors' analogy
+    evaluation paper.
+  tldr: >
+    Fine-tunes a masked LM into a dedicated relation encoder; the embeddings
+    generalise to relation types never seen in training, which is the strongest
+    evidence that relational structure can be modelled explicitly.
+
+- id: forbus1995macfac
+  title: "MAC/FAC: A Model of Similarity-Based Retrieval"
+  authors: Kenneth D. Forbus, Dedre Gentner and Keith Law
+  venue: Cognitive Science
+  year: 1995
+  subsection: retrieval-memory
+  tags: [cognitive-science]
+  links:
+    paper: https://doi.org/10.1207/s15516709cog1902_1
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    §7.2.2 proposes structure-aware retrieval as future work; this is the
+    original two-stage cheap-then-structural retrieval model, from 1995.
+
+- id: li2023relation
+  title: Solving Hard Analogy Questions with Relation Embedding Chains
+  authors: Nitesh Kumar and Steven Schockaert
+  venue: EMNLP
+  year: 2023
+  subsection: relational-modeling
+  links:
+    paper: https://arxiv.org/abs/2310.12379
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Composes relations into chains to reach far-domain pairs — a concrete
+    method for the far-analogy failures documented in §3.4.
+
+- id: ushio2025relbert
+  title: "RelBERT: Embedding Relations with Language Models"
+  authors: Asahi Ushio, Jose Camacho-Collados and Steven Schockaert
+  venue: Artificial Intelligence
+  year: 2025
+  subsection: relational-modeling
+  links:
+    paper: https://arxiv.org/abs/2310.00299
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Journal extension with cross-relation-type generalisation evidence.
+
+- id: turney2008latent
+  title: "The Latent Relation Mapping Engine: Algorithm and Experiments"
+  authors: Peter D. Turney
+  venue: JAIR
+  year: 2008
+  subsection: relational-modeling
+  links:
+    paper: https://arxiv.org/abs/0812.4446
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    The survey cites Turney (2006) on relational similarity; this is the
+    mapping engine built from it, and the corpus-based counterpart to SME.

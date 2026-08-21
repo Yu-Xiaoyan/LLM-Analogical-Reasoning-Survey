@@ -57,7 +57,10 @@ def render_links(paper: dict) -> str:
 def render_paper(paper: dict, show_new: bool = True) -> list[str]:
     star = "⭐ " if "must-read" in (paper.get("tags") or []) else ""
     new = ""
-    if show_new and not paper.get("in_survey", True):
+    if paper.get("proposed_addition"):
+        priority = paper.get("priority")
+        new = f" `PROPOSED · {priority}`" if priority else " `PROPOSED`"
+    elif show_new and not paper.get("in_survey", True):
         new = " `NEW`"
     venue = paper.get("venue") or "n/a"
     year = paper.get("year", "")
@@ -76,7 +79,9 @@ def build_toc(taxonomy: dict, papers: list[dict]) -> list[str]:
     for paper in papers:
         counts[paper["subsection"]] = counts.get(paper["subsection"], 0) + 1
     out = ["## Contents", ""]
-    out.append(f"- [🔥 New since the survey](#-new-since-the-survey)")
+    out.append("- [🔥 New since the survey](#-new-since-the-survey)")
+    if any(p.get("proposed_addition") for p in papers):
+        out.append("- [📌 Proposed for the next revision](#-proposed-for-the-next-revision)")
     for section in taxonomy["sections"]:
         total = sum(counts.get(sub["key"], 0) for sub in section["subsections"])
         title = f"{section['title']} ({section['survey_section']})"
@@ -91,8 +96,18 @@ def build_toc(taxonomy: dict, papers: list[dict]) -> list[str]:
     return out
 
 
+def is_new(paper: dict) -> bool:
+    """Published after the survey — not merely absent from it.
+
+    Proposed additions also carry `in_survey: false`, but most of them predate
+    the survey by years (Gick & Holyoak is 1980). Letting them into this feed
+    would put 1980 under a "new since January 2026" heading.
+    """
+    return not paper.get("in_survey", True) and not paper.get("proposed_addition")
+
+
 def build_new_feed(papers: list[dict]) -> list[str]:
-    new = [p for p in papers if not p.get("in_survey", True)]
+    new = [p for p in papers if is_new(p)]
     new.sort(key=lambda p: (p.get("date") or f"{p.get('year', 0)}-00"), reverse=True)
     out = [
         "## 🔥 New since the survey",
@@ -113,6 +128,49 @@ def build_new_feed(papers: list[dict]) -> list[str]:
             out.append(f"**{month}**")
             out.append("")
         out += render_paper(paper, show_new=False)
+        out.append("")
+    return out
+
+
+def build_proposed(taxonomy: dict, papers: list[dict]) -> list[str]:
+    """Work the survey should cite but does not — the next revision's worklist."""
+    proposed = [p for p in papers if p.get("proposed_addition")]
+    if not proposed:
+        return []
+
+    titles = {s["key"]: s["title"] for s in taxonomy["sections"]}
+    home = {}
+    for section in taxonomy["sections"]:
+        for sub in section["subsections"]:
+            home[sub["key"]] = section["key"]
+
+    out = [
+        "## 📌 Proposed for the next revision",
+        "",
+        f"Papers that belong in the survey but are not cited in v1 — **{len(proposed)}** "
+        "of them, from a coverage audit against the taxonomy. Unlike the feed above, "
+        "these are not simply newer than the survey; they were missed. "
+        "`P1` should be added, `P2` is worth adding, `P3` is optional.",
+        "",
+    ]
+    for priority in ("P1", "P2", "P3"):
+        group = [p for p in proposed if p.get("priority") == priority]
+        if not group:
+            continue
+        out.append(f"### {priority} — {len(group)}")
+        out.append("")
+        out.append("| Paper | Goes in | Why it changes the survey |")
+        out.append("| --- | --- | --- |")
+        for paper in sorted(group, key=lambda p: p.get("year", 0)):
+            links = paper.get("links") or {}
+            url = links.get("paper") or fallback_link(paper)
+            section = titles.get(home.get(paper["subsection"], ""), "")
+            reason = " ".join(str(paper.get("gap_reason", "")).split())
+            authors = paper.get("authors", "")
+            out.append(
+                f"| [{paper['title']}]({url})<br><sub>{authors} · {paper.get('year','')}</sub> "
+                f"| {section} | {reason} |"
+            )
         out.append("")
     return out
 
@@ -176,11 +234,16 @@ def build_stats(papers: list[dict], benchmarks: list[dict]) -> str:
     so anything time-dependent here would break the build one day later. The
     "Last Commit" shields badge in the header covers freshness instead.
     """
-    new = sum(1 for p in papers if not p.get("in_survey", True))
-    return (
-        f"**{len(papers)}** papers · **{len(benchmarks)}** benchmarks · "
-        f"**{new}** added since the survey"
-    )
+    new = sum(1 for p in papers if is_new(p))
+    proposed = sum(1 for p in papers if p.get("proposed_addition"))
+    parts = [
+        f"**{len(papers)}** papers",
+        f"**{len(benchmarks)}** benchmarks",
+        f"**{new}** added since the survey",
+    ]
+    if proposed:
+        parts.append(f"**{proposed}** proposed for the next revision")
+    return " · ".join(parts)
 
 
 # ---------------------------------------------------------------- doc views --
@@ -288,6 +351,9 @@ def main() -> None:
     body.append("---")
     body.append("")
     body += build_new_feed(papers)
+    body.append("---")
+    body.append("")
+    body += build_proposed(taxonomy, papers)
     body.append("---")
     body.append("")
     body += build_sections(taxonomy, papers)

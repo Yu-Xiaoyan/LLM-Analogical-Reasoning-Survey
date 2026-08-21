@@ -18,7 +18,7 @@ import sys
 import urllib.error
 import urllib.request
 
-from common import load_benchmarks, load_papers, load_taxonomy, section_index
+from common import load_benchmarks, load_papers, load_taxonomy, section_index, ssl_context
 
 REQUIRED = ("id", "title", "year", "subsection")
 ID_RE = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
@@ -82,10 +82,38 @@ def check_structure(papers, benchmarks, taxonomy) -> list[str]:
         if paper.get("date") and not re.match(r"^\d{4}-\d{2}$", str(paper["date"])):
             errors.append(f"{where}: `{pid}` has date `{paper['date']}`, expected YYYY-MM")
 
-        if paper.get("in_survey") is False and not paper.get("date"):
+        # A proposed addition predates the survey by definition, so it is not
+        # part of the dated "new since" feed and needs no `date`.
+        if (
+            paper.get("in_survey") is False
+            and not paper.get("proposed_addition")
+            and not paper.get("date")
+        ):
             errors.append(
                 f"{where}: `{pid}` is new since the survey and needs a `date` "
                 "so it sorts correctly in the feed"
+            )
+
+        if paper.get("proposed_addition"):
+            if paper.get("in_survey"):
+                errors.append(
+                    f"{where}: `{pid}` cannot be both cited in the survey and "
+                    "proposed for addition — drop one of the flags"
+                )
+            if paper.get("priority") not in ("P1", "P2", "P3"):
+                errors.append(
+                    f"{where}: `{pid}` is proposed but has priority "
+                    f"{paper.get('priority')!r}; expected P1, P2 or P3"
+                )
+            if not paper.get("gap_reason"):
+                errors.append(
+                    f"{where}: `{pid}` is proposed but has no `gap_reason` — "
+                    "say what it changes about the survey"
+                )
+        elif paper.get("priority") or paper.get("gap_reason"):
+            errors.append(
+                f"{where}: `{pid}` has priority/gap_reason without "
+                "`proposed_addition: true`"
             )
 
     ids = set(seen)
@@ -116,7 +144,7 @@ def head(item: tuple[str, str]) -> str | None:
     name, url = item
     request = urllib.request.Request(url, method="HEAD", headers=UA)
     try:
-        with urllib.request.urlopen(request, timeout=20) as response:
+        with urllib.request.urlopen(request, timeout=20, context=ssl_context()) as response:
             if response.status >= 400:
                 return f"{name}: HTTP {response.status} — {url}"
     except urllib.error.HTTPError as exc:

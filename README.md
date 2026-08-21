@@ -13,7 +13,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/Yu-Xiaoyan/LLM-Analogical-Reasoning-Survey)](https://github.com/Yu-Xiaoyan/LLM-Analogical-Reasoning-Survey/commits/main)
 [![Stars](https://img.shields.io/github/stars/Yu-Xiaoyan/LLM-Analogical-Reasoning-Survey?style=social)](https://github.com/Yu-Xiaoyan/LLM-Analogical-Reasoning-Survey/stargazers)
 
-**144** papers · **17** benchmarks · **30** added since the survey
+**177** papers · **17** benchmarks · **30** added since the survey · **33** proposed for the next revision
 
 </div>
 
@@ -46,6 +46,26 @@ by the same taxonomy as our survey.
 </p>
 </details>
 
+## How the field is moving
+
+<p align="center">
+  <img src="figures/trends.png" width="100%" alt="arXiv submissions on analogical reasoning, 2018-2026: volume, share of cs.CL+cs.AI, and growth by facet">
+</p>
+
+Measured from arXiv rather than from this list — a curated list would only
+measure our own reading. Submissions matching *analogical reasoning* grew about
+eightfold since 2018 **(A)**, but cs.CL+cs.AI grew just as fast, so the topic's
+share of its parent field is flat **(B)**: this is a steady concern, not a
+bandwagon. What did change is where the attention goes **(C)** — indexed to
+2018, elicitation and prompting grew ×17.0 against ×6.2–8.4 for every other
+facet, while the mechanism facet's share held constant. The field has shifted
+from *studying* the capability to *using* it, and mechanistic understanding has
+not kept pace.
+
+Counts are arXiv-only, so ACL-Anthology-only and cognitive-science venues are
+undercounted; facets are keyword proxies scoped to `cs.*`; 2026 is partial.
+Reproduce with `make trends`. Raw counts: [`data/trends.csv`](data/trends.csv).
+
 ## Other views
 
 The list below is organised by taxonomy. The same papers, sliced differently:
@@ -75,33 +95,34 @@ If this list or the survey is useful to you, please cite:
 ## Contents
 
 - [🔥 New since the survey](#-new-since-the-survey)
-- [Definitions, Scope & Related Surveys (§2)](#definitions-scope-related-surveys-2) — 16 papers
-  - [Cognitive Science Foundations](#cognitive-science-foundations) — 6
+- [📌 Proposed for the next revision](#-proposed-for-the-next-revision)
+- [Definitions, Scope & Related Surveys (§2)](#definitions-scope-related-surveys-2) — 23 papers
+  - [Cognitive Science Foundations](#cognitive-science-foundations) — 13
   - [Scope & Positioning](#scope-positioning) — 3
   - [Related Surveys](#related-surveys) — 7
-- [Capability Evaluation (§3)](#capability-evaluation-3) — 66 papers
-  - [Symbolic Analogy](#symbolic-analogy) — 14
-  - [Perceptual Analogy](#perceptual-analogy) — 16
+- [Capability Evaluation (§3)](#capability-evaluation-3) — 76 papers
+  - [Symbolic Analogy](#symbolic-analogy) — 15
+  - [Perceptual Analogy](#perceptual-analogy) — 18
   - [Semantic Analogy](#semantic-analogy) — 10
   - [Structural Analogy](#structural-analogy) — 10
-  - [Common Failure Modes](#common-failure-modes) — 4
-  - [Benchmarks & Datasets](#benchmarks-datasets) — 12
-- [Mechanistic Interpretability (§4)](#mechanistic-interpretability-4) — 17 papers
-  - [Relational Representation](#relational-representation) — 6
-  - [Relational Invariance & Reuse](#relational-invariance-reuse) — 4
+  - [Common Failure Modes](#common-failure-modes) — 6
+  - [Benchmarks & Datasets](#benchmarks-datasets) — 17
+- [Mechanistic Interpretability (§4)](#mechanistic-interpretability-4) — 24 papers
+  - [Relational Representation](#relational-representation) — 11
+  - [Relational Invariance & Reuse](#relational-invariance-reuse) — 5
   - [Structural Sensitivity](#structural-sensitivity) — 1
-  - [Process Decomposability](#process-decomposability) — 6
-- [Elicitation & Augmentation (§5)](#elicitation-augmentation-5) — 26 papers
+  - [Process Decomposability](#process-decomposability) — 7
+- [Elicitation & Augmentation (§5)](#elicitation-augmentation-5) — 31 papers
   - [Analogical Prompting](#analogical-prompting) — 8
-  - [Retrieval & Memory Augmentation](#retrieval-memory-augmentation) — 7
-  - [Relational Modeling](#relational-modeling) — 4
+  - [Retrieval & Memory Augmentation](#retrieval-memory-augmentation) — 8
+  - [Relational Modeling](#relational-modeling) — 8
   - [Knowledge-Enhanced Methods](#knowledge-enhanced-methods) — 7
-- [Applications (§6)](#applications-6) — 19 papers
-  - [Textual Analogy Generation & Mining](#textual-analogy-generation-mining) — 5
-  - [Creativity & Design Support](#creativity-design-support) — 2
+- [Applications (§6)](#applications-6) — 23 papers
+  - [Textual Analogy Generation & Mining](#textual-analogy-generation-mining) — 6
+  - [Creativity & Design Support](#creativity-design-support) — 3
   - [Educational Applications](#educational-applications) — 3
-  - [Scientific Knowledge Extraction](#scientific-knowledge-extraction) — 4
-  - [Knowledge Graph Enhancement](#knowledge-graph-enhancement) — 2
+  - [Scientific Knowledge Extraction](#scientific-knowledge-extraction) — 5
+  - [Knowledge Graph Enhancement](#knowledge-graph-enhancement) — 3
   - [Visual & Embodied Intelligence](#visual-embodied-intelligence) — 3
 - [Benchmarks](#benchmarks)
 - [Contributing](#contributing)
@@ -115,87 +136,87 @@ Papers that appeared **after** the survey was finalised (January 2026). This fee
 **2026-08**
 
 - **On the Diversity of Analogy Making in Large Language Models**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.03233)
+  *Yuanhao Shen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.03233)
 
 - **A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.14220)
+  *Pierre-Alexandre Murena and Marcelo Hartmann* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.14220)
 
 - **Proportional Analogies on Probability Distributions via Bayesian Updating**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.11724)
+  *Pierre-Alexandre Murena* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.11724)
 
 - **What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.18186)
+  *Emanuele Ratti and Lena Zuchowski* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.18186)
 
 **2026-07**
 
 - **ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
+  *Ahmed Haj Ahmed and Alvin Grissom* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
 
 - **TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.29586)
+  *Binnan Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.29586)
 
 - **Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.11263)
+  *Jasmin Thelen and Oliver Wilhelm* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.11263)
 
 - **Verbalizable Representations Form a Global Workspace in Language Models**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
+  *Wes Gurnee et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
 
 - ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
+  *Yongqiang Chen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
   > Agentic retrieval of historical analogues for forecasting — the clearest instance so far of the "structure-aware retrieval" direction proposed in §7.2.2 of the survey.
 
 - **Metaphor-Induced Algorithmic Steering: Cross-Domain Procedural Transfer in LLM Code Generation**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.28683)
+  *Zhibo Hu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.28683)
 
 **2026-06**
 
 - **Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.09026)
+  *Ayan Pendharkar* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.09026)
 
 **2026-05**
 
 - **StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
+  *Xixiang He et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
 
 - **Uneven Evolution of Cognition Across Generations of Generative AI Models**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
+  *Isaac Galatzer-Levy et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
 
 - **Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
+  *Zuoyu Zhang and Yancheng Zhu* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
 
 - ⭐ **Unlocking LLM Creativity in Science through Analogical Reasoning**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.11258)  
+  *Andrew Shen, Shaul Druckmann and James Zou* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.11258)  
   > Positions analogy as the operative mechanism behind LLM scientific ideation — the 2026 successor to Ding et al. (2023) on creative cross-domain association.
 
 - **Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.19045)
+  *Claire R. Leibowicz* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.19045)
 
 **2026-04**
 
 - **When Models Know More Than They Say: Probing Analogical Reasoning in LLMs**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
+  *Hope McGovern et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
 
 - **Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
+  *Liangru Xiang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
 
 - **DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
+  *Jiachen Zhang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
 
 - **Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.21346)
+  *Mohit Vaishnav and Tanel Tammet* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.21346)
 
 - ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
+  *Philipp Hellwig et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
   > Training-dynamics evidence that analogical behaviour is scaffolded on an earlier-acquired copying circuit — a concrete developmental story for how the capability arises rather than a static probe.
 
 - **Linear Representations of Hierarchical Concepts in Language Models**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
+  *Masaki Sakata et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
 
 - **CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10504)
+  *Bingzhe Wu, Haotian Lu and Yuchen Mou* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10504)
 
 - ⭐ **Analogical Reasoning as a Doctor: A Foundation Model for Gastrointestinal Endoscopy Diagnosis**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05649)  
+  *Peixi Peng et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05649)  
   > Builds case-to-case analogical matching into a clinical foundation model — the clinical-diagnostics vertical named in §7.2.1 of the survey, now with an actual system behind it.
 
 **2026-03**
@@ -205,11 +226,11 @@ Papers that appeared **after** the survey was finalised (January 2026). This fee
   > Extends visual analogy from single pairs to composition over multiple pairs (5.5k samples); Gemini-2.5 Pro reaches 40.4% against 100% human, with failures traced to decomposing visual change into symbolic rules.
 
 - ⭐ **Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
+  *Ruichen Xu, Wenjing Yan and Ying-Jun Angela Zhang* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
   > A theoretical account of when transformers can implement analogical mapping at all — pairs naturally with Minegishi et al. as the theory side of the same question.
 
 - ⭐ **Enhancing Structural Mapping with LLM-derived Abstractions for Analogical Reasoning in Narratives**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.29997)  
+  *Mohammadhossein Khojasteh et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.29997)  
   > Uses the LLM to produce the abstraction layer and then does explicit structure mapping on top of it — a direct engineering answer to the ARN finding that models default to lexical overlap on narratives.
 
 **2026-02**
@@ -221,10 +242,64 @@ Papers that appeared **after** the survey was finalised (January 2026). This fee
 **2026-01**
 
 - **MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.22050)
+  *Ghazal Kalhor and Behnam Bahrak* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.22050)
 
 - **Relational Knowledge Distillation Using Fine-tuned Function Vectors**  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.08169)
+  *Andrea Kang, Yingnian Wu and Hongjing Lu* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.08169)
+
+---
+
+## 📌 Proposed for the next revision
+
+Papers that belong in the survey but are not cited in v1 — **33** of them, from a coverage audit against the taxonomy. Unlike the feed above, these are not simply newer than the survey; they were missed. `P1` should be added, `P2` is worth adding, `P3` is optional.
+
+### P1 — 12
+
+| Paper | Goes in | Why it changes the survey |
+| --- | --- | --- |
+| [Analogical Problem Solving](https://doi.org/10.1016/0010-0285(80)90013-4)<br><sub>Mary L. Gick and Keith J. Holyoak · 1980</sub> | Definitions, Scope & Related Surveys | The survey uses human performance as its benchmark throughout but cites no human transfer experiment; this is the canonical one. |
+| [Schema Induction and Analogical Transfer](https://doi.org/10.1016/0010-0285(83)90002-6)<br><sub>Mary L. Gick and Keith J. Holyoak · 1983</sub> | Definitions, Scope & Related Surveys | Comparing two source analogues induces a reusable schema — the human result that in-context learning with multiple exemplars mirrors. |
+| [The Structure-Mapping Engine: Algorithm and Examples](https://doi.org/10.1016/0004-3702(89)90077-5)<br><sub>Brian Falkenhainer, Kenneth D. Forbus and Dedre Gentner · 1989</sub> | Definitions, Scope & Related Surveys | §2.1 writes structure-mapping as an algorithm-shaped constraint and cites only Gentner (1983); this is the algorithm that constraint came from. |
+| [The (Too Many) Problems of Analogical Reasoning with Word Vectors](https://aclanthology.org/S17-1017/)<br><sub>Anna Rogers, Aleksandr Drozd and Bofang Li · 2017</sub> | Capability Evaluation | The most-cited statement of the vector-offset critique; §3.5 and §4.1 cite Linzen, Schluter and Fournier but skip it. |
+| [SOLVENT: A Mixed-Initiative System for Finding Analogies between Research Papers](https://doi.org/10.1145/3274300)<br><sub>Joel Chan et al. · 2018</sub> | Applications | Directly implements what §7.2.2 proposes as an opportunity — indexing papers by purpose and mechanism to retrieve cross-domain analogues. |
+| [Distilling Relation Embeddings from Pretrained Language Models](https://aclanthology.org/2021.emnlp-main.712/)<br><sub>Asahi Ushio, Jose Camacho-Collados and Steven Schockaert · 2021</sub> | Elicitation & Augmentation | RelBERT is the central implementation of §5.2's "elevate relations to first-class units", and the survey cites only the same authors' analogy evaluation paper. |
+| [In-context Learning and Induction Heads](https://arxiv.org/abs/2209.11895)<br><sub>Catherine Olsson et al. · 2022</sub> | Mechanistic Interpretability | The mechanism §4.4 needs, and the prerequisite for the 2026 finding that analogical behaviour is scaffolded on a copying circuit. |
+| [Comparing Humans, GPT-4, and GPT-4V on Abstraction and Reasoning Tasks](https://arxiv.org/abs/2311.09247)<br><sub>Melanie Mitchell, Alessandro B. Palmarini and Arseny Moskvichev · 2023</sub> | Capability Evaluation | The survey cites ConceptARC but not the headline evaluation its own authors ran on it — including the finding that the multimodal model does worse than the text-only one. |
+| [In-Context Learning Creates Task Vectors](https://arxiv.org/abs/2310.15916)<br><sub>Roee Hendel, Mor Geva and Amir Globerson · 2023</sub> | Mechanistic Interpretability | Independent, contemporaneous confirmation of the same mechanism; citing both is what makes the finding safe to build on. |
+| [Function Vectors in Large Language Models](https://arxiv.org/abs/2310.15213)<br><sub>Eric Todd et al. · 2024</sub> | Mechanistic Interpretability | §4.1 asks whether the mapped relation admits an explicit, localisable representation. This answers yes, causally, and the survey does not cite it. |
+| [Evidence from Counterfactual Tasks Supports Emergent Analogical Reasoning in Large Language Models](https://arxiv.org/abs/2404.13070)<br><sub>Taylor Webb, Keith J. Holyoak and Hongjing Lu · 2025</sub> | Capability Evaluation | §3.1 stages the emergence debate as claim-then-rebuttal and stops there. This is the authors' reply, and it moves the conclusion from "the ability is illusory" to "it is sensitive to the execution medium". |
+| [VOILA: Evaluation of MLLMs for Perceptual Understanding and Analogical Reasoning](https://arxiv.org/abs/2503.00043)<br><sub>Nilay Yilmaz et al. · 2025</sub> | Capability Evaluation | Missing from Table 1 despite predating the survey. It is the strongest perceptual-analogy counter-evidence because it requires generating the completion rather than selecting it, closing the multiple-choice shortcut. |
+
+### P2 — 17
+
+| Paper | Goes in | Why it changes the survey |
+| --- | --- | --- |
+| [Analogical Mapping by Constraint Satisfaction](https://doi.org/10.1207/s15516709cog1303_1)<br><sub>Keith J. Holyoak and Paul Thagard · 1989</sub> | Definitions, Scope & Related Surveys | The constraint-satisfaction rival to SME; the historical precedent for §5.2's neuro-symbolic framing. |
+| [MAC/FAC: A Model of Similarity-Based Retrieval](https://doi.org/10.1207/s15516709cog1902_1)<br><sub>Kenneth D. Forbus, Dedre Gentner and Keith Law · 1995</sub> | Elicitation & Augmentation | §7.2.2 proposes structure-aware retrieval as future work; this is the original two-stage cheap-then-structural retrieval model, from 1995. |
+| [Distributed Representations of Structure: A Theory of Analogical Access and Mapping](https://doi.org/10.1037/0033-295X.104.3.427)<br><sub>John E. Hummel and Keith J. Holyoak · 1997</sub> | Definitions, Scope & Related Surveys | §6 currently refers to "the LISA model" through Raad & Evermann (2015) without citing LISA itself — a second-hand citation worth fixing. |
+| [Computational Models of Analogy](https://doi.org/10.1002/wcs.105)<br><sub>Dedre Gentner and Kenneth D. Forbus · 2011</sub> | Definitions, Scope & Related Surveys | One citation covering SME, ACME, LISA and MAC/FAC, if there is no room to cite them individually. |
+| [Word Embeddings, Analogies, and Machine Learning: Beyond King - Man + Woman = Queen](https://aclanthology.org/C16-1332/)<br><sub>Aleksandr Drozd, Anna Gladkova and Satoshi Matsuoka · 2016</sub> | Capability Evaluation | The constructive half of the critique — 3CosAvg and LRCos partly answer the similarity dependence, so citing only the critique overstates how unsolved it is. |
+| [Bongard-LOGO: A New Benchmark for Human-Level Concept Learning and Reasoning](https://arxiv.org/abs/2010.00763)<br><sub>Weili Nie et al. · 2020</sub> | Capability Evaluation | §3.2 cites an MLLM evaluation on Bongard problems without citing the dataset that evaluation runs on. |
+| [Emergent Symbols through Binding in a Neural Network](https://arxiv.org/abs/2012.07172)<br><sub>Taylor Webb, Ishan Sinha and Jonathan D. Cohen · 2021</sub> | Mechanistic Interpretability | Webb was building abstract-rule architectures before the LLM claim; this is where the 2023 position comes from, and it grounds §4.2. |
+| [Neural Analogical Matching](https://arxiv.org/abs/2004.03573)<br><sub>Maxwell Crouse et al. · 2021</sub> | Mechanistic Interpretability | A neural implementation of SME — the bridge between §4's representational questions and §5.2's neuro-symbolic methods. |
+| [Data-Driven Design-by-Analogy: State of the Art and Future Directions](https://arxiv.org/abs/2106.01592)<br><sub>Shuo Jiang, Jianxi Luo et al. · 2021</sub> | Applications | §6's creativity and design subsection has only two entries; this is the field's own review and the anchor that subsection is missing. |
+| [Augmenting Scientific Creativity with Retrieval across Knowledge Domains](https://arxiv.org/abs/2206.01328)<br><sub>Hyeonsu B. Kang et al. · 2022</sub> | Applications | User-study evidence that cross-domain analogical retrieval changes what researchers produce — §6 currently argues utility without such evidence. |
+| [Solving Hard Analogy Questions with Relation Embedding Chains](https://arxiv.org/abs/2310.12379)<br><sub>Nitesh Kumar and Steven Schockaert · 2023</sub> | Elicitation & Augmentation | Composes relations into chains to reach far-domain pairs — a concrete method for the far-analogy failures documented in §3.4. |
+| [Do Large Language Models Solve ARC Visual Analogies Like People Do?](https://arxiv.org/abs/2403.09734)<br><sub>Gustaw Opiełka et al. · 2024</sub> | Capability Evaluation | Direct human-vs-model error analysis on ARC; the prequel to Opiełka et al. (2025), which the survey already cites twice. |
+| [ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems](https://arxiv.org/abs/2505.11831)<br><sub>François Chollet et al. · 2025</sub> | Capability Evaluation | The survey anchors on Chollet (2019) for what ARC measures; the benchmark has since been recalibrated, and any current SOTA claim needs v2. |
+| [Which Attention Heads Matter for In-Context Learning?](https://www.semanticscholar.org/search?q=Which+Attention+Heads+Matter+for+In-Context+Learning%3F)<br><sub>TBD — run scripts/fetch_meta.py · 2025</sub> | Mechanistic Interpretability | Separates induction heads from function-vector heads and finds the former often mature into the latter — a developmental account that §4 can use. |
+| [RelBERT: Embedding Relations with Language Models](https://arxiv.org/abs/2310.00299)<br><sub>Asahi Ushio, Jose Camacho-Collados and Steven Schockaert · 2025</sub> | Elicitation & Augmentation | Journal extension with cross-relation-type generalisation evidence. |
+| [AnRe: Analogical Replay for Temporal Knowledge Graph Forecasting](https://www.semanticscholar.org/search?q=AnRe%3A+Analogical+Replay+for+Temporal+Knowledge+Graph+Forecasting)<br><sub>TBD — run scripts/fetch_meta.py · 2025</sub> | Applications | §6's knowledge-graph subsection has two entries and stops at 2023; this is directly relevant 2025 work. |
+| [Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models](https://arxiv.org/abs/2602.07794)<br><sub>TBD — run scripts/fetch_meta.py · 2026</sub> | Mechanistic Interpretability | Pairs with Minegishi et al. (2026) as the second independent mechanistic result of the year; together they are enough to rewrite §4.2. |
+
+### P3 — 4
+
+| Paper | Goes in | Why it changes the survey |
+| --- | --- | --- |
+| [Analogy-Making as Perception: A Computer Model](https://doi.org/10.7551/mitpress/1251.001.0001)<br><sub>Melanie Mitchell · 1993</sub> | Definitions, Scope & Related Surveys | Copycat. Shows that Mitchell's critiques in §3.1–3.2 rest on thirty years of building analogy systems, not on a reaction to LLMs. |
+| [The Latent Relation Mapping Engine: Algorithm and Experiments](https://arxiv.org/abs/0812.4446)<br><sub>Peter D. Turney · 2008</sub> | Elicitation & Augmentation | The survey cites Turney (2006) on relational similarity; this is the mapping engine built from it, and the corpus-based counterpart to SME. |
+| [Bongard-HOI: Benchmarking Few-Shot Visual Reasoning for Human-Object Interactions](https://arxiv.org/abs/2205.13803)<br><sub>Huaizu Jiang et al. · 2022</sub> | Capability Evaluation | Extends the Bongard paradigm to natural images, bridging §3.2 and the embodied applications in §6. |
+| [A Benchmark for Compositional Visual Reasoning](https://arxiv.org/abs/2206.05379)<br><sub>Aimen Zerroug et al. · 2022</sub> | Capability Evaluation | Measures sample efficiency and rule transfer, which is what §3.5's "fragile rule generalisation" claim needs to be quantitative. |
 
 ---
 
@@ -236,24 +311,47 @@ Papers that appeared **after** the survey was finalised (January 2026). This fee
 
 _Structure-mapping theory and the classical account of analogy._
 
+- ⭐ **The Structure-Mapping Engine: Algorithm and Examples** `PROPOSED · P1`  
+  *Brian Falkenhainer, Kenneth D. Forbus and Dedre Gentner* — Artificial Intelligence 1989 · [paper](https://doi.org/10.1016/0004-3702(89)90077-5)  
+  > Turns structure-mapping theory into a working matcher — the reference implementation every later computational account is measured against.
+
 - ⭐ **Structure-Mapping: A Theoretical Framework for Analogy**  
-  *Dedre Gentner* — Cognitive Science 1983 · [search](https://www.semanticscholar.org/search?q=Structure-Mapping%3A+A+Theoretical+Framework+for+Analogy)  
+  *Dedre Gentner* — Cognitive Science 1983 · [paper](https://doi.org/10.1016/b978-1-4832-1446-7.50026-1)  
   > The foundational account: analogy aligns two domains by a one-to-one object mapping that preserves relations, and the systematicity principle says we prefer mappings that carry interconnected higher-order structure (causal chains) over isolated shared attributes.
 
+- ⭐ **Analogical Problem Solving** `PROPOSED · P1`  
+  *Mary L. Gick and Keith J. Holyoak* — Cognitive Psychology 1980 · [paper](https://doi.org/10.1016/0010-0285(80)90013-4)  
+  > The radiation/fortress studies — only 10% of people spontaneously transfer the analogous solution, rising to 75–92% once told the story is relevant. The human baseline for far analogy is far worse than usually assumed.
+
 - **Analogy Between Concepts**  
-  *Nelly Barbot, Laurent Miclet and Henri Prade* — Artificial Intelligence 2019 · [search](https://www.semanticscholar.org/search?q=Analogy+Between+Concepts)
+  *Nelly Barbot, Laurent Miclet and Henri Prade* — Artificial Intelligence 2019 · [paper](https://doi.org/10.1016/j.artint.2019.06.008)
 
 - **Surfaces and Essences: Analogy as the Fuel and Fire of Thinking**  
   *Douglas Hofstadter and Emmanuel Sander* — Basic Books 2013 · [search](https://www.semanticscholar.org/search?q=Surfaces+and+Essences%3A+Analogy+as+the+Fuel+and+Fire+of+Thinking)
 
+- **Computational Models of Analogy** `PROPOSED · P2`  
+  *Dedre Gentner and Kenneth D. Forbus* — WIREs Cognitive Science 2011 · [paper](https://doi.org/10.1002/wcs.105)
+
 - **Analogy as the Core of Cognition**  
   *Douglas R. Hofstadter* — The Analogical Mind 2001 · [search](https://www.semanticscholar.org/search?q=Analogy+as+the+Core+of+Cognition)
+
+- **Distributed Representations of Structure: A Theory of Analogical Access and Mapping** `PROPOSED · P2`  
+  *John E. Hummel and Keith J. Holyoak* — Psychological Review 1997 · [paper](https://doi.org/10.1037/0033-295X.104.3.427)
+
+- **Analogy-Making as Perception: A Computer Model** `PROPOSED · P3`  
+  *Melanie Mitchell* — MIT Press 1993 · [paper](https://doi.org/10.7551/mitpress/1251.001.0001)
 
 - **Analogical Learning**  
   *Dedre Gentner* — Similarity and Analogical Reasoning 1989 · [search](https://www.semanticscholar.org/search?q=Analogical+Learning)
 
+- **Analogical Mapping by Constraint Satisfaction** `PROPOSED · P2`  
+  *Keith J. Holyoak and Paul Thagard* — Cognitive Science 1989 · [paper](https://doi.org/10.1207/s15516709cog1303_1)
+
 - **Connectionism and Cognitive Architecture: A Critical Analysis**  
-  *Jerry A. Fodor and Zenon W. Pylyshyn* — Cognition 1988 · [search](https://www.semanticscholar.org/search?q=Connectionism+and+Cognitive+Architecture%3A+A+Critical+Analysis)
+  *Jerry A. Fodor and Zenon W. Pylyshyn* — Cognition 1988 · [paper](https://doi.org/10.7551/mitpress/2103.003.0002)
+
+- **Schema Induction and Analogical Transfer** `PROPOSED · P1`  
+  *Mary L. Gick and Keith J. Holyoak* — Cognitive Psychology 1983 · [paper](https://doi.org/10.1016/0010-0285(83)90002-6)
 
 ### Scope & Positioning
 
@@ -264,7 +362,7 @@ _Work that frames analogy relative to other reasoning modes._
   > Defines intelligence as skill-acquisition efficiency rather than skill itself, and introduces ARC — the reason abstraction-and-analogy benchmarks became the standard stress test for "fluid" intelligence in AI.
 
 - **Compositionality Decomposed: How Do Neural Networks Generalise?**  
-  *Dieuwke Hupkes et al.* — JAIR 2020 · [search](https://www.semanticscholar.org/search?q=Compositionality+Decomposed%3A+How+Do+Neural+Networks+Generalise%3F)
+  *Dieuwke Hupkes et al.* — JAIR 2020 · [paper](https://doi.org/10.1613/jair.1.11674)
 
 - **Learning Analogies and Semantic Relations**  
   *Peter D. Turney and Michael L. Littman* — arXiv 2003 · [paper](https://arxiv.org/abs/cs/0307055)
@@ -281,7 +379,7 @@ _Adjacent surveys on LLM reasoning, abstract visual reasoning, and analogy._
   *Zixuan Ke et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2504.09037)
 
 - **Deep Learning Methods for Abstract Visual Reasoning: A Survey on Raven's Progressive Matrices**  
-  *Mikołaj Małkiński and Jacek Mańdziuk* — ACM Computing Surveys 2025 · [search](https://www.semanticscholar.org/search?q=Deep+Learning+Methods+for+Abstract+Visual+Reasoning%3A+A+Survey+on+Raven%27s+Progressive+Matrices)
+  *Mikołaj Małkiński and Jacek Mańdziuk* — ACM Computing Surveys 2025 · [paper](https://doi.org/10.1145/3715093)
 
 - **Logical Reasoning in Large Language Models: A Survey**  
   *Hanmeng Liu et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2502.09100)
@@ -290,10 +388,10 @@ _Adjacent surveys on LLM reasoning, abstract visual reasoning, and analogy._
   *Fengli Xu et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2501.09686)
 
 - **A Survey on In-Context Learning**  
-  *Qingxiu Dong et al.* — EMNLP 2024 · [search](https://www.semanticscholar.org/search?q=A+Survey+on+In-Context+Learning)
+  *Qingxiu Dong et al.* — EMNLP 2024 · [paper](https://arxiv.org/abs/2301.00234)
 
 - **Towards Reasoning in Large Language Models: A Survey**  
-  *Jie Huang and Kevin Chen-Chuan Chang* — ACL Findings 2023 · [search](https://www.semanticscholar.org/search?q=Towards+Reasoning+in+Large+Language+Models%3A+A+Survey)
+  *Jie Huang and Kevin Chen-Chuan Chang* — ACL Findings 2023 · [paper](https://aclanthology.org/2023.findings-acl.67/)
 
 ## Capability Evaluation (§3)
 
@@ -307,8 +405,12 @@ _Zero-shot generalisation over formal rules with semantics stripped out — lett
   *Gustaw Opiełka, Hannes Rosenbusch and Claire E. Stevenson* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.03666)  
   > Bridges evaluation and interpretability — LLMs do form reusable concept vectors for relations, but the representations degrade fast when transferred across tasks/domains or when higher-order alignment is needed.
 
+- ⭐ **Evidence from Counterfactual Tasks Supports Emergent Analogical Reasoning in Large Language Models** `PROPOSED · P1`  
+  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — PNAS Nexus 2025 · [paper](https://arxiv.org/abs/2404.13070)  
+  > Answers the counterfactual critiques: models do generalise to arbitrarily permuted alphabets once allowed to write and run code, so the failures localise to mental execution rather than to the mapping itself.
+
 - ⭐ **Relevant or Random: Can LLMs Truly Perform Analogical Reasoning?**  
-  *Chengwei Qin et al.* — ACL Findings 2025 · [search](https://www.semanticscholar.org/search?q=Relevant+or+Random%3A+Can+LLMs+Truly+Perform+Analogical+Reasoning%3F)  
+  *Chengwei Qin et al.* — ACL Findings 2025 · [paper](https://aclanthology.org/2025.findings-acl.1230/)  
   > Self-generated "relevant" exemplars help no more than random ones on many tasks — a pointed challenge to the premise behind analogical prompting.
 
 - ⭐ **Evaluating the Robustness of Analogical Reasoning in Large Language Models**  
@@ -316,7 +418,7 @@ _Zero-shot generalisation over formal rules with semantics stripped out — lett
   > Systematic robustness study across letter-strings, digit matrices and story analogies: humans stay flat under counterfactual variants while GPT models degrade sharply — the strongest evidence that the ability is non-robust.
 
 - ⭐ **Emergent Analogical Reasoning in Large Language Models**  
-  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — Nature Human Behaviour 2023 · [search](https://www.semanticscholar.org/search?q=Emergent+Analogical+Reasoning+in+Large+Language+Models)  
+  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — Nature Human Behaviour 2023 · [paper](https://doi.org/10.1038/s41562-023-01659-w)  
   > The paper that started the debate — GPT-3 matches or exceeds humans on letter-string analogies, digit matrices and story analogies zero-shot, which the authors read as an emergent capacity for abstract mapping.
 
 - ⭐ **Response: Emergent Analogical Reasoning in Large Language Models**  
@@ -330,22 +432,22 @@ _Zero-shot generalisation over formal rules with semantics stripped out — lett
   *Andrea Gregor de Varda, Chiara Saponaro and Marco Marelli* — I4R Discussion Paper Series 2025 · [search](https://www.semanticscholar.org/search?q=Emergent+Analogical+Reasoning+in+Large+Language+Models%3A+A+Replication+with+Open-Weights+Alternatives)
 
 - **Auxiliary Task Demands Mask the Capabilities of Smaller Language Models**  
-  *Jennifer Hu and Michael Frank* — COLM 2024 · [search](https://www.semanticscholar.org/search?q=Auxiliary+Task+Demands+Mask+the+Capabilities+of+Smaller+Language+Models)
+  *Jennifer Hu and Michael Frank* — COLM 2024 · [paper](https://arxiv.org/abs/2404.02418)
 
 - **Can Large Language Models Generalize Analogy Solving Like People Can?**  
   *Claire E. Stevenson, Alexandra Pafford, Han L. J. van der Maas and Melanie Mitchell* — CoRR 2024 · [search](https://www.semanticscholar.org/search?q=Can+Large+Language+Models+Generalize+Analogy+Solving+Like+People+Can%3F)
 
 - **Towards Learning to Reason: Comparing LLMs with Neuro-Symbolic on Arithmetic Relations in Abstract Reasoning**  
-  *Michael Hersche, Giacomo Camposampiero, Roger Wattenhofer, Abu Sebastian and Abbas Rahimi* — arXiv 2024 · [search](https://www.semanticscholar.org/search?q=Towards+Learning+to+Reason%3A+Comparing+LLMs+with+Neuro-Symbolic+on+Arithmetic+Relations+in+Abstract+Reasoning)
+  *Michael Hersche, Giacomo Camposampiero, Roger Wattenhofer, Abu Sebastian and Abbas Rahimi* — arXiv 2024 · [paper](https://doi.org/10.1177/29498732261419316)
 
 - **Using Counterfactual Tasks to Evaluate the Generality of Analogical Reasoning in Large Language Models**  
-  *Martha Anne Lewis and Melanie Mitchell* — CoRR 2024 · [search](https://www.semanticscholar.org/search?q=Using+Counterfactual+Tasks+to+Evaluate+the+Generality+of+Analogical+Reasoning+in+Large+Language+Models)
+  *Martha Anne Lewis and Melanie Mitchell* — CoRR 2024 · [paper](https://arxiv.org/abs/2402.08955)
 
 - **Do Large Language Models Solve Verbal Analogies Like Children Do?**  
-  *Claire E. Stevenson et al.* — CoRR 2023 · [search](https://www.semanticscholar.org/search?q=Do+Large+Language+Models+Solve+Verbal+Analogies+Like+Children+Do%3F)
+  *Claire E. Stevenson et al.* — CoRR 2023 · [paper](https://aclanthology.org/2025.conll-1.40/)
 
 - **In-Context Analogical Reasoning with Pre-Trained Language Models**  
-  *Xiaoyang Hu, Shane Storks, Richard L. Lewis and Joyce Chai* — ACL 2023 · [search](https://www.semanticscholar.org/search?q=In-Context+Analogical+Reasoning+with+Pre-Trained+Language+Models)
+  *Xiaoyang Hu, Shane Storks, Richard L. Lewis and Joyce Chai* — ACL 2023 · [paper](https://aclanthology.org/2023.acl-long.109/)
 
 - **Advances in Connectionist and Neural Computation Theory**  
   *John A. Barnden* — Ablex 1991 · [search](https://www.semanticscholar.org/search?q=Advances+in+Connectionist+and+Neural+Computation+Theory)
@@ -359,34 +461,38 @@ _Inducing logical patterns from non-verbal, multi-modal stimuli — RPM/ARC-styl
   > Extends visual analogy from single pairs to composition over multiple pairs (5.5k samples); Gemini-2.5 Pro reaches 40.4% against 100% human, with failures traced to decomposing visual change into symbolic rules.
 
 - ⭐ **KiVA: Kid-Inspired Visual Analogies for Testing Large Multimodal Models**  
-  *Eunice Yiu et al.* — ICLR 2025 · [search](https://www.semanticscholar.org/search?q=KiVA%3A+Kid-Inspired+Visual+Analogies+for+Testing+Large+Multimodal+Models)  
+  *Eunice Yiu et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2407.17773)  
   > Visual analogies over everyday-object transformations that young children solve easily; large multimodal models lag children badly, and often explain the transformation correctly in text while failing to execute it visually.
 
 - ⭐ **What Is an "Abstract Reasoner"? Revisiting Experiments and Arguments About Large Language Models**  
-  *Tian Yun, Chen Sun and Ellie Pavlick* — CoNLL 2025 · [search](https://www.semanticscholar.org/search?q=What+Is+an+%22Abstract+Reasoner%22%3F+Revisiting+Experiments+and+Arguments+About+Large+Language+Models)  
+  *Tian Yun, Chen Sun and Ellie Pavlick* — CoNLL 2025 · [paper](https://aclanthology.org/2025.conll-1.11/)  
   > Shows the "abstract reasoner or not" question is partly ill-posed: tuning only the input representation recovers near-ceiling performance, so the deficit sits in interfacing, not in the underlying abstraction.
 
+- ⭐ **Comparing Humans, GPT-4, and GPT-4V on Abstraction and Reasoning Tasks** `PROPOSED · P1`  
+  *Melanie Mitchell, Alessandro B. Palmarini and Arseny Moskvichev* — arXiv 2023 · [paper](https://arxiv.org/abs/2311.09247)  
+  > Better prompting lifts GPT-4 well above earlier reported ARC scores yet still far below humans, and GPT-4V underperforms GPT-4 — evidence that vision hurts rather than helps on grid abstraction.
+
 - ⭐ **The ConceptARC Benchmark: Evaluating Understanding and Generalization in the ARC Domain**  
-  *Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell* — TMLR 2023 · [search](https://www.semanticscholar.org/search?q=The+ConceptARC+Benchmark%3A+Evaluating+Understanding+and+Generalization+in+the+ARC+Domain)  
+  *Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell* — TMLR 2023 · [paper](https://arxiv.org/abs/2305.07141)  
   > Restructures ARC around 16 named spatial/semantic concepts so failures are diagnosable rather than just a score — the standard tool for asking whether a system grasps a concept or just fits its instances.
 
 - **Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.11263)
+  *Jasmin Thelen and Oliver Wilhelm* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.11263)
 
 - **DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
+  *Jiachen Zhang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
 
 - **StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
+  *Xixiang He et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
 
 - **Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.09026)
+  *Ayan Pendharkar* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.09026)
 
 - **Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.21346)
+  *Mohit Vaishnav and Tanel Tammet* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.21346)
 
 - **TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.29586)
+  *Binnan Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.29586)
 
 - **Can Large Reasoning Models Do Analogical Reasoning Under Perceptual Uncertainty?**  
   *Giacomo Camposampiero, Michael Hersche, Roger Wattenhofer, Abu Sebastian and Abbas Rahimi* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.11207)
@@ -398,48 +504,51 @@ _Inducing logical patterns from non-verbal, multi-modal stimuli — RPM/ARC-styl
   *Shuhao Fu* — PhD Thesis, UCLA 2025 · [search](https://www.semanticscholar.org/search?q=Perception+and+Reasoning+with+Visual+Relations+in+Humans+and+Machines)
 
 - **Reasoning Limitations of Multimodal Large Language Models: A Case Study of Bongard Problems**  
-  *Mikołaj Małkiński, Szymon Pawlonka and Jacek Mańdziuk* — ICML 2025 · [search](https://www.semanticscholar.org/search?q=Reasoning+Limitations+of+Multimodal+Large+Language+Models%3A+A+Case+Study+of+Bongard+Problems)
+  *Mikołaj Małkiński, Szymon Pawlonka and Jacek Mańdziuk* — ICML 2025 · [paper](https://arxiv.org/abs/2411.01173)
+
+- **Do Large Language Models Solve ARC Visual Analogies Like People Do?** `PROPOSED · P2`  
+  *Gustaw Opiełka et al.* — arXiv 2024 · [paper](https://arxiv.org/abs/2403.09734)
 
 - **The Curious Case of Nonverbal Abstract Reasoning with Multi-Modal Large Language Models**  
-  *Kian Ahrabian et al.* — COLM 2024 · [search](https://www.semanticscholar.org/search?q=The+Curious+Case+of+Nonverbal+Abstract+Reasoning+with+Multi-Modal+Large+Language+Models)
+  *Kian Ahrabian et al.* — COLM 2024 · [paper](https://arxiv.org/abs/2401.12117)
 
 - **RAVEN: A Dataset for Relational and Analogical Visual Reasoning**  
-  *Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu* — CVPR 2019 · [search](https://www.semanticscholar.org/search?q=RAVEN%3A+A+Dataset+for+Relational+and+Analogical+Visual+Reasoning)
+  *Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu* — CVPR 2019 · [paper](https://doi.org/10.1109/cvpr.2019.00546)
 
 ### Semantic Analogy
 
 _Correspondence between linguistic concepts — proportional analogies (A:B::C:D), metaphorical mappings, analogy-based concept explanation._
 
 - ⭐ **How Are Metaphors Processed by Language Models? The Case of Analogies**  
-  *Joanne Boisson et al.* — CoNLL 2024 · [search](https://www.semanticscholar.org/search?q=How+Are+Metaphors+Processed+by+Language+Models%3F+The+Case+of+Analogies)  
+  *Joanne Boisson et al.* — CoNLL 2024 · [paper](https://aclanthology.org/2024.conll-1.28/)  
   > Finds a divergence between implicit probability (perplexity) and explicit understanding — models often cannot flag semantically anomalous analogies unless prompted to, even when their likelihoods "know" better.
 
 - **A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.14220)
+  *Pierre-Alexandre Murena and Marcelo Hartmann* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.14220)
 
 - **On the Diversity of Analogy Making in Large Language Models** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.03233)
+  *Yuanhao Shen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.03233)
 
 - **Proportional Analogies on Probability Distributions via Bayesian Updating** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.11724)
+  *Pierre-Alexandre Murena* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.11724)
 
 - **When Models Know More Than They Say: Probing Analogical Reasoning in LLMs** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
+  *Hope McGovern et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
 
 - **KnowledgePrompts: Exploring the Abilities of Large Language Models to Solve Proportional Analogies via Knowledge-Enhanced Prompting**  
-  *Thilini Wijesiriwardene et al.* — COLING 2025 · [search](https://www.semanticscholar.org/search?q=KnowledgePrompts%3A+Exploring+the+Abilities+of+Large+Language+Models+to+Solve+Proportional+Analogies+via+Knowledge-Enhanced+Prompting)
+  *Thilini Wijesiriwardene et al.* — COLING 2025 · [paper](https://arxiv.org/abs/2412.00869)
 
 - **Analogical Proportions and Creativity: A Preliminary Study**  
-  *Stergos Afantenos, Henri Prade, Gilles Richard and Leonardo Cortez-Bernades* — ICCC 2024 · [search](https://www.semanticscholar.org/search?q=Analogical+Proportions+and+Creativity%3A+A+Preliminary+Study)
+  *Stergos Afantenos, Henri Prade, Gilles Richard and Leonardo Cortez-Bernades* — ICCC 2024 · [paper](https://arxiv.org/abs/2310.13500)
 
 - **Boosting Scientific Concepts Understanding: Can Analogy from Teacher Models Empower Student Models?**  
-  *Siyu Yuan, Cheng Jiayang, Lin Qiu and Deqing Yang* — EMNLP 2024 · [search](https://www.semanticscholar.org/search?q=Boosting+Scientific+Concepts+Understanding%3A+Can+Analogy+from+Teacher+Models+Empower+Student+Models%3F)
+  *Siyu Yuan, Cheng Jiayang, Lin Qiu and Deqing Yang* — EMNLP 2024 · [paper](https://aclanthology.org/2024.emnlp-main.346/)
 
 - **Evaluating Approaches to Solving Proportional Sentence Analogies**  
   *Yves Blain-Montesano* — n/a 2024 · [search](https://www.semanticscholar.org/search?q=Evaluating+Approaches+to+Solving+Proportional+Sentence+Analogies)
 
 - **Analogical Reasoning on Chinese Morphological and Semantic Relations**  
-  *Shen Li et al.* — ACL 2018 · [search](https://www.semanticscholar.org/search?q=Analogical+Reasoning+on+Chinese+Morphological+and+Semantic+Relations)
+  *Shen Li et al.* — ACL 2018 · [paper](https://aclanthology.org/p18-2023/)
 
 ### Structural Analogy
 
@@ -454,10 +563,10 @@ _Systematic mapping of causal structure across disparate domains — narrative m
   > Reframes the task as abducing the latent mapping between two systems rather than picking an answer — models do far better when the structure is made an explicit output than when it stays implicit.
 
 - **Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
+  *Liangru Xiang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
 
 - **Evaluating the Trade-off Between Analogical Reasoning Ability and Efficiency in Large Language Models**  
-  *Kara L. Combs et al.* — IEEE TCDS 2025 · [search](https://www.semanticscholar.org/search?q=Evaluating+the+Trade-off+Between+Analogical+Reasoning+Ability+and+Efficiency+in+Large+Language+Models)
+  *Kara L. Combs et al.* — IEEE TCDS 2025 · [paper](https://doi.org/10.1109/tcds.2025.3559771)
 
 - **Exploring Causal and Compositional Reasoning in Large Language Models**  
   *Magnus Gjerde, Vanessa Cheung and David Lagnado* — CogSci 2025 · [search](https://www.semanticscholar.org/search?q=Exploring+Causal+and+Compositional+Reasoning+in+Large+Language+Models)
@@ -469,37 +578,48 @@ _Systematic mapping of causal structure across disparate domains — narrative m
   *Kara Combs, Trevor Bihl, Spencer Howlett and Yuki Adams* — n/a 2025 · [search](https://www.semanticscholar.org/search?q=Zero-Shot+Comparison+of+Large+Language+Models%27+Reasoning+Abilities+on+Long-Text+Analogies)
 
 - **A Systematic Assessment of OpenAI o1-Preview for Higher Order Thinking in Education**  
-  *Ehsan Latif et al.* — CoRR 2024 · [search](https://www.semanticscholar.org/search?q=A+Systematic+Assessment+of+OpenAI+o1-Preview+for+Higher+Order+Thinking+in+Education)
+  *Ehsan Latif et al.* — CoRR 2024 · [paper](https://arxiv.org/abs/2410.21287)
 
 - **Proportions Analogiques et Créativité: Une Étude Préliminaire**  
   *Stergos Afantenos, Henri Prade, Gilles Richard and Leonardo Cortez-Bernades* — JIAF 2024 · [search](https://www.semanticscholar.org/search?q=Proportions+Analogiques+et+Cr%C3%A9ativit%C3%A9%3A+Une+%C3%89tude+Pr%C3%A9liminaire)
 
 - **Fluid Transformers and Creative Analogies: Exploring Large Language Models' Capacity for Augmenting Cross-Domain Analogical Creativity**  
-  *Zijian Ding, Arvind Srinivasan, Stephen MacNeil and Joel Chan* — Creativity and Cognition 2023 · [search](https://www.semanticscholar.org/search?q=Fluid+Transformers+and+Creative+Analogies%3A+Exploring+Large+Language+Models%27+Capacity+for+Augmenting+Cross-Domain+Analogical+Creativity)
+  *Zijian Ding, Arvind Srinivasan, Stephen MacNeil and Joel Chan* — Creativity and Cognition 2023 · [paper](https://doi.org/10.1145/3591196.3593516)
 
 ### Common Failure Modes
 
 _Surface shortcuts, fragile rule generalisation, and input–output inconsistency. Evidence that the capability is not what it looks like._
+
+- ⭐ **The (Too Many) Problems of Analogical Reasoning with Word Vectors** `PROPOSED · P1`  
+  *Anna Rogers, Aleksandr Drozd and Bofang Li* — *SEM 2017 · [paper](https://aclanthology.org/S17-1017/)  
+  > Vector-offset analogy accuracy tracks the similarity of the source pair rather than the relation, so the benchmark measures proximity, not relational knowledge.
 
 - ⭐ **Issues in Evaluating Semantic Spaces Using Word Analogies**  
   *Tal Linzen* — RepEval 2016 · [paper](https://arxiv.org/abs/1606.07736)  
   > The original caution for this whole literature — vector-offset analogy scores are inflated by nearest-neighbour effects, so a high number does not demonstrate that the relation is represented at all.
 
 - **Uneven Evolution of Cognition Across Generations of Generative AI Models** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
+  *Isaac Galatzer-Levy et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
 
 - **Semantically Guided Analogical Reasoning in Humans and Large Language Models**  
   *Alex Duchnowski* — n/a 2024 · [search](https://www.semanticscholar.org/search?q=Semantically+Guided+Analogical+Reasoning+in+Humans+and+Large+Language+Models)
 
 - **The Word Analogy Testing Caveat**  
-  *Natalie Schluter* — NAACL 2018 · [search](https://www.semanticscholar.org/search?q=The+Word+Analogy+Testing+Caveat)
+  *Natalie Schluter* — NAACL 2018 · [paper](https://aclanthology.org/n18-2039/)
+
+- **Word Embeddings, Analogies, and Machine Learning: Beyond King - Man + Woman = Queen** `PROPOSED · P2`  
+  *Aleksandr Drozd, Anna Gladkova and Satoshi Matsuoka* — COLING 2016 · [paper](https://aclanthology.org/C16-1332/)
 
 ### Benchmarks & Datasets
 
 _Resources built specifically to measure analogical ability._
 
+- ⭐ **VOILA: Evaluation of MLLMs for Perceptual Understanding and Analogical Reasoning** `PROPOSED · P1`  
+  *Nilay Yilmaz et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2503.00043) · [code](https://github.com/nlylmz/Voila)  
+  > Open-ended visual analogy at up to 6.4M items: the model must generate the image completing the analogy. Best model 13–29% against 70% for humans.
+
 - ⭐ **AnaloBench: Benchmarking the Identification of Abstract and Long-Context Analogies**  
-  *Xiao Ye et al.* — EMNLP 2024 · [search](https://www.semanticscholar.org/search?q=AnaloBench%3A+Benchmarking+the+Identification+of+Abstract+and+Long-Context+Analogies)  
+  *Xiao Ye et al.* — EMNLP 2024 · [paper](https://aclanthology.org/2024.emnlp-main.725/)  
   > Long-context analogy identification over story sets — scaling model size barely helps, and performance drops sharply as the story pool grows, isolating retrieval-over-structure as the bottleneck.
 
 - ⭐ **E-KAR: A Benchmark for Rationalizing Natural Language Analogical Reasoning**  
@@ -507,16 +627,19 @@ _Resources built specifically to measure analogical ability._
   > Knowledge-intensive analogy QA from civil-service exams that requires a free-text explanation alongside the answer — it tests "knowing why", not just "knowing what".
 
 - **ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
+  *Ahmed Haj Ahmed and Alvin Grissom* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
 
 - **MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.22050)
+  *Ghazal Kalhor and Behnam Bahrak* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.22050)
+
+- **ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems** `PROPOSED · P2`  
+  *François Chollet et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.11831)
 
 - **ParallelPARC: A Scalable Pipeline for Generating Natural-Language Analogies**  
-  *Oren Sultan, Yonatan Bitton, Ron Yosef and Dafna Shahaf* — NAACL 2025 · [search](https://www.semanticscholar.org/search?q=ParallelPARC%3A+A+Scalable+Pipeline+for+Generating+Natural-Language+Analogies)
+  *Oren Sultan, Yonatan Bitton, Ron Yosef and Dafna Shahaf* — NAACL 2025 · [paper](https://aclanthology.org/2024.naacl-long.329/)
 
 - **ANALOGICAL: A Novel Benchmark for Long Text Analogy Evaluation in Large Language Models**  
-  *Thilini Wijesiriwardene et al.* — ACL Findings 2023 · [search](https://www.semanticscholar.org/search?q=ANALOGICAL%3A+A+Novel+Benchmark+for+Long+Text+Analogy+Evaluation+in+Large+Language+Models)
+  *Thilini Wijesiriwardene et al.* — ACL Findings 2023 · [paper](https://aclanthology.org/2023.findings-acl.218/)
 
 - **StoryAnalogy: Deriving Story-Level Analogies from Large Language Models to Unlock Analogical Understanding**  
   *Cheng Jiayang et al.* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12874)
@@ -524,14 +647,23 @@ _Resources built specifically to measure analogical ability._
 - **VASR: Visual Analogies of Situation Recognition**  
   *Yonatan Bitton et al.* — AAAI 2023 · [paper](https://arxiv.org/abs/2212.04542)
 
+- **A Benchmark for Compositional Visual Reasoning** `PROPOSED · P3`  
+  *Aimen Zerroug et al.* — NeurIPS 2022 · [paper](https://arxiv.org/abs/2206.05379)
+
+- **Bongard-HOI: Benchmarking Few-Shot Visual Reasoning for Human-Object Interactions** `PROPOSED · P3`  
+  *Huaizu Jiang et al.* — CVPR 2022 · [paper](https://arxiv.org/abs/2205.13803) · [code](https://github.com/NVlabs/Bongard-HOI)
+
 - **SCAN: Scientific and Creative Analogies in Pretrained Language Models**  
   *Tamara Czinczoll, Helen Yannakoudakis, Pushkar Mishra and Ekaterina Shutova* — EMNLP Findings 2022 · [paper](https://arxiv.org/abs/2211.15268)
+
+- **Bongard-LOGO: A New Benchmark for Human-Level Concept Learning and Reasoning** `PROPOSED · P2`  
+  *Weili Nie et al.* — NeurIPS 2020 · [paper](https://arxiv.org/abs/2010.00763)
 
 - **CA-EHN: Commonsense Analogy from E-HowNet**  
   *Peng-Hsuan Li, Tsan-Yu Yang and Wei-Yun Ma* — LREC 2020 · [paper](https://arxiv.org/abs/1908.07218)
 
 - **Analogy-Based Detection of Morphological and Semantic Relations with Word Embeddings: What Works and What Doesn't**  
-  *Anna Gladkova, Aleksandr Drozd and Satoshi Matsuoka* — NAACL SRW 2016 · [search](https://www.semanticscholar.org/search?q=Analogy-Based+Detection+of+Morphological+and+Semantic+Relations+with+Word+Embeddings%3A+What+Works+and+What+Doesn%27t)
+  *Anna Gladkova, Aleksandr Drozd and Satoshi Matsuoka* — NAACL SRW 2016 · [paper](https://aclanthology.org/n16-2002/)
 
 - **WordRep: A Benchmark for Research on Learning Word Representations**  
   *Bin Gao, Jiang Bian and Tie-Yan Liu* — arXiv 2014 · [paper](https://arxiv.org/abs/1407.1640)
@@ -549,73 +681,97 @@ _Whether a mapped relation admits an explicit, localisable representation._
   > Formalises analogy as a functor between categories and shows, on synthetic tasks, that it emerges from two identifiable mechanisms — geometric alignment of relational structure in embedding space plus application of the functor — with the same signatures visible in pretrained LLMs. The most direct mechanistic answer to §4 published since the survey.
 
 - ⭐ **Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
+  *Ruichen Xu, Wenjing Yan and Ying-Jun Angela Zhang* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.05143)  
   > A theoretical account of when transformers can implement analogical mapping at all — pairs naturally with Minegishi et al. as the theory side of the same question.
 
+- ⭐ **Function Vectors in Large Language Models** `PROPOSED · P1`  
+  *Eric Todd et al.* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.15213)  
+  > A small set of mid-layer attention heads encodes an input-output relation as a single transportable vector; inject it into an unrelated zero-shot context and the model performs the relation. Localisation plus causal intervention, which correlational probing cannot deliver.
+
+- ⭐ **In-Context Learning Creates Task Vectors** `PROPOSED · P1`  
+  *Roee Hendel, Mor Geva and Amir Globerson* — EMNLP Findings 2023 · [paper](https://arxiv.org/abs/2310.15916)  
+  > Demonstrations compress into a single task vector that parameterises the model's behaviour — the same result as function vectors, reached from the in-context-learning side.
+
 - ⭐ **Analogies Explained: Towards Understanding Word Embeddings**  
-  *Carl Allen and Timothy Hospedales* — ICML 2019 · [search](https://www.semanticscholar.org/search?q=Analogies+Explained%3A+Towards+Understanding+Word+Embeddings)  
+  *Carl Allen and Timothy Hospedales* — ICML 2019 · [paper](https://arxiv.org/abs/1901.09813)  
   > Derives why the parallelogram works from the PMI factorisation, showing analogy performance is a geometric byproduct of the training objective rather than evidence of explicit relation modeling.
 
 - ⭐ **Linguistic Regularities in Continuous Space Word Representations**  
   *Tomáš Mikolov, Wen-tau Yih and Geoffrey Zweig* — NAACL 2013 · [search](https://www.semanticscholar.org/search?q=Linguistic+Regularities+in+Continuous+Space+Word+Representations)  
   > The vector-offset result (king - man + woman ≈ queen) that made "analogy" an interpretability probe in the first place. Everything in this section is downstream of arguing about what it does and does not show.
 
+- **Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.07794)
+
+- **Which Attention Heads Matter for In-Context Learning?** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — ICML 2025 · [search](https://www.semanticscholar.org/search?q=Which+Attention+Heads+Matter+for+In-Context+Learning%3F)
+
+- **Neural Analogical Matching** `PROPOSED · P2`  
+  *Maxwell Crouse et al.* — AAAI 2021 · [paper](https://arxiv.org/abs/2004.03573)
+
 - **Analogies Minus Analogy Test: Measuring Regularities in Word Embeddings**  
   *Louis Fournier, Emmanuel Dupoux and Ewan Dunbar* — CoNLL 2020 · [paper](https://arxiv.org/abs/2010.03446)
 
 - **Linguistic Regularities in Sparse and Explicit Word Representations**  
-  *Omer Levy and Yoav Goldberg* — CoNLL 2014 · [search](https://www.semanticscholar.org/search?q=Linguistic+Regularities+in+Sparse+and+Explicit+Word+Representations)
+  *Omer Levy and Yoav Goldberg* — CoNLL 2014 · [paper](https://doi.org/10.3115/v1/w14-1618)
 
 ### Relational Invariance & Reuse
 
 _Whether the same relation is represented consistently across contexts._
 
 - ⭐ **Locating and Editing Factual Associations in GPT**  
-  *Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov* — NeurIPS 2022 · [search](https://www.semanticscholar.org/search?q=Locating+and+Editing+Factual+Associations+in+GPT)  
+  *Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-1262)  
   > Not an analogy paper, but the methodological template this section borrows: relations can be localised to specific parameters and causally intervened on, which is what makes "is the relation explicitly represented?" testable.
 
 - ⭐ **Generalization Without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks**  
-  *Brenden Lake and Marco Baroni* — ICML 2018 · [search](https://www.semanticscholar.org/search?q=Generalization+Without+Systematicity%3A+On+the+Compositional+Skills+of+Sequence-to-Sequence+Recurrent+Networks)  
+  *Brenden Lake and Marco Baroni* — ICML 2018 · [paper](https://arxiv.org/abs/1711.00350)  
   > The systematicity challenge in its modern form — networks reliably capture low-level regularities and reliably fail when the same rule must be reused in a novel composition.
 
 - **Linear Representations of Hierarchical Concepts in Language Models** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
+  *Masaki Sakata et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
 
 - **Relational Knowledge Distillation Using Fine-tuned Function Vectors** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.08169)
+  *Andrea Kang, Yingnian Wu and Hongjing Lu* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.08169)
+
+- **Emergent Symbols through Binding in a Neural Network** `PROPOSED · P2`  
+  *Taylor Webb, Ishan Sinha and Jonathan D. Cohen* — ICLR 2021 · [paper](https://arxiv.org/abs/2012.07172)
 
 ### Structural Sensitivity
 
 _Whether performance survives the removal of surface statistical cues._
 
 - **When and Why Vision-Language Models Behave Like Bags-of-Words, and What to Do About It?**  
-  *Mert Yuksekgonul et al.* — ICLR 2023 · [search](https://www.semanticscholar.org/search?q=When+and+Why+Vision-Language+Models+Behave+Like+Bags-of-Words%2C+and+What+to+Do+About+It%3F)
+  *Mert Yuksekgonul et al.* — ICLR 2023 · [paper](https://arxiv.org/abs/2210.01936)
 
 ### Process Decomposability
 
 _Whether the computation unfolds through decomposable intermediate states._
 
 - ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
+  *Philipp Hellwig et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
   > Training-dynamics evidence that analogical behaviour is scaffolded on an earlier-acquired copying circuit — a concrete developmental story for how the capability arises rather than a static probe.
 
 - ⭐ **Step-by-Step Analogical Reasoning in Humans and Neural Networks**  
-  *Jacob Russin, Joonhwa Kim, Ellie Pavlick and Michael J. Frank* — n/a 2025 · [search](https://www.semanticscholar.org/search?q=Step-by-Step+Analogical+Reasoning+in+Humans+and+Neural+Networks)  
+  *Jacob Russin, Joonhwa Kim, Ellie Pavlick and Michael J. Frank* — n/a 2025 · [paper](https://www.semanticscholar.org/paper/dc42b4eeee05c616335a83d67ac95f323cea49c2)  
   > Compares model intermediate activations against human incremental analogy traces and finds substantial mismatch — models can reach the answer without following anything like the human stepwise mapping process.
 
 - ⭐ **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**  
-  *Jason Wei et al.* — NeurIPS 2022 · [search](https://www.semanticscholar.org/search?q=Chain-of-Thought+Prompting+Elicits+Reasoning+in+Large+Language+Models)  
+  *Jason Wei et al.* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-1800)  
   > The prompting result that made "does the computation decompose into steps?" a live question for analogy — every process-decomposability claim in §4.4 is arguing with or building on it.
+
+- ⭐ **In-context Learning and Induction Heads** `PROPOSED · P1`  
+  *Catherine Olsson et al.* — Transformer Circuits Thread 2022 · [paper](https://arxiv.org/abs/2209.11895)  
+  > Identifies heads that complete patterns by copying from earlier context, and shows they appear exactly when in-context learning does — the concrete circuit behind pattern completion.
 
 - ⭐ **Towards Faithfully Interpretable NLP Systems: How Should We Define and Evaluate Faithfulness?**  
   *Alon Jacovi and Yoav Goldberg* — ACL 2020 · [paper](https://aclanthology.org/2020.acl-main.386/)  
   > The reason generated "step-by-step explanations" cannot be taken as the computation: faithfulness must be argued for, not assumed from plausibility.
 
 - **Verbalizable Representations Form a Global Workspace in Language Models** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
+  *Wes Gurnee et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
 
 - **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**  
-  *Shunyu Yao et al.* — NeurIPS 2023 · [search](https://www.semanticscholar.org/search?q=Tree+of+Thoughts%3A+Deliberate+Problem+Solving+with+Large+Language+Models)
+  *Shunyu Yao et al.* — NeurIPS 2023 · [paper](https://doi.org/10.52202/075280-0517)
 
 ## Elicitation & Augmentation (§5)
 
@@ -626,56 +782,59 @@ _Whether the computation unfolds through decomposable intermediate states._
 _Injecting temporary structure through exemplars and relational scaffolds._
 
 - ⭐ **Large Language Models as Analogical Reasoners**  
-  *Michihiro Yasunaga et al.* — ICLR 2024 · [search](https://www.semanticscholar.org/search?q=Large+Language+Models+as+Analogical+Reasoners)  
+  *Michihiro Yasunaga et al.* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.01714)  
   > Analogical prompting — have the model self-generate relevant exemplars before solving, removing the need for hand-labelled demonstrations. The single most-cited method paper in this pillar; read alongside Qin et al. (2025), which questions whether the "relevance" is doing the work.
 
 - ⭐ **Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models**  
-  *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [search](https://www.semanticscholar.org/search?q=Thought+Propagation%3A+An+Analogical+Approach+to+Complex+Reasoning+with+Large+Language+Models)  
+  *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.03965)  
   > Solves analogous sub-problems first and propagates their solutions back to the target — makes the source-problem construction explicit rather than leaving it to the exemplar.
 
 - **CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10504)
+  *Bingzhe Wu, Haotian Lu and Yuchen Mou* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10504)
 
 - **Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
+  *Zuoyu Zhang and Yancheng Zhu* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
 
 - **Metaphor-Induced Algorithmic Steering: Cross-Domain Procedural Transfer in LLM Code Generation** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.28683)
+  *Zhibo Hu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.28683)
 
 - **Let's Be Self-Generated via Step by Step: A Curriculum Learning Approach to Automated Reasoning with Large Language Models**  
   *Kangyang Luo et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2410.21728)
 
 - **Graph of Thoughts: Solving Elaborate Problems with Large Language Models**  
-  *Maciej Besta et al.* — AAAI 2024 · [search](https://www.semanticscholar.org/search?q=Graph+of+Thoughts%3A+Solving+Elaborate+Problems+with+Large+Language+Models)
+  *Maciej Besta et al.* — AAAI 2024 · [paper](https://doi.org/10.1609/aaai.v38i16.29720)
 
 - **Language Models Are Few-Shot Learners**  
-  *Tom B. Brown et al.* — NeurIPS 2020 · [search](https://www.semanticscholar.org/search?q=Language+Models+Are+Few-Shot+Learners)
+  *Tom B. Brown et al.* — NeurIPS 2020 · [paper](https://doi.org/10.65525/svup.9788199778009.2026.224-230)
 
 ### Retrieval & Memory Augmentation
 
 _Analogy as a latent inductive bias over retrieved cases and reasoning traces._
 
 - ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
+  *Yongqiang Chen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
   > Agentic retrieval of historical analogues for forecasting — the clearest instance so far of the "structure-aware retrieval" direction proposed in §7.2.2 of the survey.
 
 - **DeFine: Decision-Making with Analogical Reasoning over Factor Profiles**  
-  *Yebowen Hu et al.* — ACL 2025 · [search](https://www.semanticscholar.org/search?q=DeFine%3A+Decision-Making+with+Analogical+Reasoning+over+Factor+Profiles)
+  *Yebowen Hu et al.* — ACL 2025 · [paper](https://aclanthology.org/2025.findings-acl.238/)
 
 - **From Local to Global: A Graph RAG Approach to Query-Focused Summarization**  
   *Darren Edge et al.* — arXiv 2024 · [paper](https://arxiv.org/abs/2404.16130)
 
 - **Making Language Models Better Reasoners with Step-Aware Verifier**  
-  *Yifei Li et al.* — ACL 2023 · [search](https://www.semanticscholar.org/search?q=Making+Language+Models+Better+Reasoners+with+Step-Aware+Verifier)
+  *Yifei Li et al.* — ACL 2023 · [paper](https://aclanthology.org/2023.acl-long.291/)
 
 - **Reasoning with Language Model Is Planning with World Model**  
-  *Shibo Hao et al.* — EMNLP 2023 · [search](https://www.semanticscholar.org/search?q=Reasoning+with+Language+Model+Is+Planning+with+World+Model)
+  *Shibo Hao et al.* — EMNLP 2023 · [paper](https://aclanthology.org/2023.emnlp-main.507/)
 
 - **kNN Prompting: Beyond-Context Learning with Calibration-Free Nearest Neighbor Inference**  
   *Benfeng Xu et al.* — ICLR 2023 · [search](https://www.semanticscholar.org/search?q=kNN+Prompting%3A+Beyond-Context+Learning+with+Calibration-Free+Nearest+Neighbor+Inference)
 
 - **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks**  
-  *Patrick Lewis et al.* — NeurIPS 2020 · [search](https://www.semanticscholar.org/search?q=Retrieval-Augmented+Generation+for+Knowledge-Intensive+NLP+Tasks)
+  *Patrick Lewis et al.* — NeurIPS 2020 · [paper](https://arxiv.org/abs/2005.11401)
+
+- **MAC/FAC: A Model of Similarity-Based Retrieval** `PROPOSED · P2`  
+  *Kenneth D. Forbus, Dedre Gentner and Keith Law* — Cognitive Science 1995 · [paper](https://doi.org/10.1207/s15516709cog1902_1)
 
 ### Relational Modeling
 
@@ -685,21 +844,34 @@ _Elevating relations to first-class modeling units during training._
   *Asahi Ushio, Luis Espinosa Anke, Steven Schockaert and Jose Camacho-Collados* — ACL 2021 · [paper](https://aclanthology.org/2021.acl-long.280/)  
   > The careful pre-LLM baseline: with well-designed scoring, PLMs beat word embeddings on analogy, but still fall short of humans — and the gap tracks relation abstractness, not word frequency.
 
+- ⭐ **Distilling Relation Embeddings from Pretrained Language Models** `PROPOSED · P1`  
+  *Asahi Ushio, Jose Camacho-Collados and Steven Schockaert* — EMNLP 2021 · [paper](https://aclanthology.org/2021.emnlp-main.712/) · [code](https://github.com/asahi417/relbert)  
+  > Fine-tunes a masked LM into a dedicated relation encoder; the embeddings generalise to relation types never seen in training, which is the strongest evidence that relational structure can be modelled explicitly.
+
+- **RelBERT: Embedding Relations with Language Models** `PROPOSED · P2`  
+  *Asahi Ushio, Jose Camacho-Collados and Steven Schockaert* — Artificial Intelligence 2025 · [paper](https://arxiv.org/abs/2310.00299)
+
+- **Solving Hard Analogy Questions with Relation Embedding Chains** `PROPOSED · P2`  
+  *Nitesh Kumar and Steven Schockaert* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12379)
+
 - **Emergence of Analogy from Relation Learning**  
-  *Hongjing Lu, Ying Nian Wu and Keith J. Holyoak* — PNAS 2019 · [search](https://www.semanticscholar.org/search?q=Emergence+of+Analogy+from+Relation+Learning)
+  *Hongjing Lu, Ying Nian Wu and Keith J. Holyoak* — PNAS 2019 · [paper](https://doi.org/10.1073/pnas.1814779116)
 
 - **A Simple Neural Network Module for Relational Reasoning**  
-  *Adam Santoro et al.* — NeurIPS 2017 · [search](https://www.semanticscholar.org/search?q=A+Simple+Neural+Network+Module+for+Relational+Reasoning)
+  *Adam Santoro et al.* — NeurIPS 2017 · [paper](https://arxiv.org/abs/1706.01427)
+
+- **The Latent Relation Mapping Engine: Algorithm and Experiments** `PROPOSED · P3`  
+  *Peter D. Turney* — JAIR 2008 · [paper](https://arxiv.org/abs/0812.4446)
 
 - **Similarity of Semantic Relations**  
-  *Peter D. Turney* — Computational Linguistics 2006 · [search](https://www.semanticscholar.org/search?q=Similarity+of+Semantic+Relations)
+  *Peter D. Turney* — Computational Linguistics 2006 · [paper](https://doi.org/10.1162/coli.2006.32.3.379)
 
 ### Knowledge-Enhanced Methods
 
 _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
 
 - ⭐ **Enhancing Structural Mapping with LLM-derived Abstractions for Analogical Reasoning in Narratives** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.29997)  
+  *Mohammadhossein Khojasteh et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.29997)  
   > Uses the LLM to produce the abstraction layer and then does explicit structure mapping on top of it — a direct engineering answer to the ARN finding that models default to lexical overlap on narratives.
 
 - ⭐ **AnalogyKB: Unlocking Analogical Reasoning of Language Models with a Million-Scale Knowledge Base**  
@@ -710,16 +882,16 @@ _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
   *Anna Sofia Lippolis, Andrea Giovanni Nuzzolese and Aldo Gangemi* — arXiv 2025 · [paper](https://arxiv.org/abs/2504.11190)
 
 - **Can Multimodal Large Language Model Think Analogically?**  
-  *Diandian Guo et al.* — ICONIP 2024 · [search](https://www.semanticscholar.org/search?q=Can+Multimodal+Large+Language+Model+Think+Analogically%3F)
+  *Diandian Guo et al.* — ICONIP 2024 · [paper](https://doi.org/10.1007/978-981-96-7008-6_4)
 
 - **Why Do We Need Neurosymbolic AI to Model Pragmatic Analogies?**  
-  *Thilini Wijesiriwardene, Amit Sheth, Valerie L. Shalin and Amit Sheth* — IEEE Intelligent Systems 2023 · [search](https://www.semanticscholar.org/search?q=Why+Do+We+Need+Neurosymbolic+AI+to+Model+Pragmatic+Analogies%3F)
+  *Thilini Wijesiriwardene, Amit Sheth, Valerie L. Shalin and Amit Sheth* — IEEE Intelligent Systems 2023 · [paper](https://doi.org/10.1109/mis.2023.3305862)
 
 - **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision**  
   *Jiayuan Mao et al.* — ICLR 2019 · [paper](https://arxiv.org/abs/1904.12584)
 
 - **Solving and Explaining Analogy Questions Using Semantic Networks**  
-  *Adrian Boteanu and Sonia Chernova* — AAAI 2015 · [search](https://www.semanticscholar.org/search?q=Solving+and+Explaining+Analogy+Questions+Using+Semantic+Networks)
+  *Adrian Boteanu and Sonia Chernova* — AAAI 2015 · [paper](https://doi.org/10.1609/aaai.v29i1.9400)
 
 ## Applications (§6)
 
@@ -728,37 +900,44 @@ _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
 ### Textual Analogy Generation & Mining
 
 - ⭐ **Can Language Models Serve as Analogy Annotators?**  
-  *Xiaojing Zhang and Bochen Lyu* — ACL Findings 2025 · [search](https://www.semanticscholar.org/search?q=Can+Language+Models+Serve+as+Analogy+Annotators%3F)  
+  *Xiaojing Zhang and Bochen Lyu* — ACL Findings 2025 · [paper](https://aclanthology.org/2025.findings-acl.819/)  
   > Proposes A3E, structure-aware evaluation of generated analogies — the response to the §7.1 complaint that surface-overlap metrics like BLEU cannot see structural fidelity.
 
 - ⭐ **CAM: A Large Language Model-Based Creative Analogy Mining Framework**  
-  *Bhavya Bhavya, Jinjun Xiong and ChengXiang Zhai* — WWW 2023 · [search](https://www.semanticscholar.org/search?q=CAM%3A+A+Large+Language+Model-Based+Creative+Analogy+Mining+Framework)  
+  *Bhavya Bhavya, Jinjun Xiong and ChengXiang Zhai* — WWW 2023 · [paper](https://doi.org/10.1145/3543507.3587431)  
   > Unsupervised discovery of novel analogies at scale by pairing generation with closed-loop verification — moves the field from retrieving known analogies to synthesising new ones from unstructured text.
 
+- ⭐ **SOLVENT: A Mixed-Initiative System for Finding Analogies between Research Papers** `PROPOSED · P1`  
+  *Joel Chan et al.* — CSCW 2018 · [paper](https://doi.org/10.1145/3274300)  
+  > Annotating papers by background, purpose, mechanism and findings, then matching on that structure, surfaces analogies that pure information retrieval misses — and domain experts judge them useful.
+
 - ⭐ **Accelerating Innovation Through Analogy Mining**  
-  *Tom Hope, Joel Chan, Aniket Kittur and Dafna Shahaf* — KDD 2017 · [search](https://www.semanticscholar.org/search?q=Accelerating+Innovation+Through+Analogy+Mining)  
+  *Tom Hope, Joel Chan, Aniket Kittur and Dafna Shahaf* — KDD 2017 · [paper](https://doi.org/10.1145/3097983.3098038)  
   > The pre-LLM statement of the problem — mining purpose/mechanism structure from product descriptions to surface far-domain matches. Still the cleanest articulation of why relational indexing beats semantic similarity here.
 
 - **Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT**  
-  *Bhavya Bhavya, Jinjun Xiong and ChengXiang Zhai* — INLG 2022 · [search](https://www.semanticscholar.org/search?q=Analogy+Generation+by+Prompting+Large+Language+Models%3A+A+Case+Study+of+InstructGPT)
+  *Bhavya Bhavya, Jinjun Xiong and ChengXiang Zhai* — INLG 2022 · [paper](https://aclanthology.org/2022.inlg-main.25/)
 
 - **Training Language Models to Follow Instructions with Human Feedback**  
-  *Long Ouyang et al.* — NeurIPS 2022 · [search](https://www.semanticscholar.org/search?q=Training+Language+Models+to+Follow+Instructions+with+Human+Feedback)
+  *Long Ouyang et al.* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-2011)
 
 ### Creativity & Design Support
 
 - ⭐ **Unlocking LLM Creativity in Science through Analogical Reasoning** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.11258)  
+  *Andrew Shen, Shaul Druckmann and James Zou* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.11258)  
   > Positions analogy as the operative mechanism behind LLM scientific ideation — the 2026 successor to Ding et al. (2023) on creative cross-domain association.
 
 - ⭐ **AutoTRIZ: Automating Engineering Innovation with TRIZ and Large Language Models**  
-  *Shuo Jiang, Weifeng Li, Yuping Qian, Yangjun Zhang and Jianxi Luo* — Advanced Engineering Informatics 2025 · [search](https://www.semanticscholar.org/search?q=AutoTRIZ%3A+Automating+Engineering+Innovation+with+TRIZ+and+Large+Language+Models)  
+  *Shuo Jiang, Weifeng Li, Yuping Qian, Yangjun Zhang and Jianxi Luo* — Advanced Engineering Informatics 2025 · [paper](https://doi.org/10.2139/ssrn.4973876)  
   > Wraps TRIZ's contradiction-resolution heuristics around an LLM, turning analogical transfer into a controllable invention pipeline rather than an open-ended brainstorm.
+
+- **Data-Driven Design-by-Analogy: State of the Art and Future Directions** `PROPOSED · P2`  
+  *Shuo Jiang, Jianxi Luo et al.* — arXiv 2021 · [paper](https://arxiv.org/abs/2106.01592)
 
 ### Educational Applications
 
 - **Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.19045)
+  *Claire R. Leibowicz* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.19045)
 
 - **Generative Metaphors and Visualization for STEM Concept Explanation**  
   *Ehsan Latif et al.* — CoRR 2024 · [search](https://www.semanticscholar.org/search?q=Generative+Metaphors+and+Visualization+for+STEM+Concept+Explanation)
@@ -769,17 +948,20 @@ _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
 ### Scientific Knowledge Extraction
 
 - ⭐ **Past Meets Present: Creating Historical Analogy with Large Language Models**  
-  *Nianqi Li et al.* — ACL 2025 · [search](https://www.semanticscholar.org/search?q=Past+Meets+Present%3A+Creating+Historical+Analogy+with+Large+Language+Models)  
+  *Nianqi Li et al.* — ACL 2025 · [paper](https://aclanthology.org/2025.acl-long.200/)  
   > Retrieval and alignment of cross-temporal parallels for historical synthesis — the template that Analogical Deep Research (2026) scales up into an agentic foresight pipeline.
 
 - **What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.18186)
+  *Emanuele Ratti and Lena Zuchowski* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.18186)
 
 - **MetaphorPrompt: An Analogical Reasoning Approach for Extracting Causal Links from Biological Text**  
-  *Parth Patel, Yu-Chiao Chiu, Yufei Huang and Jianqiu Zhang* — ACM BCB 2024 · [search](https://www.semanticscholar.org/search?q=MetaphorPrompt%3A+An+Analogical+Reasoning+Approach+for+Extracting+Causal+Links+from+Biological+Text)
+  *Parth Patel, Yu-Chiao Chiu, Yufei Huang and Jianqiu Zhang* — ACM BCB 2024 · [paper](https://doi.org/10.1145/3698587.3701384)
 
 - **ReguloGPT: Harnessing GPT for Knowledge Graph Construction of Molecular Regulatory Pathways**  
-  *Xidong Wu et al.* — bioRxiv 2024 · [search](https://www.semanticscholar.org/search?q=ReguloGPT%3A+Harnessing+GPT+for+Knowledge+Graph+Construction+of+Molecular+Regulatory+Pathways)
+  *Xidong Wu et al.* — bioRxiv 2024 · [paper](https://doi.org/10.1101/2024.01.27.577521)
+
+- **Augmenting Scientific Creativity with Retrieval across Knowledge Domains** `PROPOSED · P2`  
+  *Hyeonsu B. Kang et al.* — arXiv 2022 · [paper](https://arxiv.org/abs/2206.01328)
 
 ### Knowledge Graph Enhancement
 
@@ -787,20 +969,23 @@ _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
   *Ningyu Zhang et al.* — ICLR 2023 · [paper](https://arxiv.org/abs/2210.00312)  
   > Introduces MarT and the multimodal analogical reasoning task over KGs — the main resource connecting the structural-mapping view to graph-shaped data rather than to text or grids.
 
+- **AnRe: Analogical Replay for Temporal Knowledge Graph Forecasting** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — ACL 2025 · [search](https://www.semanticscholar.org/search?q=AnRe%3A+Analogical+Replay+for+Temporal+Knowledge+Graph+Forecasting)
+
 - **The Role of Analogy in Ontology Alignment: A Study on LISA**  
-  *Elie Raad and Joerg Evermann* — Cognitive Systems Research 2015 · [search](https://www.semanticscholar.org/search?q=The+Role+of+Analogy+in+Ontology+Alignment%3A+A+Study+on+LISA)
+  *Elie Raad and Joerg Evermann* — Cognitive Systems Research 2015 · [paper](https://doi.org/10.1016/j.cogsys.2014.09.001)
 
 ### Visual & Embodied Intelligence
 
 - ⭐ **Analogical Reasoning as a Doctor: A Foundation Model for Gastrointestinal Endoscopy Diagnosis** `NEW`  
-  *TBD — run scripts/fetch_meta.py* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05649)  
+  *Peixi Peng et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05649)  
   > Builds case-to-case analogical matching into a clinical foundation model — the clinical-diagnostics vertical named in §7.2.1 of the survey, now with an actual system behind it.
 
 - **Vision-and-Language Navigation with Analogical Textual Descriptions in LLMs**  
-  *Yue Zhang, Tianyi Ma, Zun Wang, Yanyuan Qiao and Parisa Kordjamshidi* — EMNLP 2025 · [search](https://www.semanticscholar.org/search?q=Vision-and-Language+Navigation+with+Analogical+Textual+Descriptions+in+LLMs)
+  *Yue Zhang, Tianyi Ma, Zun Wang, Yanyuan Qiao and Parisa Kordjamshidi* — EMNLP 2025 · [paper](https://aclanthology.org/2025.emnlp-main.759/)
 
 - **A Diagnostic Study of Visual Question Answering with Analogical Reasoning**  
-  *Ziqi Huang, Hongyuan Zhu, Ying Sun, Dongkyu Choi, Cheston Tan and Joo-Hwee Lim* — ICIP 2021 · [search](https://www.semanticscholar.org/search?q=A+Diagnostic+Study+of+Visual+Question+Answering+with+Analogical+Reasoning)
+  *Ziqi Huang, Hongyuan Zhu, Ying Sun, Dongkyu Choi, Cheston Tan and Joo-Hwee Lim* — ICIP 2021 · [paper](https://doi.org/10.1109/icip42928.2021.9506539)
 
 ---
 

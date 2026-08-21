@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import pathlib
 import re
+import ssl
 import sys
 
 import yaml
@@ -11,6 +12,22 @@ import yaml
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 PAPERS_DIR = DATA / "papers"
+
+
+def ssl_context() -> ssl.SSLContext:
+    """TLS context that works on a stock macOS python.org install.
+
+    That build ships without root certificates, so every HTTPS call fails with
+    CERTIFICATE_VERIFY_FAILED until you run `Install Certificates.command`.
+    Falling back to certifi's bundle means the scripts just work; on Linux and
+    in CI the system store is already fine and this is a no-op.
+    """
+    try:
+        import certifi
+
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
 
 
 def load_taxonomy() -> dict:

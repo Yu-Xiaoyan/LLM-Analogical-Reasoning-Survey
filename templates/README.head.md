@@ -46,6 +46,26 @@ by the same taxonomy as our survey.
 </p>
 </details>
 
+## How the field is moving
+
+<p align="center">
+  <img src="figures/trends.png" width="100%" alt="arXiv submissions on analogical reasoning, 2018-2026: volume, share of cs.CL+cs.AI, and growth by facet">
+</p>
+
+Measured from arXiv rather than from this list — a curated list would only
+measure our own reading. Submissions matching *analogical reasoning* grew about
+eightfold since 2018 **(A)**, but cs.CL+cs.AI grew just as fast, so the topic's
+share of its parent field is flat **(B)**: this is a steady concern, not a
+bandwagon. What did change is where the attention goes **(C)** — indexed to
+2018, elicitation and prompting grew ×17.0 against ×6.2–8.4 for every other
+facet, while the mechanism facet's share held constant. The field has shifted
+from *studying* the capability to *using* it, and mechanistic understanding has
+not kept pace.
+
+Counts are arXiv-only, so ACL-Anthology-only and cognitive-science venues are
+undercounted; facets are keyword proxies scoped to `cs.*`; 2026 is partial.
+Reproduce with `make trends`. Raw counts: [`data/trends.csv`](data/trends.csv).
+
 ## Other views
 
 The list below is organised by taxonomy. The same papers, sliced differently:

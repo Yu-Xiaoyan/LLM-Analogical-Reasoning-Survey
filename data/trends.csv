@@ -1,0 +1,79 @@
+year,facet,hits,baseline,share_per_10k,partial_year
+2014,Analogical reasoning (all),3,1535,19.54,no
+2014,Capability evaluation,11,1535,71.66,no
+2014,Perceptual / visual analogy,0,1535,0.0,no
+2014,Mechanism / interpretability,4,1535,26.06,no
+2014,Elicitation / prompting,8,1535,52.12,no
+2014,Applications,7,1535,45.6,no
+2015,Analogical reasoning (all),0,1828,0.0,no
+2015,Capability evaluation,12,1828,65.65,no
+2015,Perceptual / visual analogy,1,1828,5.47,no
+2015,Mechanism / interpretability,12,1828,65.65,no
+2015,Elicitation / prompting,8,1828,43.76,no
+2015,Applications,8,1828,43.76,no
+2016,Analogical reasoning (all),2,3353,5.96,no
+2016,Capability evaluation,22,3353,65.61,no
+2016,Perceptual / visual analogy,2,3353,5.96,no
+2016,Mechanism / interpretability,7,3353,20.88,no
+2016,Elicitation / prompting,13,3353,38.77,no
+2016,Applications,14,3353,41.75,no
+2017,Analogical reasoning (all),5,4824,10.36,no
+2017,Capability evaluation,41,4824,84.99,no
+2017,Perceptual / visual analogy,3,4824,6.22,no
+2017,Mechanism / interpretability,12,4824,24.88,no
+2017,Elicitation / prompting,15,4824,31.09,no
+2017,Applications,28,4824,58.04,no
+2018,Analogical reasoning (all),4,7327,5.46,no
+2018,Capability evaluation,38,7327,51.86,no
+2018,Perceptual / visual analogy,7,7327,9.55,no
+2018,Mechanism / interpretability,27,7327,36.85,no
+2018,Elicitation / prompting,12,7327,16.38,no
+2018,Applications,44,7327,60.05,no
+2019,Analogical reasoning (all),11,9304,11.82,no
+2019,Capability evaluation,54,9304,58.04,no
+2019,Perceptual / visual analogy,7,9304,7.52,no
+2019,Mechanism / interpretability,40,9304,42.99,no
+2019,Elicitation / prompting,26,9304,27.94,no
+2019,Applications,57,9304,61.26,no
+2020,Analogical reasoning (all),6,13260,4.52,no
+2020,Capability evaluation,81,13260,61.09,no
+2020,Perceptual / visual analogy,15,13260,11.31,no
+2020,Mechanism / interpretability,45,13260,33.94,no
+2020,Elicitation / prompting,34,13260,25.64,no
+2020,Applications,68,13260,51.28,no
+2021,Analogical reasoning (all),10,18548,5.39,no
+2021,Capability evaluation,96,18548,51.76,no
+2021,Perceptual / visual analogy,15,18548,8.09,no
+2021,Mechanism / interpretability,48,18548,25.88,no
+2021,Elicitation / prompting,42,18548,22.64,no
+2021,Applications,107,18548,57.69,no
+2022,Analogical reasoning (all),19,21202,8.96,no
+2022,Capability evaluation,98,21202,46.22,no
+2022,Perceptual / visual analogy,15,21202,7.07,no
+2022,Mechanism / interpretability,66,21202,31.13,no
+2022,Elicitation / prompting,40,21202,18.87,no
+2022,Applications,104,21202,49.05,no
+2023,Analogical reasoning (all),23,30240,7.61,no
+2023,Capability evaluation,110,30240,36.38,no
+2023,Perceptual / visual analogy,17,30240,5.62,no
+2023,Mechanism / interpretability,76,30240,25.13,no
+2023,Elicitation / prompting,81,30240,26.79,no
+2023,Applications,129,30240,42.66,no
+2024,Analogical reasoning (all),30,44478,6.74,no
+2024,Capability evaluation,160,44478,35.97,no
+2024,Perceptual / visual analogy,36,44478,8.09,no
+2024,Mechanism / interpretability,118,44478,26.53,no
+2024,Elicitation / prompting,131,44478,29.45,no
+2024,Applications,198,44478,44.52,no
+2025,Analogical reasoning (all),33,57935,5.7,no
+2025,Capability evaluation,280,57935,48.33,no
+2025,Perceptual / visual analogy,59,57935,10.18,no
+2025,Mechanism / interpretability,207,57935,35.73,no
+2025,Elicitation / prompting,204,57935,35.21,no
+2025,Applications,272,57935,46.95,no
+2026,Analogical reasoning (all),24,48518,4.95,yes
+2026,Capability evaluation,304,48518,62.66,yes
+2026,Perceptual / visual analogy,64,48518,13.19,yes
+2026,Mechanism / interpretability,217,48518,44.73,yes
+2026,Elicitation / prompting,197,48518,40.6,yes
+2026,Applications,206,48518,42.46,yes

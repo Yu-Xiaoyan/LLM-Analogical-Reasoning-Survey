@@ -9,7 +9,7 @@
   year: 2022
   subsection: generation-mining
   links:
-    paper:
+    paper: https://aclanthology.org/2022.inlg-main.25/
   in_survey: true
 
 - id: bhavya2023cam
@@ -20,7 +20,7 @@
   subsection: generation-mining
   tags: [must-read]
   links:
-    paper:
+    paper: https://doi.org/10.1145/3543507.3587431
   in_survey: true
   tldr: >
     Unsupervised discovery of novel analogies at scale by pairing generation
@@ -35,7 +35,7 @@
   subsection: generation-mining
   tags: [must-read]
   links:
-    paper:
+    paper: https://doi.org/10.1145/3097983.3098038
   in_survey: true
   tldr: >
     The pre-LLM statement of the problem — mining purpose/mechanism structure
@@ -49,7 +49,7 @@
   year: 2022
   subsection: generation-mining
   links:
-    paper:
+    paper: https://doi.org/10.52202/068431-2011
   in_survey: true
 
 - id: zhang2025annotators
@@ -60,7 +60,7 @@
   subsection: generation-mining
   tags: [must-read]
   links:
-    paper:
+    paper: https://aclanthology.org/2025.findings-acl.819/
   in_survey: true
   tldr: >
     Proposes A3E, structure-aware evaluation of generated analogies — the
@@ -76,7 +76,7 @@
   subsection: creativity-design
   tags: [must-read]
   links:
-    paper:
+    paper: https://doi.org/10.2139/ssrn.4973876
   in_survey: true
   tldr: >
     Wraps TRIZ's contradiction-resolution heuristics around an LLM, turning
@@ -112,7 +112,7 @@
   year: 2024
   subsection: science
   links:
-    paper:
+    paper: https://doi.org/10.1145/3698587.3701384
   in_survey: true
 
 - id: wu2024regulogpt
@@ -122,7 +122,7 @@
   year: 2024
   subsection: science
   links:
-    paper:
+    paper: https://doi.org/10.1101/2024.01.27.577521
   in_survey: true
 
 - id: li2025past
@@ -133,7 +133,7 @@
   subsection: science
   tags: [must-read]
   links:
-    paper:
+    paper: https://aclanthology.org/2025.acl-long.200/
   in_survey: true
   tldr: >
     Retrieval and alignment of cross-temporal parallels for historical
@@ -148,7 +148,7 @@
   year: 2015
   subsection: knowledge-graph
   links:
-    paper:
+    paper: https://doi.org/10.1016/j.cogsys.2014.09.001
   in_survey: true
 
 - id: zhang2023multimodal
@@ -176,7 +176,7 @@
   subsection: visual-embodied
   tags: [multimodal]
   links:
-    paper:
+    paper: https://doi.org/10.1109/icip42928.2021.9506539
   in_survey: true
 
 - id: zhang2025vln
@@ -187,7 +187,7 @@
   subsection: visual-embodied
   tags: [multimodal]
   links:
-    paper:
+    paper: https://aclanthology.org/2025.emnlp-main.759/
   in_survey: true
 
 # =========================================================================
@@ -196,7 +196,7 @@
 
 - id: anon2026creativityscience
   title: Unlocking LLM Creativity in Science through Analogical Reasoning
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Andrew Shen, Shaul Druckmann and James Zou
   venue: arXiv
   year: 2026
   date: 2026-05
@@ -212,7 +212,7 @@
 
 - id: anon2026endoscopy
   title: "Analogical Reasoning as a Doctor: A Foundation Model for Gastrointestinal Endoscopy Diagnosis"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Peixi Peng et al.
   venue: arXiv
   year: 2026
   date: 2026-04
@@ -228,7 +228,7 @@
 
 - id: anon2026medicineanalogies
   title: "What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Emanuele Ratti and Lena Zuchowski
   venue: arXiv
   year: 2026
   date: 2026-08
@@ -240,7 +240,7 @@
 
 - id: anon2026disclosure
   title: "Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Claire R. Leibowicz
   venue: arXiv
   year: 2026
   date: 2026-05
@@ -248,3 +248,72 @@
   links:
     paper: https://arxiv.org/abs/2605.19045
   in_survey: false
+
+# =========================================================================
+# Proposed for the next revision — from the coverage audit (2026-08-21).
+# =========================================================================
+
+- id: chan2018solvent
+  title: "SOLVENT: A Mixed-Initiative System for Finding Analogies between Research Papers"
+  authors: Joel Chan et al.
+  venue: CSCW
+  year: 2018
+  subsection: generation-mining
+  tags: [must-read]
+  links:
+    paper: https://doi.org/10.1145/3274300
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Directly implements what §7.2.2 proposes as an opportunity — indexing
+    papers by purpose and mechanism to retrieve cross-domain analogues.
+  tldr: >
+    Annotating papers by background, purpose, mechanism and findings, then
+    matching on that structure, surfaces analogies that pure information
+    retrieval misses — and domain experts judge them useful.
+
+- id: kang2022augmenting
+  title: Augmenting Scientific Creativity with Retrieval across Knowledge Domains
+  authors: Hyeonsu B. Kang et al.
+  venue: arXiv
+  year: 2022
+  subsection: science
+  links:
+    paper: https://arxiv.org/abs/2206.01328
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    User-study evidence that cross-domain analogical retrieval changes what
+    researchers produce — §6 currently argues utility without such evidence.
+
+- id: jiang2021datadriven
+  title: "Data-Driven Design-by-Analogy: State of the Art and Future Directions"
+  authors: Shuo Jiang, Jianxi Luo et al.
+  venue: arXiv
+  year: 2021
+  subsection: creativity-design
+  links:
+    paper: https://arxiv.org/abs/2106.01592
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    §6's creativity and design subsection has only two entries; this is the
+    field's own review and the anchor that subsection is missing.
+
+- id: anon2025anre
+  title: "AnRe: Analogical Replay for Temporal Knowledge Graph Forecasting"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: ACL
+  year: 2025
+  subsection: knowledge-graph
+  links:
+    paper:
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    §6's knowledge-graph subsection has two entries and stops at 2023; this is
+    directly relevant 2025 work.

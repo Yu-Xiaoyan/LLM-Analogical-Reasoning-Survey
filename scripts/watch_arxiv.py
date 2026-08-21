@@ -25,7 +25,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-from common import load_papers
+from common import load_papers, ssl_context
 
 ARXIV_API = "http://export.arxiv.org/api/query"
 ATOM = {"a": "http://www.w3.org/2005/Atom"}
@@ -71,7 +71,7 @@ def query(search: str, start_date: str, end_date: str, limit: int = 100) -> list
     request = urllib.request.Request(f"{ARXIV_API}?{params}", headers=UA)
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(request, timeout=60) as response:
+            with urllib.request.urlopen(request, timeout=60, context=ssl_context()) as response:
                 raw = response.read()
             break
         except Exception as exc:  # noqa: BLE001

@@ -9,7 +9,7 @@
   subsection: theory
   tags: [must-read, cognitive-science]
   links:
-    paper:
+    paper: https://doi.org/10.1016/b978-1-4832-1446-7.50026-1
   in_survey: true
   tldr: >
     The foundational account: analogy aligns two domains by a one-to-one object
@@ -58,7 +58,7 @@
   subsection: theory
   tags: [cognitive-science, position]
   links:
-    paper:
+    paper: https://doi.org/10.7551/mitpress/2103.003.0002
   in_survey: true
 
 - id: barbot2019analogy
@@ -68,7 +68,7 @@
   year: 2019
   subsection: theory
   links:
-    paper:
+    paper: https://doi.org/10.1016/j.artint.2019.06.008
   in_survey: true
 
 - id: turney2003learning
@@ -103,7 +103,7 @@
   year: 2020
   subsection: scope
   links:
-    paper:
+    paper: https://doi.org/10.1613/jair.1.11674
   in_survey: true
 
 - id: petersen2025modelling
@@ -130,7 +130,7 @@
   year: 2023
   subsection: surveys
   links:
-    paper:
+    paper: https://aclanthology.org/2023.findings-acl.67/
   in_survey: true
 
 - id: ke2025survey
@@ -164,13 +164,14 @@
   in_survey: true
 
 - id: dong2024survey
+  date: 2022-12
   title: A Survey on In-Context Learning
   authors: Qingxiu Dong et al.
   venue: EMNLP
   year: 2024
   subsection: surveys
   links:
-    paper:
+    paper: https://arxiv.org/abs/2301.00234
   in_survey: true
 
 - id: malkinski2025deep
@@ -181,5 +182,129 @@
   subsection: surveys
   tags: [multimodal]
   links:
-    paper:
+    paper: https://doi.org/10.1145/3715093
   in_survey: true
+
+# =========================================================================
+# Proposed for the next revision — from the coverage audit (2026-08-21).
+# Not cited in survey v1. See ../schema.md for the field semantics.
+# =========================================================================
+
+- id: falkenhainer1989structure
+  title: "The Structure-Mapping Engine: Algorithm and Examples"
+  authors: Brian Falkenhainer, Kenneth D. Forbus and Dedre Gentner
+  venue: Artificial Intelligence
+  year: 1989
+  subsection: theory
+  tags: [must-read, cognitive-science]
+  links:
+    paper: https://doi.org/10.1016/0004-3702(89)90077-5
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    §2.1 writes structure-mapping as an algorithm-shaped constraint and cites
+    only Gentner (1983); this is the algorithm that constraint came from.
+  tldr: >
+    Turns structure-mapping theory into a working matcher — the reference
+    implementation every later computational account is measured against.
+
+- id: gick1980analogical
+  title: Analogical Problem Solving
+  authors: Mary L. Gick and Keith J. Holyoak
+  venue: Cognitive Psychology
+  year: 1980
+  subsection: theory
+  tags: [must-read, cognitive-science]
+  links:
+    paper: https://doi.org/10.1016/0010-0285(80)90013-4
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    The survey uses human performance as its benchmark throughout but cites no
+    human transfer experiment; this is the canonical one.
+  tldr: >
+    The radiation/fortress studies — only 10% of people spontaneously transfer
+    the analogous solution, rising to 75–92% once told the story is relevant.
+    The human baseline for far analogy is far worse than usually assumed.
+
+- id: gick1983schema
+  title: Schema Induction and Analogical Transfer
+  authors: Mary L. Gick and Keith J. Holyoak
+  venue: Cognitive Psychology
+  year: 1983
+  subsection: theory
+  tags: [cognitive-science]
+  links:
+    paper: https://doi.org/10.1016/0010-0285(83)90002-6
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Comparing two source analogues induces a reusable schema — the human
+    result that in-context learning with multiple exemplars mirrors.
+
+- id: gentner2011computational
+  title: Computational Models of Analogy
+  authors: Dedre Gentner and Kenneth D. Forbus
+  venue: WIREs Cognitive Science
+  year: 2011
+  subsection: theory
+  tags: [cognitive-science]
+  links:
+    paper: https://doi.org/10.1002/wcs.105
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    One citation covering SME, ACME, LISA and MAC/FAC, if there is no room to
+    cite them individually.
+
+- id: holyoak1989analogical
+  title: Analogical Mapping by Constraint Satisfaction
+  authors: Keith J. Holyoak and Paul Thagard
+  venue: Cognitive Science
+  year: 1989
+  subsection: theory
+  tags: [cognitive-science]
+  links:
+    paper: https://doi.org/10.1207/s15516709cog1303_1
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    The constraint-satisfaction rival to SME; the historical precedent for
+    §5.2's neuro-symbolic framing.
+
+- id: hummel1997distributed
+  title: "Distributed Representations of Structure: A Theory of Analogical Access and Mapping"
+  authors: John E. Hummel and Keith J. Holyoak
+  venue: Psychological Review
+  year: 1997
+  subsection: theory
+  tags: [cognitive-science]
+  links:
+    paper: https://doi.org/10.1037/0033-295X.104.3.427
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    §6 currently refers to "the LISA model" through Raad & Evermann (2015)
+    without citing LISA itself — a second-hand citation worth fixing.
+
+- id: mitchell1993analogy
+  title: "Analogy-Making as Perception: A Computer Model"
+  authors: Melanie Mitchell
+  venue: MIT Press
+  year: 1993
+  subsection: theory
+  tags: [cognitive-science]
+  links:
+    paper: https://doi.org/10.7551/mitpress/1251.001.0001
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Copycat. Shows that Mitchell's critiques in §3.1–3.2 rest on thirty years
+    of building analogy systems, not on a reaction to LLMs.

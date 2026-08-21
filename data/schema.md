@@ -21,6 +21,24 @@ survey pillar — this keeps concurrent PRs from colliding.
   tldr: One sentence on what the paper actually shows.   # required for `must-read`
 ```
 
+## Papers proposed for the next revision
+
+Two extra fields mark work that the survey *should* cite but does not yet. They
+came out of the coverage audit, and they are what the next revision works from.
+
+```yaml
+  proposed_addition: true       # survey does not cite this, and should
+  priority: P1                  # P1 must add · P2 should add · P3 optional
+  gap_reason: >                 # required when proposed_addition is true —
+    Why it belongs, in one sentence, phrased as what it changes about the
+    survey rather than what the paper is about.
+```
+
+`proposed_addition` is orthogonal to `in_survey`. A paper from 2019 that the
+survey missed is `in_survey: false, proposed_addition: true`; a 2026 paper that
+simply postdates the survey is `in_survey: false` with no proposal flag. Once a
+revision cites something, flip it to `in_survey: true` and drop both fields.
+
 ## Rules
 
 - `id` must be globally unique across all files. `scripts/validate.py` enforces it.
