@@ -1,0 +1,809 @@
+# §3 Capability Evaluation
+# See ../schema.md before editing.
+
+# ---------------------------------------------------------------- symbolic --
+- id: barnden1991advances
+  title: Advances in Connectionist and Neural Computation Theory
+  authors: John A. Barnden
+  venue: Ablex
+  year: 1991
+  subsection: symbolic
+  links:
+    paper:
+  in_survey: true
+
+- id: webb2023emergent
+  title: Emergent Analogical Reasoning in Large Language Models
+  authors: Taylor Webb, Keith J. Holyoak and Hongjing Lu
+  venue: Nature Human Behaviour
+  year: 2023
+  date: 2023-07
+  subsection: symbolic
+  tags: [must-read, cognitive-science]
+  links:
+    paper:
+    code:
+  in_survey: true
+  tldr: >
+    The paper that started the debate — GPT-3 matches or exceeds humans on
+    letter-string analogies, digit matrices and story analogies zero-shot,
+    which the authors read as an emergent capacity for abstract mapping.
+
+- id: hodel2023response
+  title: "Response: Emergent Analogical Reasoning in Large Language Models"
+  authors: Damian Hodel and Jevin West
+  venue: arXiv
+  year: 2023
+  subsection: symbolic
+  tags: [must-read, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2308.16118
+  in_survey: true
+  tldr: >
+    The direct rebuttal to Webb et al. — on counterfactual letter-string
+    variants that a human solves just as easily, GPT-3's advantage collapses,
+    implying the original result rides on pre-training familiarity.
+
+- id: lewis2024evaluating
+  title: Evaluating the Robustness of Analogical Reasoning in Large Language Models
+  authors: Martha Lewis and Melanie Mitchell
+  venue: TMLR
+  year: 2024
+  subsection: symbolic
+  tags: [must-read, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2411.14215
+  in_survey: true
+  tldr: >
+    Systematic robustness study across letter-strings, digit matrices and story
+    analogies: humans stay flat under counterfactual variants while GPT models
+    degrade sharply — the strongest evidence that the ability is non-robust.
+
+- id: lewis2024counterfactual
+  title: Using Counterfactual Tasks to Evaluate the Generality of Analogical Reasoning in Large Language Models
+  authors: Martha Anne Lewis and Melanie Mitchell
+  venue: CoRR
+  year: 2024
+  subsection: symbolic
+  tags: [negative-result]
+  links:
+    paper:
+  in_survey: true
+
+- id: stevenson2024generalize
+  title: Can Large Language Models Generalize Analogy Solving Like People Can?
+  authors: Claire E. Stevenson, Alexandra Pafford, Han L. J. van der Maas and Melanie Mitchell
+  venue: CoRR
+  year: 2024
+  subsection: symbolic
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: stevenson2023children
+  title: Do Large Language Models Solve Verbal Analogies Like Children Do?
+  authors: Claire E. Stevenson et al.
+  venue: CoRR
+  year: 2023
+  subsection: symbolic
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: li2025rule
+  title: A Study of Rule Omission in Raven's Progressive Matrices
+  authors: Binze Li
+  venue: arXiv
+  year: 2025
+  subsection: symbolic
+  tags: [negative-result]
+  links:
+    paper: https://arxiv.org/abs/2510.03127
+  in_survey: true
+
+- id: hu2023incontext
+  title: In-Context Analogical Reasoning with Pre-Trained Language Models
+  authors: Xiaoyang Hu, Shane Storks, Richard L. Lewis and Joyce Chai
+  venue: ACL
+  year: 2023
+  subsection: symbolic
+  links:
+    paper:
+  in_survey: true
+
+- id: hu2024auxiliary
+  title: Auxiliary Task Demands Mask the Capabilities of Smaller Language Models
+  authors: Jennifer Hu and Michael Frank
+  venue: COLM
+  year: 2024
+  subsection: symbolic
+  links:
+    paper:
+  in_survey: true
+
+- id: devarda2025emergent
+  title: "Emergent Analogical Reasoning in Large Language Models: A Replication with Open-Weights Alternatives"
+  authors: Andrea Gregor de Varda, Chiara Saponaro and Marco Marelli
+  venue: I4R Discussion Paper Series
+  year: 2025
+  subsection: symbolic
+  links:
+    paper:
+  in_survey: true
+
+- id: hersche2024towards
+  title: "Towards Learning to Reason: Comparing LLMs with Neuro-Symbolic on Arithmetic Relations in Abstract Reasoning"
+  authors: Michael Hersche, Giacomo Camposampiero, Roger Wattenhofer, Abu Sebastian and Abbas Rahimi
+  venue: arXiv
+  year: 2024
+  subsection: symbolic
+  tags: [negative-result]
+  links:
+    paper:
+  in_survey: true
+
+- id: opielka2025analogical
+  title: "Analogical Reasoning Inside Large Language Models: Concept Vectors and the Limits of Abstraction"
+  authors: Gustaw Opiełka, Hannes Rosenbusch and Claire E. Stevenson
+  venue: arXiv
+  year: 2025
+  subsection: symbolic
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2503.03666
+  in_survey: true
+  tldr: >
+    Bridges evaluation and interpretability — LLMs do form reusable concept
+    vectors for relations, but the representations degrade fast when
+    transferred across tasks/domains or when higher-order alignment is needed.
+
+- id: qin2025relevant
+  title: "Relevant or Random: Can LLMs Truly Perform Analogical Reasoning?"
+  authors: Chengwei Qin et al.
+  venue: ACL Findings
+  year: 2025
+  subsection: symbolic
+  tags: [must-read, negative-result]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Self-generated "relevant" exemplars help no more than random ones on many
+    tasks — a pointed challenge to the premise behind analogical prompting.
+
+# -------------------------------------------------------------- perceptual --
+- id: yiu2025kiva
+  title: "KiVA: Kid-Inspired Visual Analogies for Testing Large Multimodal Models"
+  authors: Eunice Yiu et al.
+  venue: ICLR
+  year: 2025
+  subsection: perceptual
+  tags: [must-read, benchmark, multimodal, cognitive-science]
+  links:
+    paper:
+    code:
+  in_survey: true
+  tldr: >
+    Visual analogies over everyday-object transformations that young children
+    solve easily; large multimodal models lag children badly, and often explain
+    the transformation correctly in text while failing to execute it visually.
+
+- id: malkinski2024reasoning
+  title: "Reasoning Limitations of Multimodal Large Language Models: A Case Study of Bongard Problems"
+  authors: Mikołaj Małkiński, Szymon Pawlonka and Jacek Mańdziuk
+  venue: ICML
+  year: 2025
+  subsection: perceptual
+  tags: [multimodal, negative-result]
+  links:
+    paper:
+  in_survey: true
+
+- id: moskvichev2023conceptarc
+  title: "The ConceptARC Benchmark: Evaluating Understanding and Generalization in the ARC Domain"
+  authors: Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell
+  venue: TMLR
+  year: 2023
+  subsection: perceptual
+  tags: [must-read, benchmark, multimodal]
+  links:
+    paper:
+    data:
+  in_survey: true
+  tldr: >
+    Restructures ARC around 16 named spatial/semantic concepts so failures are
+    diagnosable rather than just a score — the standard tool for asking whether
+    a system grasps a concept or just fits its instances.
+
+- id: zhang2019raven
+  title: "RAVEN: A Dataset for Relational and Analogical Visual Reasoning"
+  authors: Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu
+  venue: CVPR
+  year: 2019
+  subsection: perceptual
+  tags: [benchmark, multimodal]
+  links:
+    paper:
+    data:
+  in_survey: true
+
+- id: yun2025abstract
+  title: What Is an "Abstract Reasoner"? Revisiting Experiments and Arguments About Large Language Models
+  authors: Tian Yun, Chen Sun and Ellie Pavlick
+  venue: CoNLL
+  year: 2025
+  subsection: perceptual
+  tags: [must-read, position]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Shows the "abstract reasoner or not" question is partly ill-posed: tuning
+    only the input representation recovers near-ceiling performance, so the
+    deficit sits in interfacing, not in the underlying abstraction.
+
+- id: pinier2025alignment
+  title: Large Language Models Show Signs of Alignment with Human Neurocognition During Abstract Reasoning
+  authors: Christopher Pinier et al.
+  venue: arXiv
+  year: 2025
+  subsection: perceptual
+  tags: [cognitive-science]
+  links:
+    paper: https://arxiv.org/abs/2508.10057
+  in_survey: true
+
+- id: fu2025perception
+  title: Perception and Reasoning with Visual Relations in Humans and Machines
+  authors: Shuhao Fu
+  venue: PhD Thesis, UCLA
+  year: 2025
+  subsection: perceptual
+  tags: [multimodal, cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: ahrabian2024curious
+  title: The Curious Case of Nonverbal Abstract Reasoning with Multi-Modal Large Language Models
+  authors: Kian Ahrabian et al.
+  venue: COLM
+  year: 2024
+  subsection: perceptual
+  tags: [multimodal, negative-result]
+  links:
+    paper:
+  in_survey: true
+
+- id: camposampiero2025perceptual
+  title: Can Large Reasoning Models Do Analogical Reasoning Under Perceptual Uncertainty?
+  authors: Giacomo Camposampiero, Michael Hersche, Roger Wattenhofer, Abu Sebastian and Abbas Rahimi
+  venue: arXiv
+  year: 2025
+  subsection: perceptual
+  tags: [multimodal, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2503.11207
+  in_survey: true
+
+# ---------------------------------------------------------------- semantic --
+- id: wijesiriwardene2025knowledgeprompts
+  title: "KnowledgePrompts: Exploring the Abilities of Large Language Models to Solve Proportional Analogies via Knowledge-Enhanced Prompting"
+  authors: Thilini Wijesiriwardene et al.
+  venue: COLING
+  year: 2025
+  subsection: semantic
+  tags: [benchmark]
+  links:
+    paper:
+  in_survey: true
+
+- id: li2018analogical
+  title: Analogical Reasoning on Chinese Morphological and Semantic Relations
+  authors: Shen Li et al.
+  venue: ACL
+  year: 2018
+  subsection: semantic
+  tags: [benchmark]
+  links:
+    paper:
+  in_survey: true
+
+- id: boisson2024metaphors
+  title: "How Are Metaphors Processed by Language Models? The Case of Analogies"
+  authors: Joanne Boisson et al.
+  venue: CoNLL
+  year: 2024
+  subsection: semantic
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Finds a divergence between implicit probability (perplexity) and explicit
+    understanding — models often cannot flag semantically anomalous analogies
+    unless prompted to, even when their likelihoods "know" better.
+
+- id: yuan2024boosting
+  title: "Boosting Scientific Concepts Understanding: Can Analogy from Teacher Models Empower Student Models?"
+  authors: Siyu Yuan, Cheng Jiayang, Lin Qiu and Deqing Yang
+  venue: EMNLP
+  year: 2024
+  subsection: semantic
+  links:
+    paper:
+  in_survey: true
+
+- id: blainmontesano2024evaluating
+  title: Evaluating Approaches to Solving Proportional Sentence Analogies
+  authors: Yves Blain-Montesano
+  venue: "n/a"
+  year: 2024
+  subsection: semantic
+  links:
+    paper:
+  in_survey: true
+
+- id: afantenos2024proportions
+  title: "Analogical Proportions and Creativity: A Preliminary Study"
+  authors: Stergos Afantenos, Henri Prade, Gilles Richard and Leonardo Cortez-Bernades
+  venue: ICCC
+  year: 2024
+  subsection: semantic
+  links:
+    paper:
+  in_survey: true
+
+# -------------------------------------------------------------- structural --
+- id: combs2025zeroshot
+  title: Zero-Shot Comparison of Large Language Models' Reasoning Abilities on Long-Text Analogies
+  authors: Kara Combs, Trevor Bihl, Spencer Howlett and Yuki Adams
+  venue: "n/a"
+  year: 2025
+  subsection: structural
+  links:
+    paper:
+  in_survey: true
+
+- id: combs2025tradeoff
+  title: Evaluating the Trade-off Between Analogical Reasoning Ability and Efficiency in Large Language Models
+  authors: Kara L. Combs et al.
+  venue: IEEE TCDS
+  year: 2025
+  subsection: structural
+  links:
+    paper:
+  in_survey: true
+
+- id: sourati2024arn
+  title: "ARN: Analogical Reasoning on Narratives"
+  authors: Zhivar Sourati, Filip Ilievski, Pia Sommerauer and Yifan Jiang
+  venue: TACL
+  year: 2024
+  subsection: structural
+  tags: [must-read, benchmark, negative-result]
+  links:
+    paper: https://aclanthology.org/2024.tacl-1.59/
+    code:
+  in_survey: true
+  tldr: >
+    Separates near/far and analogy/disanalogy in narratives and shows a
+    persistent bias toward lexical overlap — performance falls off exactly when
+    surface similarity and deep structure are made to conflict.
+
+- id: yuan2023beneath
+  title: "Beneath Surface Similarity: Large Language Models Make Reasonable Scientific Analogies After Structure Abduction"
+  authors: Siyu Yuan, Jiangjie Chen, Xuyang Ge, Yanghua Xiao and Deqing Yang
+  venue: EMNLP Findings
+  year: 2023
+  subsection: structural
+  tags: [must-read]
+  links:
+    paper: https://aclanthology.org/2023.findings-emnlp.160/
+  in_survey: true
+  tldr: >
+    Reframes the task as abducing the latent mapping between two systems rather
+    than picking an answer — models do far better when the structure is made an
+    explicit output than when it stays implicit.
+
+- id: ding2023fluid
+  title: "Fluid Transformers and Creative Analogies: Exploring Large Language Models' Capacity for Augmenting Cross-Domain Analogical Creativity"
+  authors: Zijian Ding, Arvind Srinivasan, Stephen MacNeil and Joel Chan
+  venue: "Creativity and Cognition"
+  year: 2023
+  subsection: structural
+  links:
+    paper:
+  in_survey: true
+
+- id: gjerde2025exploring
+  title: Exploring Causal and Compositional Reasoning in Large Language Models
+  authors: Magnus Gjerde, Vanessa Cheung and David Lagnado
+  venue: CogSci
+  year: 2025
+  subsection: structural
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: afantenos2024generative
+  title: "Proportions Analogiques et Créativité: Une Étude Préliminaire"
+  authors: Stergos Afantenos, Henri Prade, Gilles Richard and Leonardo Cortez-Bernades
+  venue: JIAF
+  year: 2024
+  subsection: structural
+  links:
+    paper:
+  in_survey: true
+
+- id: latif2024systematic
+  title: A Systematic Assessment of OpenAI o1-Preview for Higher Order Thinking in Education
+  authors: Ehsan Latif et al.
+  venue: CoRR
+  year: 2024
+  subsection: structural
+  links:
+    paper:
+  in_survey: true
+
+- id: yiu2025relational
+  title: "Relational Reasoning in Children and Machines: Insights into Causal Generalization and Innovation"
+  authors: Eunice Yiu
+  venue: PhD Thesis, UC Berkeley
+  year: 2025
+  subsection: structural
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+# ---------------------------------------------------------- failure modes --
+- id: duchnowski2024semantically
+  title: Semantically Guided Analogical Reasoning in Humans and Large Language Models
+  authors: Alex Duchnowski
+  venue: "n/a"
+  year: 2024
+  subsection: failure-modes
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: schluter2018word
+  title: The Word Analogy Testing Caveat
+  authors: Natalie Schluter
+  venue: NAACL
+  year: 2018
+  subsection: failure-modes
+  tags: [negative-result]
+  links:
+    paper:
+  in_survey: true
+
+- id: linzen2016issues
+  title: Issues in Evaluating Semantic Spaces Using Word Analogies
+  authors: Tal Linzen
+  venue: RepEval
+  year: 2016
+  subsection: failure-modes
+  tags: [must-read, negative-result]
+  links:
+    paper: https://arxiv.org/abs/1606.07736
+  in_survey: true
+  tldr: >
+    The original caution for this whole literature — vector-offset analogy
+    scores are inflated by nearest-neighbour effects, so a high number does not
+    demonstrate that the relation is represented at all.
+
+# ------------------------------------------------------------- benchmarks --
+- id: czinczoll2022scan
+  title: "SCAN: Scientific and Creative Analogies in Pretrained Language Models"
+  authors: Tamara Czinczoll, Helen Yannakoudakis, Pushkar Mishra and Ekaterina Shutova
+  venue: EMNLP Findings
+  year: 2022
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/2211.15268
+  in_survey: true
+
+- id: chen2022ekar
+  title: "E-KAR: A Benchmark for Rationalizing Natural Language Analogical Reasoning"
+  authors: Jiangjie Chen et al.
+  venue: ACL Findings
+  year: 2022
+  subsection: benchmarks
+  tags: [must-read, benchmark]
+  links:
+    paper: https://aclanthology.org/2022.findings-acl.311/
+    project:
+  in_survey: true
+  tldr: >
+    Knowledge-intensive analogy QA from civil-service exams that requires a
+    free-text explanation alongside the answer — it tests "knowing why", not
+    just "knowing what".
+
+- id: gladkova2016analogy
+  title: "Analogy-Based Detection of Morphological and Semantic Relations with Word Embeddings: What Works and What Doesn't"
+  authors: Anna Gladkova, Aleksandr Drozd and Satoshi Matsuoka
+  venue: NAACL SRW
+  year: 2016
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper:
+  in_survey: true
+
+- id: gao2014wordrep
+  title: "WordRep: A Benchmark for Research on Learning Word Representations"
+  authors: Bin Gao, Jiang Bian and Tie-Yan Liu
+  venue: arXiv
+  year: 2014
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/1407.1640
+  in_survey: true
+
+# NOTE: the Google Analogy dataset's paper (mikolov2013linguistic) is filed
+# under mechanistic-interpretability/relational-representation, where it is the
+# canonical citation. It still appears in the Benchmarks table.
+
+- id: li2020caehn
+  title: "CA-EHN: Commonsense Analogy from E-HowNet"
+  authors: Peng-Hsuan Li, Tsan-Yu Yang and Wei-Yun Ma
+  venue: LREC
+  year: 2020
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/1908.07218
+  in_survey: true
+
+- id: wijesiriwardene2023analogical
+  title: "ANALOGICAL: A Novel Benchmark for Long Text Analogy Evaluation in Large Language Models"
+  authors: Thilini Wijesiriwardene et al.
+  venue: ACL Findings
+  year: 2023
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper:
+  in_survey: true
+
+- id: ye2024analobench
+  title: "AnaloBench: Benchmarking the Identification of Abstract and Long-Context Analogies"
+  authors: Xiao Ye et al.
+  venue: EMNLP
+  year: 2024
+  subsection: benchmarks
+  tags: [must-read, benchmark]
+  links:
+    paper:
+    code:
+  in_survey: true
+  tldr: >
+    Long-context analogy identification over story sets — scaling model size
+    barely helps, and performance drops sharply as the story pool grows,
+    isolating retrieval-over-structure as the bottleneck.
+
+- id: jiayang2023storyanalogy
+  title: "StoryAnalogy: Deriving Story-Level Analogies from Large Language Models to Unlock Analogical Understanding"
+  authors: Cheng Jiayang et al.
+  venue: EMNLP
+  year: 2023
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/2310.12874
+    code:
+  in_survey: true
+
+- id: bitton2022vasr
+  title: "VASR: Visual Analogies of Situation Recognition"
+  authors: Yonatan Bitton et al.
+  venue: AAAI
+  year: 2023
+  subsection: benchmarks
+  tags: [benchmark, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2212.04542
+    project:
+  in_survey: true
+
+- id: sultan2024parallelparc
+  title: "ParallelPARC: A Scalable Pipeline for Generating Natural-Language Analogies"
+  authors: Oren Sultan, Yonatan Bitton, Ron Yosef and Dafna Shahaf
+  venue: NAACL
+  year: 2025
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper:
+  in_survey: true
+
+# =========================================================================
+# New since the survey (2026). in_survey: false
+# =========================================================================
+
+- id: du2026carv
+  title: "CARV: A Diagnostic Benchmark for Compositional Analogical Reasoning in Multimodal LLMs"
+  authors: Yongkang Du, Xiaohan Zou, Minhao Cheng and Lu Lin
+  venue: arXiv
+  year: 2026
+  date: 2026-03
+  subsection: perceptual
+  tags: [must-read, benchmark, multimodal, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2603.27958
+  in_survey: false
+  tldr: >
+    Extends visual analogy from single pairs to composition over multiple
+    pairs (5.5k samples); Gemini-2.5 Pro reaches 40.4% against 100% human,
+    with failures traced to decomposing visual change into symbolic rules.
+
+- id: anon2026adage
+  title: "ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-07
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/2607.23058
+  in_survey: false
+
+- id: anon2026diversity
+  title: On the Diversity of Analogy Making in Large Language Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-08
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2608.03233
+  in_survey: false
+
+- id: anon2026probing
+  title: "When Models Know More Than They Say: Probing Analogical Reasoning in LLMs"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2604.03877
+  in_survey: false
+
+- id: anon2026causaltransfer
+  title: "Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: structural
+  tags: [cognitive-science, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2604.24062
+  in_survey: false
+
+- id: anon2026dircr
+  title: "DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: perceptual
+  tags: [multimodal]
+  links:
+    paper: https://arxiv.org/abs/2604.17584
+  in_survey: false
+
+- id: anon2026stembind
+  title: "StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: perceptual
+  tags: [multimodal, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2606.00148
+  in_survey: false
+
+- id: anon2026symbolicgrounding
+  title: Symbolic Grounding Reveals Representational Bottlenecks in Abstract Visual Reasoning
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: perceptual
+  tags: [multimodal, negative-result]
+  links:
+    paper: https://arxiv.org/abs/2604.21346
+  in_survey: false
+
+- id: anon2026tracevit
+  title: "TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-07
+  subsection: perceptual
+  tags: [multimodal]
+  links:
+    paper: https://arxiv.org/abs/2607.29586
+  in_survey: false
+
+- id: anon2026arcagihumans
+  title: "Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-07
+  subsection: perceptual
+  tags: [cognitive-science]
+  links:
+    paper: https://arxiv.org/abs/2607.11263
+  in_survey: false
+
+- id: anon2026griddescriptors
+  title: Structural Grid Descriptors Predict Within-Task Solver Success on ARC-AGI
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-06
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2606.09026
+  in_survey: false
+
+- id: anon2026cognitionevolution
+  title: Uneven Evolution of Cognition Across Generations of Generative AI Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: failure-modes
+  tags: [cognitive-science]
+  links:
+    paper: https://arxiv.org/abs/2605.06815
+  in_survey: false
+
+- id: anon2026riemannian
+  title: A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-08
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2608.14220
+  in_survey: false
+
+- id: anon2026bayesian
+  title: Proportional Analogies on Probability Distributions via Bayesian Updating
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-08
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2608.11724
+  in_survey: false
+
+- id: anon2026masalbench
+  title: "MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-01
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/2601.22050
+  in_survey: false

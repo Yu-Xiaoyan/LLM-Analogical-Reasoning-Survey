@@ -1,0 +1,244 @@
+# §4 Mechanistic Interpretability
+# See ../schema.md before editing.
+
+# --------------------------------------------- relational representation --
+- id: mikolov2013linguistic
+  title: Linguistic Regularities in Continuous Space Word Representations
+  authors: Tomáš Mikolov, Wen-tau Yih and Geoffrey Zweig
+  venue: NAACL
+  year: 2013
+  subsection: relational-representation
+  tags: [must-read, benchmark]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    The vector-offset result (king - man + woman ≈ queen) that made "analogy"
+    an interpretability probe in the first place. Everything in this section is
+    downstream of arguing about what it does and does not show.
+
+- id: levy2014linguistic
+  title: Linguistic Regularities in Sparse and Explicit Word Representations
+  authors: Omer Levy and Yoav Goldberg
+  venue: CoNLL
+  year: 2014
+  subsection: relational-representation
+  links:
+    paper:
+  in_survey: true
+
+- id: allen2019analogies
+  title: "Analogies Explained: Towards Understanding Word Embeddings"
+  authors: Carl Allen and Timothy Hospedales
+  venue: ICML
+  year: 2019
+  subsection: relational-representation
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Derives why the parallelogram works from the PMI factorisation, showing
+    analogy performance is a geometric byproduct of the training objective
+    rather than evidence of explicit relation modeling.
+
+- id: fournier2020analogies
+  title: "Analogies Minus Analogy Test: Measuring Regularities in Word Embeddings"
+  authors: Louis Fournier, Emmanuel Dupoux and Ewan Dunbar
+  venue: CoNLL
+  year: 2020
+  subsection: relational-representation
+  tags: [negative-result]
+  links:
+    paper: https://arxiv.org/abs/2010.03446
+  in_survey: true
+
+# ------------------------------------------------- relational invariance --
+- id: meng2022locating
+  title: Locating and Editing Factual Associations in GPT
+  authors: Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov
+  venue: NeurIPS
+  year: 2022
+  subsection: relational-invariance
+  tags: [must-read]
+  links:
+    paper:
+    code:
+  in_survey: true
+  tldr: >
+    Not an analogy paper, but the methodological template this section borrows:
+    relations can be localised to specific parameters and causally intervened
+    on, which is what makes "is the relation explicitly represented?" testable.
+
+- id: lake2018generalization
+  title: "Generalization Without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks"
+  authors: Brenden Lake and Marco Baroni
+  venue: ICML
+  year: 2018
+  subsection: relational-invariance
+  tags: [must-read, negative-result]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    The systematicity challenge in its modern form — networks reliably capture
+    low-level regularities and reliably fail when the same rule must be reused
+    in a novel composition.
+
+# ------------------------------------------------ structural sensitivity --
+# (gentner1983structure and webb2023emergent live in 00/01; cross-referenced
+#  here via tags rather than duplicated.)
+
+- id: yuksekgonul2023bags
+  title: When and Why Vision-Language Models Behave Like Bags-of-Words, and What to Do About It?
+  authors: Mert Yuksekgonul et al.
+  venue: ICLR
+  year: 2023
+  subsection: structural-sensitivity
+  tags: [multimodal, negative-result]
+  links:
+    paper:
+  in_survey: true
+
+# ---------------------------------------------- process decomposability --
+- id: wei2022chain
+  title: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+  authors: Jason Wei et al.
+  venue: NeurIPS
+  year: 2022
+  subsection: process-decomposability
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    The prompting result that made "does the computation decompose into steps?"
+    a live question for analogy — every process-decomposability claim in §4.4
+    is arguing with or building on it.
+
+- id: yao2023tree
+  title: "Tree of Thoughts: Deliberate Problem Solving with Large Language Models"
+  authors: Shunyu Yao et al.
+  venue: NeurIPS
+  year: 2023
+  subsection: process-decomposability
+  links:
+    paper:
+    code:
+  in_survey: true
+
+- id: russin2025stepbystep
+  title: Step-by-Step Analogical Reasoning in Humans and Neural Networks
+  authors: Jacob Russin, Joonhwa Kim, Ellie Pavlick and Michael J. Frank
+  venue: "n/a"
+  year: 2025
+  subsection: process-decomposability
+  tags: [must-read, cognitive-science]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Compares model intermediate activations against human incremental analogy
+    traces and finds substantial mismatch — models can reach the answer without
+    following anything like the human stepwise mapping process.
+
+- id: jacovi2020towards
+  title: "Towards Faithfully Interpretable NLP Systems: How Should We Define and Evaluate Faithfulness?"
+  authors: Alon Jacovi and Yoav Goldberg
+  venue: ACL
+  year: 2020
+  subsection: process-decomposability
+  tags: [must-read, position]
+  links:
+    paper: https://aclanthology.org/2020.acl-main.386/
+  in_survey: true
+  tldr: >
+    The reason generated "step-by-step explanations" cannot be taken as the
+    computation: faithfulness must be argued for, not assumed from plausibility.
+
+# =========================================================================
+# New since the survey (2026). in_survey: false
+# =========================================================================
+
+- id: minegishi2026emergent
+  title: Emergent Analogical Reasoning in Transformers
+  authors: Gouki Minegishi, Jingyuan Feng, Hiroki Furuta, Takeshi Kojima, Yusuke Iwasawa and Yutaka Matsuo
+  venue: arXiv
+  year: 2026
+  date: 2026-02
+  subsection: relational-representation
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2602.01992
+  in_survey: false
+  tldr: >
+    Formalises analogy as a functor between categories and shows, on synthetic
+    tasks, that it emerges from two identifiable mechanisms — geometric
+    alignment of relational structure in embedding space plus application of
+    the functor — with the same signatures visible in pretrained LLMs. The most
+    direct mechanistic answer to §4 published since the survey.
+
+- id: anon2026featureresemblance
+  title: "Feature Resemblance: Towards a Theoretical Understanding of Analogical Reasoning in Transformers"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-03
+  subsection: relational-representation
+  tags: [must-read, position]
+  links:
+    paper: https://arxiv.org/abs/2603.05143
+  in_survey: false
+  tldr: >
+    A theoretical account of when transformers can implement analogical
+    mapping at all — pairs naturally with Minegishi et al. as the theory side
+    of the same question.
+
+- id: anon2026copying
+  title: "Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: process-decomposability
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2604.06501
+  in_survey: false
+  tldr: >
+    Training-dynamics evidence that analogical behaviour is scaffolded on an
+    earlier-acquired copying circuit — a concrete developmental story for how
+    the capability arises rather than a static probe.
+
+- id: anon2026functionvectors
+  title: Relational Knowledge Distillation Using Fine-tuned Function Vectors
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-01
+  subsection: relational-invariance
+  links:
+    paper: https://arxiv.org/abs/2601.08169
+  in_survey: false
+
+- id: anon2026hierarchicalconcepts
+  title: Linear Representations of Hierarchical Concepts in Language Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: relational-invariance
+  links:
+    paper: https://arxiv.org/abs/2604.07886
+  in_survey: false
+
+- id: anon2026globalworkspace
+  title: Verbalizable Representations Form a Global Workspace in Language Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-07
+  subsection: process-decomposability
+  links:
+    paper: https://arxiv.org/abs/2607.15495
+  in_survey: false

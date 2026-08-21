@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this list or the survey, please cite the survey."
+title: "Large Language Models Meet Analogical Reasoning: A Systematic Survey and Perspectives"
+type: article
+authors:
+  - family-names: Yu
+    given-names: Xiaoyan
+  - family-names: Ma
+    given-names: Yunshan
+  - family-names: Su
+    given-names: Huichen
+  - family-names: Sui
+    given-names: Dianbo
+  - family-names: Zhu
+    given-names: Liehuang
+  - family-names: Chua
+    given-names: Tat-Seng
+year: 2026
+identifiers:
+  - type: other
+    value: "arXiv:PLACEHOLDER"
+    description: arXiv preprint

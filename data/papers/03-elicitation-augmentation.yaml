@@ -1,0 +1,315 @@
+# §5 Elicitation & Augmentation
+# See ../schema.md before editing.
+
+# ------------------------------------------------- analogical prompting --
+- id: brown2020language
+  title: Language Models Are Few-Shot Learners
+  authors: Tom B. Brown et al.
+  venue: NeurIPS
+  year: 2020
+  subsection: analogical-prompting
+  links:
+    paper:
+  in_survey: true
+
+- id: yasunaga2024analogical
+  title: Large Language Models as Analogical Reasoners
+  authors: Michihiro Yasunaga et al.
+  venue: ICLR
+  year: 2024
+  subsection: analogical-prompting
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Analogical prompting — have the model self-generate relevant exemplars
+    before solving, removing the need for hand-labelled demonstrations. The
+    single most-cited method paper in this pillar; read alongside Qin et al.
+    (2025), which questions whether the "relevance" is doing the work.
+
+- id: yu2024thought
+  title: "Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models"
+  authors: Junchi Yu, Ran He and Zhitao Ying
+  venue: ICLR
+  year: 2024
+  subsection: analogical-prompting
+  tags: [must-read]
+  links:
+    paper:
+    code:
+  in_survey: true
+  tldr: >
+    Solves analogous sub-problems first and propagates their solutions back to
+    the target — makes the source-problem construction explicit rather than
+    leaving it to the exemplar.
+
+- id: luo2025curriculum
+  title: "Let's Be Self-Generated via Step by Step: A Curriculum Learning Approach to Automated Reasoning with Large Language Models"
+  authors: Kangyang Luo et al.
+  venue: arXiv
+  year: 2025
+  subsection: analogical-prompting
+  links:
+    paper: https://arxiv.org/abs/2410.21728
+  in_survey: true
+
+- id: besta2024graph
+  title: "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
+  authors: Maciej Besta et al.
+  venue: AAAI
+  year: 2024
+  subsection: analogical-prompting
+  links:
+    paper:
+  in_survey: true
+
+# -------------------------------------------------- retrieval & memory --
+- id: hao2023reasoning
+  title: Reasoning with Language Model Is Planning with World Model
+  authors: Shibo Hao et al.
+  venue: EMNLP
+  year: 2023
+  subsection: retrieval-memory
+  links:
+    paper:
+  in_survey: true
+
+- id: li2023making
+  title: Making Language Models Better Reasoners with Step-Aware Verifier
+  authors: Yifei Li et al.
+  venue: ACL
+  year: 2023
+  subsection: retrieval-memory
+  links:
+    paper:
+  in_survey: true
+
+- id: xu2023knn
+  title: "kNN Prompting: Beyond-Context Learning with Calibration-Free Nearest Neighbor Inference"
+  authors: Benfeng Xu et al.
+  venue: ICLR
+  year: 2023
+  subsection: retrieval-memory
+  links:
+    paper:
+  in_survey: true
+
+- id: lewis2020retrieval
+  title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+  authors: Patrick Lewis et al.
+  venue: NeurIPS
+  year: 2020
+  subsection: retrieval-memory
+  links:
+    paper:
+  in_survey: true
+
+- id: edge2024local
+  title: "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
+  authors: Darren Edge et al.
+  venue: arXiv
+  year: 2024
+  subsection: retrieval-memory
+  links:
+    paper: https://arxiv.org/abs/2404.16130
+  in_survey: true
+
+- id: hu2025define
+  title: "DeFine: Decision-Making with Analogical Reasoning over Factor Profiles"
+  authors: Yebowen Hu et al.
+  venue: ACL
+  year: 2025
+  subsection: retrieval-memory
+  links:
+    paper:
+  in_survey: true
+
+# ----------------------------------------------------- relational modeling --
+- id: turney2006similarity
+  title: Similarity of Semantic Relations
+  authors: Peter D. Turney
+  venue: Computational Linguistics
+  year: 2006
+  subsection: relational-modeling
+  links:
+    paper:
+  in_survey: true
+
+- id: ushio2021bert
+  title: "BERT Is to NLP What AlexNet Is to CV: Can Pre-Trained Language Models Identify Analogies?"
+  authors: Asahi Ushio, Luis Espinosa Anke, Steven Schockaert and Jose Camacho-Collados
+  venue: ACL
+  year: 2021
+  subsection: relational-modeling
+  tags: [must-read]
+  links:
+    paper: https://aclanthology.org/2021.acl-long.280/
+    code:
+  in_survey: true
+  tldr: >
+    The careful pre-LLM baseline: with well-designed scoring, PLMs beat word
+    embeddings on analogy, but still fall short of humans — and the gap tracks
+    relation abstractness, not word frequency.
+
+- id: lu2019emergence
+  title: Emergence of Analogy from Relation Learning
+  authors: Hongjing Lu, Ying Nian Wu and Keith J. Holyoak
+  venue: PNAS
+  year: 2019
+  subsection: relational-modeling
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: santoro2017simple
+  title: A Simple Neural Network Module for Relational Reasoning
+  authors: Adam Santoro et al.
+  venue: NeurIPS
+  year: 2017
+  subsection: relational-modeling
+  links:
+    paper:
+  in_survey: true
+
+# ---------------------------------------------------- knowledge-enhanced --
+- id: boteanu2015solving
+  title: Solving and Explaining Analogy Questions Using Semantic Networks
+  authors: Adrian Boteanu and Sonia Chernova
+  venue: AAAI
+  year: 2015
+  subsection: knowledge-enhanced
+  links:
+    paper:
+  in_survey: true
+
+- id: wijesiriwardene2023neurosymbolic
+  title: Why Do We Need Neurosymbolic AI to Model Pragmatic Analogies?
+  authors: Thilini Wijesiriwardene, Amit Sheth, Valerie L. Shalin and Amit Sheth
+  venue: IEEE Intelligent Systems
+  year: 2023
+  subsection: knowledge-enhanced
+  tags: [position]
+  links:
+    paper:
+  in_survey: true
+
+- id: yuan2024analogykb
+  title: "AnalogyKB: Unlocking Analogical Reasoning of Language Models with a Million-Scale Knowledge Base"
+  authors: Siyu Yuan et al.
+  venue: ACL
+  year: 2024
+  subsection: knowledge-enhanced
+  tags: [must-read, benchmark]
+  links:
+    paper: https://aclanthology.org/2024.acl-long.68/
+    code:
+  in_survey: true
+  tldr: >
+    A million-scale analogy KB mined from existing knowledge graphs, used as
+    training data rather than as a lookup — the clearest demonstration that the
+    bottleneck in §7.1 (data scarcity) is attackable.
+
+- id: mao2019neurosymbolic
+  title: "The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision"
+  authors: Jiayuan Mao et al.
+  venue: ICLR
+  year: 2019
+  subsection: knowledge-enhanced
+  tags: [multimodal]
+  links:
+    paper: https://arxiv.org/abs/1904.12584
+  in_survey: true
+
+- id: guo2024multimodal
+  title: Can Multimodal Large Language Model Think Analogically?
+  authors: Diandian Guo et al.
+  venue: ICONIP
+  year: 2024
+  subsection: knowledge-enhanced
+  tags: [multimodal]
+  links:
+    paper:
+  in_survey: true
+
+- id: lippolis2025enhancing
+  title: Enhancing Multimodal Analogical Reasoning with Logic Augmented Generation
+  authors: Anna Sofia Lippolis, Andrea Giovanni Nuzzolese and Aldo Gangemi
+  venue: arXiv
+  year: 2025
+  subsection: knowledge-enhanced
+  tags: [multimodal]
+  links:
+    paper: https://arxiv.org/abs/2504.11190
+  in_survey: true
+
+# =========================================================================
+# New since the survey (2026). in_survey: false
+# =========================================================================
+
+- id: anon2026structuralmapping
+  title: Enhancing Structural Mapping with LLM-derived Abstractions for Analogical Reasoning in Narratives
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-03
+  subsection: knowledge-enhanced
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2603.29997
+  in_survey: false
+  tldr: >
+    Uses the LLM to produce the abstraction layer and then does explicit
+    structure mapping on top of it — a direct engineering answer to the ARN
+    finding that models default to lexical overlap on narratives.
+
+- id: anon2026deepresearch
+  title: "Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-07
+  subsection: retrieval-memory
+  tags: [must-read, agentic]
+  links:
+    paper: https://arxiv.org/abs/2607.13602
+  in_survey: false
+  tldr: >
+    Agentic retrieval of historical analogues for forecasting — the clearest
+    instance so far of the "structure-aware retrieval" direction proposed in
+    §7.2.2 of the survey.
+
+- id: anon2026caro
+  title: "CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: analogical-prompting
+  links:
+    paper: https://arxiv.org/abs/2604.10504
+  in_survey: false
+
+- id: anon2026metaphorsteering
+  title: "Metaphor-Induced Algorithmic Steering: Cross-Domain Procedural Transfer in LLM Code Generation"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-07
+  subsection: analogical-prompting
+  links:
+    paper: https://arxiv.org/abs/2607.28683
+  in_survey: false
+
+- id: anon2026agentsafety
+  title: "Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: analogical-prompting
+  tags: [agentic]
+  links:
+    paper: https://arxiv.org/abs/2605.03242
+  in_survey: false

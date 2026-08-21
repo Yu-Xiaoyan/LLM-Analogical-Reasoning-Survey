@@ -1,0 +1,112 @@
+name: Add a paper
+description: Suggest a paper for the list
+title: "[paper] "
+labels: ["new paper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! One paper per issue, please — it keeps the triage simple.
+        If you would rather send a PR directly, see [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: Emergent Analogical Reasoning in Large Language Models
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: arXiv, ACL Anthology, or DOI. Whichever is the canonical version.
+      placeholder: https://arxiv.org/abs/2212.09196
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+      placeholder: NeurIPS 2024 / arXiv 2026
+    validations:
+      required: true
+
+  - type: dropdown
+    id: subsection
+    attributes:
+      label: Where does it belong?
+      description: >
+        Pick the single category matching its *primary* contribution.
+        See docs/taxonomy.md if you are unsure — "not sure" is a fine answer.
+      options:
+        - "Foundations — cognitive science theory"
+        - "Foundations — scope and positioning"
+        - "Foundations — related survey"
+        - "Capability Evaluation — symbolic analogy"
+        - "Capability Evaluation — perceptual analogy"
+        - "Capability Evaluation — semantic analogy"
+        - "Capability Evaluation — structural analogy"
+        - "Capability Evaluation — failure modes"
+        - "Capability Evaluation — benchmark/dataset"
+        - "Mechanistic Interpretability — relational representation"
+        - "Mechanistic Interpretability — relational invariance and reuse"
+        - "Mechanistic Interpretability — structural sensitivity"
+        - "Mechanistic Interpretability — process decomposability"
+        - "Elicitation — analogical prompting"
+        - "Elicitation — retrieval and memory augmentation"
+        - "Augmentation — relational modeling"
+        - "Augmentation — knowledge-enhanced methods"
+        - "Applications — analogy generation and mining"
+        - "Applications — creativity and design"
+        - "Applications — education"
+        - "Applications — scientific knowledge extraction"
+        - "Applications — knowledge graphs"
+        - "Applications — visual and embodied"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Tags
+      options:
+        - label: "`benchmark` — introduces a dataset or benchmark"
+        - label: "`negative-result` — reports a limitation or failure"
+        - label: "`multimodal` — involves vision or other non-text modalities"
+        - label: "`cognitive-science` — uses human data or cognitive theory"
+        - label: "`position` — position, opinion, or theory paper"
+        - label: "`agentic` — agents, program synthesis, or inference-time search"
+
+  - type: textarea
+    id: tldr
+    attributes:
+      label: What does it show?
+      description: >
+        One sentence on the *finding*, not the topic. This is the single most
+        useful thing in the issue — it usually goes into the list verbatim.
+      placeholder: >
+        Models degrade sharply on counterfactual letter-string variants that
+        humans solve just as easily, implying the ability rides on pre-training
+        familiarity.
+    validations:
+      required: true
+
+  - type: input
+    id: code
+    attributes:
+      label: Code / data link
+      description: Optional.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the README and this paper is not already listed.
+          required: true
+        - label: Analogy or relational mapping is central to this paper, not incidental.
+          required: true

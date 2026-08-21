@@ -1,0 +1,134 @@
+# Taxonomy of the survey. Order here == order in the generated README.
+# `section` maps to a data/papers/*.yaml file; `subsection` keys are what
+# individual paper entries reference.
+
+sections:
+  - key: foundations
+    title: Definitions, Scope & Related Surveys
+    paper_file: 00-foundations.yaml
+    survey_section: "§2"
+    blurb: >
+      What analogical reasoning is, the cognitive-science theory it inherits
+      (structure-mapping), where it sits relative to deductive/inductive
+      reasoning, and the surveys that neighbour this one.
+    subsections:
+      - key: theory
+        title: Cognitive Science Foundations
+        blurb: Structure-mapping theory and the classical account of analogy.
+      - key: scope
+        title: Scope & Positioning
+        blurb: Work that frames analogy relative to other reasoning modes.
+      - key: surveys
+        title: Related Surveys
+        blurb: Adjacent surveys on LLM reasoning, abstract visual reasoning, and analogy.
+
+  - key: capability-evaluation
+    title: Capability Evaluation
+    paper_file: 01-capability-evaluation.yaml
+    survey_section: "§3"
+    blurb: >
+      How well do models actually do it? Organised by level of abstraction and
+      modality, from formal rule manipulation to deep relational understanding.
+    subsections:
+      - key: symbolic
+        title: Symbolic Analogy
+        blurb: >
+          Zero-shot generalisation over formal rules with semantics stripped out —
+          letter-string analogies, digit matrices, synthetic/counterfactual rule sets.
+      - key: perceptual
+        title: Perceptual Analogy
+        blurb: >
+          Inducing logical patterns from non-verbal, multi-modal stimuli —
+          RPM/ARC-style grids, Bongard problems, real-world visual transformations.
+      - key: semantic
+        title: Semantic Analogy
+        blurb: >
+          Correspondence between linguistic concepts — proportional analogies
+          (A:B::C:D), metaphorical mappings, analogy-based concept explanation.
+      - key: structural
+        title: Structural Analogy
+        blurb: >
+          Systematic mapping of causal structure across disparate domains —
+          narrative mapping, cross-system abduction, causal reformulation.
+      - key: failure-modes
+        title: Common Failure Modes
+        blurb: >
+          Surface shortcuts, fragile rule generalisation, and input–output
+          inconsistency. Evidence that the capability is not what it looks like.
+      - key: benchmarks
+        title: Benchmarks & Datasets
+        blurb: Resources built specifically to measure analogical ability.
+
+  - key: mechanistic-interpretability
+    title: Mechanistic Interpretability
+    paper_file: 02-mechanistic-interpretability.yaml
+    survey_section: "§4"
+    blurb: >
+      What is going on inside? Four questions: is the mapped relation explicitly
+      represented, is it represented consistently, does performance reflect real
+      structural mapping, and does the computation decompose into steps?
+    subsections:
+      - key: relational-representation
+        title: Relational Representation
+        blurb: Whether a mapped relation admits an explicit, localisable representation.
+      - key: relational-invariance
+        title: Relational Invariance & Reuse
+        blurb: Whether the same relation is represented consistently across contexts.
+      - key: structural-sensitivity
+        title: Structural Sensitivity
+        blurb: Whether performance survives the removal of surface statistical cues.
+      - key: process-decomposability
+        title: Process Decomposability
+        blurb: Whether the computation unfolds through decomposable intermediate states.
+
+  - key: elicitation-augmentation
+    title: Elicitation & Augmentation
+    paper_file: 03-elicitation-augmentation.yaml
+    survey_section: "§5"
+    blurb: >
+      How to get more of it out. Split by stage of intervention — inference-time
+      methods that leave parameters alone, and training-time methods that don't.
+    subsections:
+      - key: analogical-prompting
+        title: Analogical Prompting
+        blurb: Injecting temporary structure through exemplars and relational scaffolds.
+      - key: retrieval-memory
+        title: Retrieval & Memory Augmentation
+        blurb: Analogy as a latent inductive bias over retrieved cases and reasoning traces.
+      - key: relational-modeling
+        title: Relational Modeling
+        blurb: Elevating relations to first-class modeling units during training.
+      - key: knowledge-enhanced
+        title: Knowledge-Enhanced Methods
+        blurb: Externalising analogical structure into KBs, symbolic, or neuro-symbolic form.
+
+  - key: applications
+    title: Applications
+    paper_file: 04-applications.yaml
+    survey_section: "§6"
+    blurb: >
+      Where structural mapping is a functional necessity rather than a stylistic
+      choice.
+    subsections:
+      - key: generation-mining
+        title: Textual Analogy Generation & Mining
+      - key: creativity-design
+        title: Creativity & Design Support
+      - key: education
+        title: Educational Applications
+      - key: science
+        title: Scientific Knowledge Extraction
+      - key: knowledge-graph
+        title: Knowledge Graph Enhancement
+      - key: visual-embodied
+        title: Visual & Embodied Intelligence
+
+# Tag vocabulary used for the cross-cutting views in docs/.
+tags:
+  must-read: Papers we would hand to someone entering the field.
+  benchmark: Introduces a dataset or benchmark.
+  position: Position / opinion / theory paper rather than an empirical result.
+  negative-result: Reports a limitation or failure of current models.
+  multimodal: Involves vision or other non-text modalities.
+  cognitive-science: Draws directly on human data or cognitive theory.
+  agentic: Uses agents, program synthesis, or search at inference time.

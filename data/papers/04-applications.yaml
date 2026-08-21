@@ -1,0 +1,250 @@
+# §6 Applications
+# See ../schema.md before editing.
+
+# ------------------------------------------------- generation & mining --
+- id: bhavya2022analogy
+  title: "Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT"
+  authors: Bhavya Bhavya, Jinjun Xiong and ChengXiang Zhai
+  venue: INLG
+  year: 2022
+  subsection: generation-mining
+  links:
+    paper:
+  in_survey: true
+
+- id: bhavya2023cam
+  title: "CAM: A Large Language Model-Based Creative Analogy Mining Framework"
+  authors: Bhavya Bhavya, Jinjun Xiong and ChengXiang Zhai
+  venue: WWW
+  year: 2023
+  subsection: generation-mining
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Unsupervised discovery of novel analogies at scale by pairing generation
+    with closed-loop verification — moves the field from retrieving known
+    analogies to synthesising new ones from unstructured text.
+
+- id: hope2017accelerating
+  title: Accelerating Innovation Through Analogy Mining
+  authors: Tom Hope, Joel Chan, Aniket Kittur and Dafna Shahaf
+  venue: KDD
+  year: 2017
+  subsection: generation-mining
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    The pre-LLM statement of the problem — mining purpose/mechanism structure
+    from product descriptions to surface far-domain matches. Still the cleanest
+    articulation of why relational indexing beats semantic similarity here.
+
+- id: ouyang2022training
+  title: Training Language Models to Follow Instructions with Human Feedback
+  authors: Long Ouyang et al.
+  venue: NeurIPS
+  year: 2022
+  subsection: generation-mining
+  links:
+    paper:
+  in_survey: true
+
+- id: zhang2025annotators
+  title: Can Language Models Serve as Analogy Annotators?
+  authors: Xiaojing Zhang and Bochen Lyu
+  venue: ACL Findings
+  year: 2025
+  subsection: generation-mining
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Proposes A3E, structure-aware evaluation of generated analogies — the
+    response to the §7.1 complaint that surface-overlap metrics like BLEU
+    cannot see structural fidelity.
+
+# ----------------------------------------------------- creativity & design --
+- id: jiang2025autotriz
+  title: "AutoTRIZ: Automating Engineering Innovation with TRIZ and Large Language Models"
+  authors: Shuo Jiang, Weifeng Li, Yuping Qian, Yangjun Zhang and Jianxi Luo
+  venue: Advanced Engineering Informatics
+  year: 2025
+  subsection: creativity-design
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Wraps TRIZ's contradiction-resolution heuristics around an LLM, turning
+    analogical transfer into a controllable invention pipeline rather than an
+    open-ended brainstorm.
+
+# ---------------------------------------------------------------- education --
+- id: latif2024generative
+  title: Generative Metaphors and Visualization for STEM Concept Explanation
+  authors: Ehsan Latif et al.
+  venue: CoRR
+  year: 2024
+  subsection: education
+  links:
+    paper:
+  in_survey: true
+
+- id: cao2023elucidating
+  title: "Elucidating STEM Concepts Through Generative AI: A Multi-Modal Exploration of Analogical Reasoning"
+  authors: Chen Cao, Zijian Ding, Gyeong-Geon Lee, Jiajun Jiao, Jionghao Lin and Xiaoming Zhai
+  venue: arXiv
+  year: 2023
+  subsection: education
+  links:
+    paper: https://arxiv.org/abs/2308.10454
+  in_survey: true
+
+# --------------------------------------------- scientific knowledge extraction --
+- id: patel2024metaphorprompt
+  title: "MetaphorPrompt: An Analogical Reasoning Approach for Extracting Causal Links from Biological Text"
+  authors: Parth Patel, Yu-Chiao Chiu, Yufei Huang and Jianqiu Zhang
+  venue: ACM BCB
+  year: 2024
+  subsection: science
+  links:
+    paper:
+  in_survey: true
+
+- id: wu2024regulogpt
+  title: "ReguloGPT: Harnessing GPT for Knowledge Graph Construction of Molecular Regulatory Pathways"
+  authors: Xidong Wu et al.
+  venue: bioRxiv
+  year: 2024
+  subsection: science
+  links:
+    paper:
+  in_survey: true
+
+- id: li2025past
+  title: "Past Meets Present: Creating Historical Analogy with Large Language Models"
+  authors: Nianqi Li et al.
+  venue: ACL
+  year: 2025
+  subsection: science
+  tags: [must-read]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    Retrieval and alignment of cross-temporal parallels for historical
+    synthesis — the template that Analogical Deep Research (2026) scales up
+    into an agentic foresight pipeline.
+
+# ----------------------------------------------------- knowledge graph --
+- id: raad2015role
+  title: "The Role of Analogy in Ontology Alignment: A Study on LISA"
+  authors: Elie Raad and Joerg Evermann
+  venue: Cognitive Systems Research
+  year: 2015
+  subsection: knowledge-graph
+  links:
+    paper:
+  in_survey: true
+
+- id: zhang2023multimodal
+  title: Multimodal Analogical Reasoning over Knowledge Graphs
+  authors: Ningyu Zhang et al.
+  venue: ICLR
+  year: 2023
+  subsection: knowledge-graph
+  tags: [must-read, benchmark, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2210.00312
+    code:
+  in_survey: true
+  tldr: >
+    Introduces MarT and the multimodal analogical reasoning task over KGs —
+    the main resource connecting the structural-mapping view to graph-shaped
+    data rather than to text or grids.
+
+# -------------------------------------------------- visual & embodied --
+- id: huang2021diagnostic
+  title: A Diagnostic Study of Visual Question Answering with Analogical Reasoning
+  authors: Ziqi Huang, Hongyuan Zhu, Ying Sun, Dongkyu Choi, Cheston Tan and Joo-Hwee Lim
+  venue: ICIP
+  year: 2021
+  subsection: visual-embodied
+  tags: [multimodal]
+  links:
+    paper:
+  in_survey: true
+
+- id: zhang2025vln
+  title: Vision-and-Language Navigation with Analogical Textual Descriptions in LLMs
+  authors: Yue Zhang, Tianyi Ma, Zun Wang, Yanyuan Qiao and Parisa Kordjamshidi
+  venue: EMNLP
+  year: 2025
+  subsection: visual-embodied
+  tags: [multimodal]
+  links:
+    paper:
+  in_survey: true
+
+# =========================================================================
+# New since the survey (2026). in_survey: false
+# =========================================================================
+
+- id: anon2026creativityscience
+  title: Unlocking LLM Creativity in Science through Analogical Reasoning
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: creativity-design
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2605.11258
+  in_survey: false
+  tldr: >
+    Positions analogy as the operative mechanism behind LLM scientific
+    ideation — the 2026 successor to Ding et al. (2023) on creative
+    cross-domain association.
+
+- id: anon2026endoscopy
+  title: "Analogical Reasoning as a Doctor: A Foundation Model for Gastrointestinal Endoscopy Diagnosis"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: visual-embodied
+  tags: [must-read, multimodal]
+  links:
+    paper: https://arxiv.org/abs/2604.05649
+  in_survey: false
+  tldr: >
+    Builds case-to-case analogical matching into a clinical foundation model —
+    the clinical-diagnostics vertical named in §7.2.1 of the survey, now with
+    an actual system behind it.
+
+- id: anon2026medicineanalogies
+  title: "What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-08
+  subsection: science
+  tags: [position]
+  links:
+    paper: https://arxiv.org/abs/2608.18186
+  in_survey: false
+
+- id: anon2026disclosure
+  title: "Beyond Nutrition Labels: How Analogical Reasoning Shapes Synthetic Media Disclosure Design"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: education
+  links:
+    paper: https://arxiv.org/abs/2605.19045
+  in_survey: false

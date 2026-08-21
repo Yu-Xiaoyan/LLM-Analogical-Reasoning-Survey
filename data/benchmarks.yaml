@@ -1,0 +1,209 @@
+# Benchmarks for analogical reasoning (Appendix B / Table 1 of the survey).
+# `paper_id` links back to an entry in data/papers/*.yaml when one exists.
+#
+# modality: text | visual | multimodal
+# level:    word | sentence | narrative | long-context | visual-grid | visual-scene
+
+- name: SCAN
+  paper_id: czinczoll2022scan
+  year: 2022
+  modality: text
+  level: word
+  task: Word-level compositional analogy
+  scale: "449 analogy instances, clustered into 65 full concept mappings"
+  description: >
+    Scientific and creative analogies with complex cross-domain concept mappings.
+  links:
+    data:
+
+- name: E-KAR
+  paper_id: chen2022ekar
+  year: 2022
+  modality: text
+  level: word
+  task: Analogical reasoning QA with explanations
+  scale: "1,655 Chinese + 1,251 English questions; 8,275 explanations"
+  description: >
+    Knowledge-intensive benchmark from civil service exams requiring both an
+    answer and a rationale — tests "knowing what" and "knowing why".
+  links:
+    project:
+
+- name: BATS
+  paper_id: gladkova2016analogy
+  year: 2016
+  modality: text
+  level: word
+  task: Word-level proportional analogy
+  scale: "99,200 questions (4 categories, 40 subcategories, 50 pairs each)"
+  description: >
+    Balanced word analogy test set that reduces polysemy, built to evaluate
+    whether embeddings capture linguistic rules.
+  links:
+    data:
+
+- name: WordRep
+  paper_id: gao2014wordrep
+  year: 2014
+  modality: text
+  level: word
+  task: Word-level proportional analogy
+  scale: "19,544 questions (25 subtasks)"
+  description: >
+    Large-scale word representation benchmark extended from Mikolov's task set.
+
+- name: Google Analogy
+  paper_id: mikolov2013linguistic
+  year: 2013
+  modality: text
+  level: word
+  task: Word-level proportional analogy
+  scale: "19,544 questions (10,675 morphological; 8,869 semantic)"
+  description: >
+    The classic word analogy dataset; the basic evaluation for word embeddings.
+
+- name: CA-EHN
+  paper_id: li2020caehn
+  year: 2020
+  modality: text
+  level: word
+  task: Commonsense word-level analogy
+  scale: "90,505 Chinese questions (5,656 words; 763 commonsense relations)"
+  description: >
+    First commonsense word analogy dataset, derived from E-HowNet.
+
+- name: ANALOGICAL
+  paper_id: wijesiriwardene2023analogical
+  year: 2023
+  modality: text
+  level: long-context
+  task: Long-text analogy identification
+  scale: "13 integrated datasets (5 newly built + 8 adapted)"
+  description: >
+    Long-text analogy benchmark stratified by complexity.
+
+- name: AnaloBench
+  paper_id: ye2024analobench
+  year: 2024
+  modality: text
+  level: long-context
+  task: Abstract long-context analogy identification
+  scale: "340 stories grouped into 47 clusters"
+  description: >
+    Tests the ability to capture abstract analogies in long texts of varying
+    length; scaling model size gives little benefit.
+  links:
+    code:
+
+- name: StoryAnalogy
+  paper_id: jiayang2023storyanalogy
+  year: 2023
+  modality: text
+  level: narrative
+  task: Story-level analogy identification and generation
+  scale: "24,388 story pairs, human-annotated for structural similarity"
+  description: >
+    First large-scale story analogy corpus, annotated by an extended
+    structure-mapping scheme.
+  links:
+    code:
+
+- name: ARN
+  paper_id: sourati2024arn
+  year: 2024
+  modality: text
+  level: narrative
+  task: Narrative analogy identification
+  scale: "1,096 narrative triples"
+  description: >
+    Covers four categories — far (cross-domain) and near (within-domain)
+    analogies and disanalogies.
+  links:
+    code:
+
+- name: ConceptARC
+  paper_id: moskvichev2023conceptarc
+  year: 2023
+  modality: visual
+  level: visual-grid
+  task: Visual analogy / concept generalization
+  scale: "16 concept groups × 10 tasks, each with 1–4 demonstrations + 3 test inputs"
+  description: >
+    ARC-format benchmark organised by named concepts so failures are
+    diagnosable per concept rather than only as an aggregate score.
+  links:
+    data:
+
+- name: KiVA
+  paper_id: yiu2025kiva
+  year: 2025
+  modality: multimodal
+  level: visual-scene
+  task: Visual analogy reasoning
+  scale: "KiVA: 1,400 object transformations; KiVA-Adults: 2,900"
+  description: >
+    Child-inspired multimodal benchmark; the adult version adds complexity.
+  links:
+    code:
+
+- name: RAVEN
+  paper_id: zhang2019raven
+  year: 2019
+  modality: visual
+  level: visual-grid
+  task: Visual matrix analogy reasoning
+  scale: "1,120,000 images and 70,000 RPM problems"
+  description: >
+    Visual analogy dataset simulating Raven's Progressive Matrices.
+  links:
+    data:
+
+- name: VASR
+  paper_id: bitton2022vasr
+  year: 2022
+  modality: visual
+  level: visual-scene
+  task: Visual analogy for situation recognition
+  scale: "196,269 object transitions and 385,454 activity transitions"
+  description: >
+    Scene-focused visual analogy benchmark.
+  links:
+    project:
+
+# ---- Added after the survey ----
+
+- name: CARV
+  paper_id: du2026carv
+  year: 2026
+  modality: multimodal
+  level: visual-grid
+  task: Compositional visual analogy
+  scale: "5,500 samples"
+  description: >
+    Extends visual analogy from single pairs to composition over multiple
+    pairs; Gemini-2.5 Pro reaches 40.4% against 100% human performance.
+  new_since_survey: true
+
+- name: ADAGE
+  paper_id: anon2026adage
+  year: 2026
+  modality: text
+  level: word
+  task: Language-agnostic analogical reasoning evaluation
+  scale: "TBD"
+  description: >
+    Pipeline for generating analogical reasoning evaluations that are not tied
+    to a single language.
+  new_since_survey: true
+
+- name: MasalBench
+  paper_id: anon2026masalbench
+  year: 2026
+  modality: text
+  level: sentence
+  task: Cross-cultural figurative/proverb understanding
+  scale: "TBD"
+  description: >
+    Persian proverbs; relevant to the cross-cultural generalisation of semantic
+    analogy rather than to structure mapping proper.
+  new_since_survey: true

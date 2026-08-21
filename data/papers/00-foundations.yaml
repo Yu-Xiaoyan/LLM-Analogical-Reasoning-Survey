@@ -1,0 +1,185 @@
+# §2 Definitions, Scope & Related Surveys
+# See ../schema.md before editing.
+
+- id: gentner1983structure
+  title: "Structure-Mapping: A Theoretical Framework for Analogy"
+  authors: Dedre Gentner
+  venue: Cognitive Science
+  year: 1983
+  subsection: theory
+  tags: [must-read, cognitive-science]
+  links:
+    paper:
+  in_survey: true
+  tldr: >
+    The foundational account: analogy aligns two domains by a one-to-one object
+    mapping that preserves relations, and the systematicity principle says we
+    prefer mappings that carry interconnected higher-order structure (causal
+    chains) over isolated shared attributes.
+
+- id: gentner1989analogical
+  title: Analogical Learning
+  authors: Dedre Gentner
+  venue: "Similarity and Analogical Reasoning"
+  year: 1989
+  subsection: theory
+  tags: [cognitive-science]
+  links:
+    paper:
+  in_survey: true
+
+- id: hofstadter2001analogy
+  title: "Analogy as the Core of Cognition"
+  authors: Douglas R. Hofstadter
+  venue: "The Analogical Mind"
+  year: 2001
+  subsection: theory
+  tags: [cognitive-science, position]
+  links:
+    paper:
+  in_survey: true
+
+- id: hofstadter2013surfaces
+  title: "Surfaces and Essences: Analogy as the Fuel and Fire of Thinking"
+  authors: Douglas Hofstadter and Emmanuel Sander
+  venue: Basic Books
+  year: 2013
+  subsection: theory
+  tags: [cognitive-science, position]
+  links:
+    paper:
+  in_survey: true
+
+- id: fodor1988connectionism
+  title: "Connectionism and Cognitive Architecture: A Critical Analysis"
+  authors: Jerry A. Fodor and Zenon W. Pylyshyn
+  venue: Cognition
+  year: 1988
+  subsection: theory
+  tags: [cognitive-science, position]
+  links:
+    paper:
+  in_survey: true
+
+- id: barbot2019analogy
+  title: Analogy Between Concepts
+  authors: Nelly Barbot, Laurent Miclet and Henri Prade
+  venue: Artificial Intelligence
+  year: 2019
+  subsection: theory
+  links:
+    paper:
+  in_survey: true
+
+- id: turney2003learning
+  title: Learning Analogies and Semantic Relations
+  authors: Peter D. Turney and Michael L. Littman
+  venue: arXiv
+  year: 2003
+  subsection: scope
+  links:
+    paper: https://arxiv.org/abs/cs/0307055
+  in_survey: true
+
+- id: chollet2019measure
+  title: On the Measure of Intelligence
+  authors: François Chollet
+  venue: arXiv
+  year: 2019
+  subsection: scope
+  tags: [must-read, position]
+  links:
+    paper: https://arxiv.org/abs/1911.01547
+  in_survey: true
+  tldr: >
+    Defines intelligence as skill-acquisition efficiency rather than skill
+    itself, and introduces ARC — the reason abstraction-and-analogy benchmarks
+    became the standard stress test for "fluid" intelligence in AI.
+
+- id: hupkes2020compositionality
+  title: "Compositionality Decomposed: How Do Neural Networks Generalise?"
+  authors: Dieuwke Hupkes et al.
+  venue: JAIR
+  year: 2020
+  subsection: scope
+  links:
+    paper:
+  in_survey: true
+
+- id: petersen2025modelling
+  title: "Modelling Analogies and Analogical Reasoning: Connecting Cognitive Science Theory and NLP Research"
+  authors: Molly R. Petersen, Claire E. Stevenson and Lonneke van der Plas
+  venue: TACL
+  year: 2026
+  date: 2026-01
+  subsection: surveys
+  tags: [must-read, cognitive-science]
+  links:
+    paper: https://aclanthology.org/2026.tacl-1.32/
+  in_survey: true
+  tldr: >
+    The closest neighbour to this survey — surveys analogy from the cognitive
+    science side and maps those theories onto NLP tasks. Complementary rather
+    than overlapping: it is theory-first, this survey is LLM-first.
+    (Cited as the 2025 preprint in the survey; now published in TACL 2026.)
+
+- id: huang2023towards
+  title: "Towards Reasoning in Large Language Models: A Survey"
+  authors: Jie Huang and Kevin Chen-Chuan Chang
+  venue: ACL Findings
+  year: 2023
+  subsection: surveys
+  links:
+    paper:
+  in_survey: true
+
+- id: ke2025survey
+  title: "A Survey of Frontiers in LLM Reasoning: Inference Scaling, Learning to Reason, and Agentic Systems"
+  authors: Zixuan Ke et al.
+  venue: arXiv
+  year: 2025
+  subsection: surveys
+  links:
+    paper: https://arxiv.org/abs/2504.09037
+  in_survey: true
+
+- id: liu2025logical
+  title: "Logical Reasoning in Large Language Models: A Survey"
+  authors: Hanmeng Liu et al.
+  venue: arXiv
+  year: 2025
+  subsection: surveys
+  links:
+    paper: https://arxiv.org/abs/2502.09100
+  in_survey: true
+
+- id: xu2025towards
+  title: "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models"
+  authors: Fengli Xu et al.
+  venue: arXiv
+  year: 2025
+  subsection: surveys
+  links:
+    paper: https://arxiv.org/abs/2501.09686
+  in_survey: true
+
+- id: dong2024survey
+  title: A Survey on In-Context Learning
+  authors: Qingxiu Dong et al.
+  venue: EMNLP
+  year: 2024
+  subsection: surveys
+  links:
+    paper:
+  in_survey: true
+
+- id: malkinski2025deep
+  title: "Deep Learning Methods for Abstract Visual Reasoning: A Survey on Raven's Progressive Matrices"
+  authors: Mikołaj Małkiński and Jacek Mańdziuk
+  venue: ACM Computing Surveys
+  year: 2025
+  subsection: surveys
+  tags: [multimodal]
+  links:
+    paper:
+  in_survey: true
