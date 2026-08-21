@@ -1,0 +1,43 @@
+# Anchor papers for citation-graph traversal (scripts/cited_by.py).
+#
+# An anchor is a paper that work in this area tends to cite: the claim being
+# argued with, the benchmark being run, or the method being extended. Traversing
+# their citations finds papers that keyword sweeps miss because they word things
+# differently — "abstract reasoning" instead of "analogy", "precedent" instead
+# of "source case".
+#
+# `s2_id` is any Semantic Scholar-resolvable identifier (arXiv:XXXX.XXXXX,
+# DOI:10.xxxx/yyy, or a raw S2 paper hash).
+#
+# Keep this list small and central. An anchor that everything cites (a GPT-4
+# report) returns noise; an anchor nothing cites returns nothing.
+
+- name: Webb 2023 (emergent analogical reasoning)
+  s2_id: arXiv:2212.09196
+
+- name: Lewis & Mitchell 2024 (robustness)
+  s2_id: arXiv:2411.14215
+
+- name: Hodel & West 2023 (response)
+  s2_id: arXiv:2308.16118
+
+- name: Yasunaga 2023 (analogical prompting)
+  s2_id: arXiv:2310.01714
+
+- name: Sourati 2024 (ARN)
+  s2_id: arXiv:2310.00996
+
+- name: Moskvichev 2023 (ConceptARC)
+  s2_id: arXiv:2305.07141
+
+- name: Opielka 2025 (concept vectors)
+  s2_id: arXiv:2503.03666
+
+- name: Mitchell 2023 (humans vs GPT-4 on ARC)
+  s2_id: arXiv:2311.09247
+
+- name: Yiu 2025 (KiVA)
+  s2_id: arXiv:2407.17773
+
+- name: Todd 2024 (function vectors)
+  s2_id: arXiv:2310.15213

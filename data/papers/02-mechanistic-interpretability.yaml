@@ -437,3 +437,45 @@
     Explains *why* linear analogy structure emerges in embeddings at all —
     the theoretical complement to §4.1's empirical account, which currently
     stops at Allen & Hospedales (2019).
+
+- id: yang2025emergent
+  title: Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models
+  authors: Yukang Yang, Declan Campbell, Kaixuan Huang, Mengdi Wang, Jonathan Cohen and Taylor Webb
+  venue: arXiv
+  year: 2025
+  subsection: relational-representation
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2502.20332
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    The most complete mechanistic account of how an LLM solves the very
+    letter-string tasks §3.1 and §4 are built around — and by Webb, whose 2023
+    claim the survey stages the whole emergence debate on. Its abstract never
+    says "analogy", which is why keyword sweeps miss it.
+  tldr: >
+    Identifies a three-stage circuit: early heads abstract tokens into
+    variables by their relations, mid layers run symbolic induction over those
+    variables, and late layers map the predicted variable back to a token. Puts
+    a concrete mechanism under "abstract reasoning" and cuts across the
+    symbolic/connectionist split the survey's §2 inherits.
+
+# ---- Citation-graph sweep (scripts/cited_by.py). Found by traversing
+# ---- citations of the anchors in data/anchors.yaml, not by keyword.
+
+- id: visual2025symbolic
+  title: "Visual symbolic mechanisms: Emergent symbol processing in vision language models"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv.org
+  year: 2025
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2506.15871
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Carries the symbol-abstraction circuit into vision-language models,
+    extending Yang et al. (2025) to the multimodal case §3.2 cares about.

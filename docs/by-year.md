@@ -2,7 +2,7 @@
 
 # Papers by year
 
-## 2026 (56)
+## 2026 (62)
 
 - ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis** `🔥 2026-07`  
   *Yongqiang Chen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
@@ -59,6 +59,9 @@
 - **A Generalized Parallelogram Rule for Proportional Analogies on Riemannian Manifolds** `🔥 2026-08`  
   *Pierre-Alexandre Murena and Marcelo Hartmann* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.14220)
 
+- **A Survey on the Abstraction and Reasoning Corpus** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — Trans. Mach. Learn. Res. 2026 · [search](https://www.semanticscholar.org/search?q=A+Survey+on+the+Abstraction+and+Reasoning+Corpus)
+
 - **ADAGE: A Language-Agnostic Pipeline for Analogical Reasoning Evaluation** `🔥 2026-07`  
   *Ahmed Haj Ahmed and Alvin Grissom* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.23058)
 
@@ -70,6 +73,9 @@
 
 - **Analogical Trajectory Transfer** `🔥 2026-05`  
   *Junho Kim et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.14393)
+
+- **Analogy2kg: An automatic pipeline for deriving knowledge graphs from long-text analogies** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — Knowledge-Based Systems 2026 · [paper](https://doi.org/10.1016/j.knosys.2026.115772)
 
 - **Beyond Input-Output: Rethinking Creativity through Design-by-Analogy in Human-AI Collaboration** `🔥 2026-02`  
   *Xuechen Li et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2602.09423)
@@ -85,6 +91,9 @@
 
 - **CHAIRO: Contextual Hierarchical Analogical Induction and Reasoning Optimization for LLMs** `🔥 2026-04`  
   *Haotian Lu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.10502)
+
+- **Can Large Language Models Generalize Procedures Across Representations?** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — arXiv.org 2026 · [paper](https://arxiv.org/abs/2602.03542)
 
 - **Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning** `🔥 2026-05`  
   *Junseok Kim et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.20609)
@@ -119,6 +128,9 @@
 - **Learning Like Humans: Analogical Concept Learning for Generalized Category Discovery** `🔥 2026-03`  
   *Jizhou Han et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.19918)
 
+- **Learning Proportional Analogies: Lightweight Neural Network vs Large Language Models** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — International Conference on Agents and Artificial Intelligence 2026 · [paper](https://doi.org/10.5220/0014458900004052)
+
 - **Linear Representations of Hierarchical Concepts in Language Models** `🔥 2026-04`  
   *Masaki Sakata et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.07886)
 
@@ -131,6 +143,9 @@
 - **Multi-modal Reasoning with LLMs for Visual Semantic Arithmetic** `🔥 2026-04`  
   *Chuou Xu, Liya Ji and Qifeng Chen* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.19567)  
   > Ports A:B::C:D arithmetic to images and shows performance collapses versus the text version — the concept must be extracted from irrelevant visual detail before the relation can be applied.
+
+- **On Evaluating Abstraction and Analogy in Humans and Machines** `PROPOSED · P1`  
+  *TBD — run scripts/fetch_meta.py* — Current Directions in Psychological Science 2026 · [paper](https://doi.org/10.1177/09637214261433528)
 
 - **On the Diversity of Analogy Making in Large Language Models** `🔥 2026-08`  
   *Yuanhao Shen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.03233)
@@ -181,13 +196,16 @@
 - **Verbalizable Representations Form a Global Workspace in Language Models** `🔥 2026-07`  
   *Wes Gurnee et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
 
+- **VisAnalog: A Diagnostic Suite for Visual Concept Transfer on Natural Images** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — arXiv.org 2026 · [paper](https://arxiv.org/abs/2605.23141)
+
 - **What Can Artificial Intelligence Learn from Medicine? Generative Analogies and Reliable Machine Learning Systems** `🔥 2026-08`  
   *Emanuele Ratti and Lena Zuchowski* — arXiv 2026 · [paper](https://arxiv.org/abs/2608.18186)
 
 - **When Models Know More Than They Say: Probing Analogical Reasoning in LLMs** `🔥 2026-04`  
   *Hope McGovern et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
 
-## 2025 (55)
+## 2025 (62)
 
 - ⭐ **Analogical Reasoning Inside Large Language Models: Concept Vectors and the Limits of Abstraction**  
   *Gustaw Opiełka, Hannes Rosenbusch and Claire E. Stevenson* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.03666)  
@@ -204,6 +222,10 @@
 - ⭐ **Can Language Models Serve as Analogy Annotators?**  
   *Xiaojing Zhang and Bochen Lyu* — ACL Findings 2025 · [paper](https://aclanthology.org/2025.findings-acl.819/)  
   > Proposes A3E, structure-aware evaluation of generated analogies — the response to the §7.1 complaint that surface-overlap metrics like BLEU cannot see structural fidelity.
+
+- ⭐ **Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models** `PROPOSED · P1`  
+  *Yukang Yang, Declan Campbell, Kaixuan Huang, Mengdi Wang, Jonathan Cohen and Taylor Webb* — arXiv 2025 · [paper](https://arxiv.org/abs/2502.20332)  
+  > Identifies a three-stage circuit: early heads abstract tokens into variables by their relations, mid layers run symbolic induction over those variables, and late layers map the predicted variable back to a token. Puts a concrete mechanism under "abstract reasoning" and cuts across the symbolic/connectionist split the survey's §2 inherits.
 
 - ⭐ **Evidence from Counterfactual Tasks Supports Emergent Analogical Reasoning in Large Language Models** `PROPOSED · P1`  
   *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — PNAS Nexus 2025 · [paper](https://arxiv.org/abs/2404.13070)  
@@ -255,8 +277,14 @@
 - **Analogical Structure, Minimal Contextual Cues and Contrastive Distractors: Input Design for Sample-Efficient Linguistic Rule Induction** `PROPOSED · P2`  
   *Chunyang Jiang* — arXiv 2025 · [paper](https://arxiv.org/abs/2511.10441)
 
+- **Analogical reasoning as a core AGI capability** `PROPOSED · P3`  
+  *TBD — run scripts/fetch_meta.py* — AI and Ethics 2025 · [paper](https://doi.org/10.1007/s43681-025-00785-7)
+
 - **Analogy-Driven Financial Chain-of-Thought (AD-FCoT): A Prompting Approach for Financial Sentiment Analysis** `PROPOSED · P1`  
   *Anmol Singhal Navya Singhal* — arXiv 2025 · [paper](https://arxiv.org/abs/2509.12611)
+
+- **Assessing the Relational Abilities of Large Language Models and Large Reasoning Models** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — Behavioral Science 2025 · [paper](https://doi.org/10.3390/bs16010045)
 
 - **BioSpark: Beyond Analogical Inspiration to LLM-augmented Transfer** `PROPOSED · P2`  
   *Hyeonsu Kang et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.09838)
@@ -272,6 +300,9 @@
 
 - **Deep Learning Methods for Abstract Visual Reasoning: A Survey on Raven's Progressive Matrices**  
   *Mikołaj Małkiński and Jacek Mańdziuk* — ACM Computing Surveys 2025 · [paper](https://doi.org/10.1145/3715093)
+
+- **Do AI Models Perform Human-like Abstract Reasoning Across Modalities?** `PROPOSED · P1`  
+  *TBD — run scripts/fetch_meta.py* — arXiv.org 2025 · [paper](https://arxiv.org/abs/2510.02125)
 
 - **Emergent Analogical Reasoning in Large Language Models: A Replication with Open-Weights Alternatives**  
   *Andrea Gregor de Varda, Chiara Saponaro and Marco Marelli* — I4R Discussion Paper Series 2025 · [search](https://www.semanticscholar.org/search?q=Emergent+Analogical+Reasoning+in+Large+Language+Models%3A+A+Replication+with+Open-Weights+Alternatives)
@@ -348,6 +379,9 @@
 - **Relational Reasoning in Children and Machines: Insights into Causal Generalization and Innovation**  
   *Eunice Yiu* — PhD Thesis, UC Berkeley 2025 · [search](https://www.semanticscholar.org/search?q=Relational+Reasoning+in+Children+and+Machines%3A+Insights+into+Causal+Generalization+and+Innovation)
 
+- **Small Models Big Challenges Comparing Abstract and Long Context Analogy Accuracy in Distilled and ~4B Parameter Language Models** `PROPOSED · P2`  
+  *TBD — run scripts/fetch_meta.py* — 2025 International Seminar on Application for Technology of Information and Communication (iSemantic) 2025 · [paper](https://doi.org/10.1109/ISemantic67418.2025.11292066)
+
 - **Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models**  
   *Fengli Xu et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2501.09686)
 
@@ -360,8 +394,14 @@
 - **Vision-and-Language Navigation with Analogical Textual Descriptions in LLMs**  
   *Yue Zhang, Tianyi Ma, Zun Wang, Yanyuan Qiao and Parisa Kordjamshidi* — EMNLP 2025 · [paper](https://aclanthology.org/2025.emnlp-main.759/)
 
+- **Visual symbolic mechanisms: Emergent symbol processing in vision language models** `PROPOSED · P1`  
+  *TBD — run scripts/fetch_meta.py* — arXiv.org 2025 · [paper](https://arxiv.org/abs/2506.15871)
+
 - **Which Attention Heads Matter for In-Context Learning?** `PROPOSED · P2`  
   *Kayo Yin and Jacob Steinhardt* — ICML 2025 · [paper](https://arxiv.org/abs/2502.14010)
+
+- **Whither symbols in the era of advanced neural networks?** `PROPOSED · P3`  
+  *TBD — run scripts/fetch_meta.py* — Trends in Cognitive Sciences 2025 · [paper](https://arxiv.org/abs/2508.05776)
 
 - **Zero-Shot Comparison of Large Language Models' Reasoning Abilities on Long-Text Analogies**  
   *Kara Combs, Trevor Bihl, Spencer Howlett and Yuki Adams* — n/a 2025 · [search](https://www.semanticscholar.org/search?q=Zero-Shot+Comparison+of+Large+Language+Models%27+Reasoning+Abilities+on+Long-Text+Analogies)

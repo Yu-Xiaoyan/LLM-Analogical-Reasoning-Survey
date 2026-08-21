@@ -1184,3 +1184,111 @@
   gap_reason: >
     GIFARC builds ARC-style tasks from human-intuitive analogies, addressing
     the ARC-is-not-analogy objection directly.
+
+# ---- Citation-graph sweep (scripts/cited_by.py). Found by traversing
+# ---- citations of the anchors in data/anchors.yaml, not by keyword.
+
+- id: evaluating2026abstraction
+  title: On Evaluating Abstraction and Analogy in Humans and Machines
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: Current Directions in Psychological Science
+  year: 2026
+  subsection: perceptual
+  links:
+    paper: https://doi.org/10.1177/09637214261433528
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Sets out how abstraction and analogy should be evaluated at all — the
+    methodological frame §3 assumes without stating.
+
+- id: ai2025models
+  title: "Do AI Models Perform Human-like Abstract Reasoning Across Modalities?"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv.org
+  year: 2025
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2510.02125
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Cross-modal comparison against human performance, directly addressing
+    §3.5's verbal-visual disconnect claim.
+
+- id: assessing2025relational
+  title: Assessing the Relational Abilities of Large Language Models and Large Reasoning Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: Behavioral Science
+  year: 2025
+  subsection: semantic
+  links:
+    paper: https://doi.org/10.3390/bs16010045
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Extends relational evaluation to reasoning-tuned models, which §3 does
+    not cover at all.
+
+- id: small2025models
+  title: Small Models Big Challenges Comparing Abstract and Long Context Analogy Accuracy in Distilled and ~4B Parameter Language Models
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: 2025 International Seminar on Application for Technology of Information and Communication (iSemantic)
+  year: 2025
+  subsection: symbolic
+  links:
+    paper: https://doi.org/10.1109/ISemantic67418.2025.11292066
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Scale and distillation effects on analogy accuracy — the model-size axis
+    §3 discusses only in passing.
+
+- id: learning2026proportional
+  title: "Learning Proportional Analogies: Lightweight Neural Network vs Large Language Models"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: International Conference on Agents and Artificial Intelligence
+  year: 2026
+  subsection: semantic
+  links:
+    paper: https://doi.org/10.5220/0014458900004052
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Small purpose-built models against LLMs on proportional analogy — a
+    scale baseline §3.3 is missing.
+
+- id: visanalog2026diagnostic
+  title: "VisAnalog: A Diagnostic Suite for Visual Concept Transfer on Natural Images"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv.org
+  year: 2026
+  subsection: benchmarks
+  links:
+    paper: https://arxiv.org/abs/2605.23141
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Visual concept transfer on natural rather than synthetic images, closing
+    a gap between ARC-style grids and real scenes.
+
+- id: large2026language
+  title: "Can Large Language Models Generalize Procedures Across Representations?"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: arXiv.org
+  year: 2026
+  subsection: structural
+  links:
+    paper: https://arxiv.org/abs/2602.03542
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Procedure transfer across representations — structural analogy tested on
+    process rather than narrative.

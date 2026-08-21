@@ -357,3 +357,51 @@
   gap_reason: >
     Extends analogical proportion from Boolean to continuous domains,
     generalising the formal machinery §2.1 introduces.
+
+# ---- Citation-graph sweep (scripts/cited_by.py). Found by traversing
+# ---- citations of the anchors in data/anchors.yaml, not by keyword.
+
+- id: survey2026abstraction
+  title: A Survey on the Abstraction and Reasoning Corpus
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: Trans. Mach. Learn. Res.
+  year: 2026
+  subsection: surveys
+  links:
+    paper: 
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    A dedicated ARC survey; §3.2 leans on ARC-family benchmarks without
+    pointing readers to their own literature.
+
+- id: analogical2025reasoning
+  title: Analogical reasoning as a core AGI capability
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: AI and Ethics
+  year: 2025
+  subsection: scope
+  links:
+    paper: https://doi.org/10.1007/s43681-025-00785-7
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Position piece arguing analogy is constitutive of general intelligence;
+    useful for §2.3's motivation.
+
+- id: whither2025symbols
+  title: "Whither symbols in the era of advanced neural networks?"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: Trends in Cognitive Sciences
+  year: 2025
+  subsection: theory
+  links:
+    paper: https://arxiv.org/abs/2508.05776
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Revisits the symbolic/connectionist question the survey inherits from
+    Fodor & Pylyshyn.

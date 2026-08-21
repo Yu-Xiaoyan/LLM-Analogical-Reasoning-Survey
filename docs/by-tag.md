@@ -319,7 +319,7 @@ _Involves vision or other non-text modalities._
 - **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision**  
   *Jiayuan Mao et al.* — ICLR 2019 · [paper](https://arxiv.org/abs/1904.12584)
 
-## `must-read` (60)
+## `must-read` (61)
 
 _Papers we would hand to someone entering the field._
 
@@ -390,6 +390,10 @@ _Papers we would hand to someone entering the field._
 - ⭐ **Can Language Models Serve as Analogy Annotators?**  
   *Xiaojing Zhang and Bochen Lyu* — ACL Findings 2025 · [paper](https://aclanthology.org/2025.findings-acl.819/)  
   > Proposes A3E, structure-aware evaluation of generated analogies — the response to the §7.1 complaint that surface-overlap metrics like BLEU cannot see structural fidelity.
+
+- ⭐ **Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models** `PROPOSED · P1`  
+  *Yukang Yang, Declan Campbell, Kaixuan Huang, Mengdi Wang, Jonathan Cohen and Taylor Webb* — arXiv 2025 · [paper](https://arxiv.org/abs/2502.20332)  
+  > Identifies a three-stage circuit: early heads abstract tokens into variables by their relations, mid layers run symbolic induction over those variables, and late layers map the predicted variable back to a token. Puts a concrete mechanism under "abstract reasoning" and cuts across the symbolic/connectionist split the survey's §2 inherits.
 
 - ⭐ **Evidence from Counterfactual Tasks Supports Emergent Analogical Reasoning in Large Language Models** `PROPOSED · P1`  
   *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — PNAS Nexus 2025 · [paper](https://arxiv.org/abs/2404.13070)  

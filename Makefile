@@ -18,8 +18,13 @@ verify:     ## title-check every existing link (catches links to the WRONG paper
 links:      ## check every URL resolves (catches dead links, not wrong ones)
 	python3 scripts/validate.py --check-links
 
-watch:      ## find new arXiv candidates from the last 90 days -> candidates.yaml
+watch:      ## keyword sweep of arXiv -> candidates.yaml
 	python3 scripts/watch_arxiv.py
+
+cited:      ## citation-graph sweep from data/anchors.yaml -> citation-candidates.yaml
+	python3 scripts/cited_by.py
+
+sweep: watch cited   ## both recall paths; neither alone is complete
 
 trends:     ## re-measure arXiv publication trends and redraw figures/trends.*
 	python3 scripts/trends.py --from 2014

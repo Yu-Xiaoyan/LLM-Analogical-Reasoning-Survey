@@ -633,3 +633,21 @@
   gap_reason: >
     Experimental evidence on whether LLMs improve human analogical reasoning
     in strategic decisions — human-in-the-loop evaluation the survey lacks.
+
+# ---- Citation-graph sweep (scripts/cited_by.py). Found by traversing
+# ---- citations of the anchors in data/anchors.yaml, not by keyword.
+
+- id: analogykg2026automatic
+  title: "Analogy2kg: An automatic pipeline for deriving knowledge graphs from long-text analogies"
+  authors: "TBD — run scripts/fetch_meta.py"
+  venue: Knowledge-Based Systems
+  year: 2026
+  subsection: knowledge-graph
+  links:
+    paper: https://doi.org/10.1016/j.knosys.2026.115772
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Automatic analogy-to-KG extraction; §6's knowledge-graph subsection is
+    two entries and stops at 2023.
