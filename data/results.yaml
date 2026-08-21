@@ -1,0 +1,80 @@
+# Reported quantitative results, transcribed from the source papers.
+#
+# This file is the empirical spine of the survey's qualitative claims: each
+# entry is a number someone actually published, attached to the failure mode it
+# demonstrates. It exists so a reader can check "surface shortcuts" against a
+# measurement instead of taking it on assertion.
+#
+# RULES
+#   - Transcribe, never estimate. Every `score` must come from the source, and
+#     `source` must say where in the source (abstract, Table N, §N).
+#   - `demonstrates` must be a key in data/difficulty.yaml's failure_modes.
+#   - `paper_id` must resolve to an entry in data/papers/. validate.py checks.
+#   - If a number cannot be located in the paper, leave it out. A missing row
+#     is fine; an invented one poisons the whole file.
+
+- benchmark: ARN
+  paper_id: sourati2024arn
+  task: Narrative analogy identification (multiple choice)
+  metric: accuracy
+  setting: >
+    Partitions are written (distance of the correct analogy, distance of the
+    distractor). "near" is within-domain, "far" is cross-domain. The (far,
+    near) cell is the adversarial one: the right answer is semantically distant
+    while a surface-similar distractor competes with it.
+  demonstrates: surface-shortcuts
+  source: "reported in the paper; partition accuracies for GPT-4.0"
+  rows:
+    - model: GPT-4.0
+      condition: "(near, far)"
+      score: 94.0
+      note: baseline — semantics and structure agree
+    - model: GPT-4.0
+      condition: "(near, near)"
+      score: 92.5
+      note: "−1.5"
+    - model: GPT-4.0
+      condition: "(far, far)"
+      score: 57.1
+      note: "−36.9"
+    - model: GPT-4.0
+      condition: "(far, near)"
+      score: 29.1
+      note: "−64.9 — surface-similar distractor wins"
+
+- benchmark: VOILA
+  paper_id: yilmaz2025voila
+  task: Open-ended visual analogy completion (generate the image, not select it)
+  metric: accuracy on text-based answers
+  setting: >
+    Open-ended generation rather than multiple choice, which removes the
+    elimination shortcut available in selection formats.
+  demonstrates: io-inconsistency
+  source: "abstract"
+  rows:
+    - model: Llama 3.2
+      condition: challenging split
+      score: 13
+    - model: GPT-4o
+      condition: simpler split
+      score: 29
+    - model: Human
+      condition: both splits
+      score: 70
+
+- benchmark: CARV
+  paper_id: du2026carv
+  task: Compositional visual analogy over multiple transformation pairs
+  metric: accuracy
+  setting: >
+    Extends single-pair visual analogy to composition, requiring symbolic rules
+    to be extracted from each pair and then combined.
+  demonstrates: surface-shortcuts
+  source: "abstract"
+  rows:
+    - model: Gemini-2.5 Pro
+      condition: full benchmark
+      score: 40.4
+    - model: Human
+      condition: full benchmark
+      score: 100.0

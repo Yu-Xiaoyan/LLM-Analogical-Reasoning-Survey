@@ -64,7 +64,7 @@
   tags: [must-read]
   links:
     paper: https://doi.org/10.52202/068431-1262
-    code:
+    code: https://github.com/kmeng01/rome
   in_survey: true
   tldr: >
     Not an analogy paper, but the methodological template this section borrows:
@@ -127,7 +127,7 @@
   subsection: process-decomposability
   links:
     paper: https://doi.org/10.52202/075280-0517
-    code:
+    code: https://github.com/princeton-nlp/tree-of-thought-llm
   in_survey: true
 
 - id: russin2025stepbystep

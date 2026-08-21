@@ -22,7 +22,7 @@
   tags: [must-read, cognitive-science]
   links:
     paper: https://doi.org/10.1038/s41562-023-01659-w
-    code:
+    code: https://github.com/taylorwwebb/emergent_analogies_LLM
   in_survey: true
   tldr: >
     The paper that started the debate — GPT-3 matches or exceeds humans on
@@ -186,7 +186,7 @@
   tags: [must-read, benchmark, multimodal, cognitive-science]
   links:
     paper: https://arxiv.org/abs/2407.17773
-    code:
+    code: https://github.com/ey242/KiVA
   in_survey: true
   tldr: >
     Visual analogies over everyday-object transformations that young children
@@ -216,6 +216,7 @@
   links:
     paper: https://arxiv.org/abs/2305.07141
     data:
+    code: https://github.com/victorvikram/ConceptARC
   in_survey: true
   tldr: >
     Restructures ARC around 16 named spatial/semantic concepts so failures are
@@ -232,6 +233,7 @@
   links:
     paper: https://doi.org/10.1109/cvpr.2019.00546
     data:
+    code: https://github.com/WellyZhang/RAVEN
   in_survey: true
 
 - id: yun2025abstract
@@ -394,7 +396,6 @@
   tags: [must-read, benchmark, negative-result]
   links:
     paper: https://aclanthology.org/2024.tacl-1.59/
-    code:
   in_survey: true
   tldr: >
     Separates near/far and analogy/disanalogy in narratives and shows a
@@ -592,7 +593,7 @@
   tags: [must-read, benchmark]
   links:
     paper: https://aclanthology.org/2024.emnlp-main.725/
-    code:
+    code: https://github.com/JHU-CLSP/AnaloBench
   in_survey: true
   tldr: >
     Long-context analogy identification over story sets — scaling model size
@@ -608,7 +609,7 @@
   tags: [benchmark]
   links:
     paper: https://arxiv.org/abs/2310.12874
-    code:
+    code: https://github.com/loginaway/StoryAnalogy
   in_survey: true
 
 - id: bitton2022vasr

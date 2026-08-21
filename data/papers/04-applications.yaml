@@ -160,7 +160,7 @@
   tags: [must-read, benchmark, multimodal]
   links:
     paper: https://arxiv.org/abs/2210.00312
-    code:
+    code: https://github.com/zjunlp/MKG_Analogy
   in_survey: true
   tldr: >
     Introduces MarT and the multimodal analogical reasoning task over KGs —

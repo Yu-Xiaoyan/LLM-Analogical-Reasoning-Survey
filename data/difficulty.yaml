@@ -1,0 +1,72 @@
+# Task Difficulty Overview (survey §3).
+#
+# How the four task categories scale in difficulty, and which structural
+# property makes each hard. Rendered into the Capability Evaluation section of
+# the README by scripts/build.py — do not hand-write the table.
+#
+# `difficulty` is 1-5 and drives the star rendering. It is an editorial
+# judgement about the *structural demand* of the task family, not a measured
+# quantity — deliberately so, since no cross-category score exists. Ordering
+# follows the survey's progression from formal manipulation to deep relational
+# understanding.
+#
+# `failure_modes` links each category to the failure modes it predominantly
+# triggers (§3.5), which is the connection the table exists to make.
+# `evidence` cites entries from data/papers/ that demonstrate the difficulty;
+# validate.py checks the ids resolve.
+
+failure_modes:
+  surface-shortcuts:
+    title: Surface shortcuts
+    blurb: >
+      Exploiting lexical co-occurrence, texture or position instead of the
+      relation.
+  fragile-rules:
+    title: Fragile rule generalisation
+    blurb: >
+      Counterfactual collapse — the rule holds for familiar content and breaks
+      when the symbols change.
+  io-inconsistency:
+    title: Input–output inconsistency
+    blurb: >
+      Reasoning detached from perception or confidence; explaining a mapping
+      correctly while failing to execute it.
+
+levels:
+  - subsection: symbolic
+    task_type: Symbolic
+    description: Formal rule induction — letter-string sequences, arithmetic matrices.
+    difficulty: 2
+    structural_property: >
+      Requires exact rule induction while isolating semantic prior knowledge.
+    failure_modes: [fragile-rules]
+    evidence: [hodel2023response, lewis2024evaluating, li2025rule]
+
+  - subsection: perceptual
+    task_type: Perceptual
+    description: Pattern recognition from visual stimuli — RAVEN, ARC, Bongard.
+    difficulty: 3
+    structural_property: >
+      Requires compositional generalisation and decoupling logic from visual
+      noise.
+    failure_modes: [surface-shortcuts, io-inconsistency]
+    evidence: [moskvichev2023conceptarc, yiu2025kiva, yilmaz2025voila, du2026carv]
+
+  - subsection: semantic
+    task_type: Semantic
+    description: Relational mapping between linguistic concepts — proportional analogies, metaphor.
+    difficulty: 4
+    structural_property: >
+      Requires relational preservation across semantically distant domains.
+    failure_modes: [surface-shortcuts]
+    evidence: [boisson2024metaphors, wijesiriwardene2025knowledgeprompts, xu2026multimodal]
+
+  - subsection: structural
+    task_type: Structural
+    description: Systematic mapping of causal and narrative structure across domains.
+    difficulty: 5
+    structural_property: >
+      Requires higher-order alignment of whole systems while ignoring complex
+      surface noise.
+    failure_modes: [surface-shortcuts, fragile-rules]
+    evidence: [sourati2024arn, yuan2023beneath, combs2025tradeoff]

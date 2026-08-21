@@ -40,6 +40,22 @@ def load_benchmarks() -> list[dict]:
         return yaml.safe_load(fh) or []
 
 
+def load_difficulty() -> dict:
+    path = DATA / "difficulty.yaml"
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8") as fh:
+        return yaml.safe_load(fh) or {}
+
+
+def load_results() -> list[dict]:
+    path = DATA / "results.yaml"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as fh:
+        return yaml.safe_load(fh) or []
+
+
 def load_papers() -> list[dict]:
     """Load every paper entry, tagging each with the file it came from."""
     papers: list[dict] = []
@@ -75,7 +91,8 @@ def patch_entry(filename: str, paper_id: str, updates: dict[str, str]) -> None:
     """Surgically update fields of one entry, preserving comments and layout.
 
     Keys are either a top-level field name (`authors`, `venue`, `year`, `date`)
-    or `links.paper`. A field that does not exist yet is inserted in place.
+    or `links.<label>` for any link label (`paper`, `code`, `data`, `project`).
+    A field that does not exist yet is inserted in place.
 
     A full yaml.safe_dump round-trip would be shorter, but it strips every
     comment in the file — including the section dividers — so it is not an
@@ -87,8 +104,8 @@ def patch_entry(filename: str, paper_id: str, updates: dict[str, str]) -> None:
 
     for key, value in updates.items():
         rendered = _render_scalar(value)
-        if key == "links.paper":
-            _patch_link(lines, start, end, rendered)
+        if key.startswith("links."):
+            _patch_link(lines, start, end, key.split(".", 1)[1], rendered)
         else:
             _patch_field(lines, start, end, key, rendered)
         start, end = _entry_bounds(lines, paper_id)  # bounds shift on insert
@@ -113,7 +130,7 @@ def _patch_field(lines: list[str], start: int, end: int, key: str, value: str) -
     lines.insert(start + 1, f"  {key}: {value}\n")
 
 
-def _patch_link(lines: list[str], start: int, end: int, value: str) -> None:
+def _patch_link(lines: list[str], start: int, end: int, label: str, value: str) -> None:
     links_at = None
     for i in range(start, end):
         if re.match(r"^\s+links:\s*$", lines[i]):
@@ -123,16 +140,18 @@ def _patch_link(lines: list[str], start: int, end: int, value: str) -> None:
             raise ValueError(f"inline `links:` mapping at line {i + 1} is not supported")
     if links_at is None:
         lines.insert(end, "  links:\n")
-        lines.insert(end + 1, f"    paper: {value}\n")
+        lines.insert(end + 1, f"    {label}: {value}\n")
         return
+    insert_at = links_at + 1
     for i in range(links_at + 1, end):
-        match = re.match(r"^(\s+)paper:\s*(.*)$", lines[i])
-        if match:
-            lines[i] = f"{match.group(1)}paper: {value}\n"
-            return
         if not lines[i].startswith("    "):
             break
-    lines.insert(links_at + 1, f"    paper: {value}\n")
+        insert_at = i + 1
+        match = re.match(rf"^(\s+){re.escape(label)}:\s*(.*)$", lines[i])
+        if match:
+            lines[i] = f"{match.group(1)}{label}: {value}\n"
+            return
+    lines.insert(insert_at, f"    {label}: {value}\n")
 
 
 def section_index(taxonomy: dict) -> dict[str, dict]:

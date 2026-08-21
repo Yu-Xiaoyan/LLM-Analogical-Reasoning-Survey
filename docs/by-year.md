@@ -206,7 +206,7 @@
   > Answers the counterfactual critiques: models do generalise to arbitrarily permuted alphabets once allowed to write and run code, so the failures localise to mental execution rather than to the mapping itself.
 
 - ⭐ **KiVA: Kid-Inspired Visual Analogies for Testing Large Multimodal Models**  
-  *Eunice Yiu et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2407.17773)  
+  *Eunice Yiu et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2407.17773) · [code](https://github.com/ey242/KiVA)  
   > Visual analogies over everyday-object transformations that young children solve easily; large multimodal models lag children badly, and often explain the transformation correctly in text while failing to execute it visually.
 
 - ⭐ **Past Meets Present: Creating Historical Analogy with Large Language Models**  
@@ -321,11 +321,11 @@
   > Separates near/far and analogy/disanalogy in narratives and shows a persistent bias toward lexical overlap — performance falls off exactly when surface similarity and deep structure are made to conflict.
 
 - ⭐ **AnaloBench: Benchmarking the Identification of Abstract and Long-Context Analogies**  
-  *Xiao Ye et al.* — EMNLP 2024 · [paper](https://aclanthology.org/2024.emnlp-main.725/)  
+  *Xiao Ye et al.* — EMNLP 2024 · [paper](https://aclanthology.org/2024.emnlp-main.725/) · [code](https://github.com/JHU-CLSP/AnaloBench)  
   > Long-context analogy identification over story sets — scaling model size barely helps, and performance drops sharply as the story pool grows, isolating retrieval-over-structure as the bottleneck.
 
 - ⭐ **AnalogyKB: Unlocking Analogical Reasoning of Language Models with a Million-Scale Knowledge Base**  
-  *Siyu Yuan et al.* — ACL 2024 · [paper](https://aclanthology.org/2024.acl-long.68/)  
+  *Siyu Yuan et al.* — ACL 2024 · [paper](https://aclanthology.org/2024.acl-long.68/) · [code](https://github.com/siyuyuan/analogykb)  
   > A million-scale analogy KB mined from existing knowledge graphs, used as training data rather than as a lookup — the clearest demonstration that the bottleneck in §7.1 (data scarcity) is attackable.
 
 - ⭐ **Evaluating the Robustness of Analogical Reasoning in Large Language Models**  
@@ -345,7 +345,7 @@
   > Analogical prompting — have the model self-generate relevant exemplars before solving, removing the need for hand-labelled demonstrations. The single most-cited method paper in this pillar; read alongside Qin et al. (2025), which questions whether the "relevance" is doing the work.
 
 - ⭐ **Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models**  
-  *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.03965)  
+  *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.03965) · [code](https://github.com/Samyu0304/thought-propagation)  
   > Solves analogous sub-problems first and propagates their solutions back to the target — makes the source-problem construction explicit rather than leaving it to the exemplar.
 
 - **A Survey on In-Context Learning**  
@@ -427,7 +427,7 @@
   > Better prompting lifts GPT-4 well above earlier reported ARC scores yet still far below humans, and GPT-4V underperforms GPT-4 — evidence that vision hurts rather than helps on grid abstraction.
 
 - ⭐ **Emergent Analogical Reasoning in Large Language Models**  
-  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — Nature Human Behaviour 2023 · [paper](https://doi.org/10.1038/s41562-023-01659-w)  
+  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — Nature Human Behaviour 2023 · [paper](https://doi.org/10.1038/s41562-023-01659-w) · [code](https://github.com/taylorwwebb/emergent_analogies_LLM)  
   > The paper that started the debate — GPT-3 matches or exceeds humans on letter-string analogies, digit matrices and story analogies zero-shot, which the authors read as an emergent capacity for abstract mapping.
 
 - ⭐ **In-Context Learning Creates Task Vectors** `PROPOSED · P1`  
@@ -435,7 +435,7 @@
   > Demonstrations compress into a single task vector that parameterises the model's behaviour — the same result as function vectors, reached from the in-context-learning side.
 
 - ⭐ **Multimodal Analogical Reasoning over Knowledge Graphs**  
-  *Ningyu Zhang et al.* — ICLR 2023 · [paper](https://arxiv.org/abs/2210.00312)  
+  *Ningyu Zhang et al.* — ICLR 2023 · [paper](https://arxiv.org/abs/2210.00312) · [code](https://github.com/zjunlp/MKG_Analogy)  
   > Introduces MarT and the multimodal analogical reasoning task over KGs — the main resource connecting the structural-mapping view to graph-shaped data rather than to text or grids.
 
 - ⭐ **Response: Emergent Analogical Reasoning in Large Language Models**  
@@ -443,7 +443,7 @@
   > The direct rebuttal to Webb et al. — on counterfactual letter-string variants that a human solves just as easily, GPT-3's advantage collapses, implying the original result rides on pre-training familiarity.
 
 - ⭐ **The ConceptARC Benchmark: Evaluating Understanding and Generalization in the ARC Domain**  
-  *Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell* — TMLR 2023 · [paper](https://arxiv.org/abs/2305.07141)  
+  *Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell* — TMLR 2023 · [paper](https://arxiv.org/abs/2305.07141) · [code](https://github.com/victorvikram/ConceptARC)  
   > Restructures ARC around 16 named spatial/semantic concepts so failures are diagnosable rather than just a score — the standard tool for asking whether a system grasps a concept or just fits its instances.
 
 - **ANALOGICAL: A Novel Benchmark for Long Text Analogy Evaluation in Large Language Models**  
@@ -471,13 +471,13 @@
   *Nitesh Kumar and Steven Schockaert* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12379)
 
 - **StoryAnalogy: Deriving Story-Level Analogies from Large Language Models to Unlock Analogical Understanding**  
-  *Cheng Jiayang et al.* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12874)
+  *Cheng Jiayang et al.* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12874) · [code](https://github.com/loginaway/StoryAnalogy)
 
 - **Towards Reasoning in Large Language Models: A Survey**  
   *Jie Huang and Kevin Chen-Chuan Chang* — ACL Findings 2023 · [paper](https://aclanthology.org/2023.findings-acl.67/)
 
 - **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**  
-  *Shunyu Yao et al.* — NeurIPS 2023 · [paper](https://doi.org/10.52202/075280-0517)
+  *Shunyu Yao et al.* — NeurIPS 2023 · [paper](https://doi.org/10.52202/075280-0517) · [code](https://github.com/princeton-nlp/tree-of-thought-llm)
 
 - **VASR: Visual Analogies of Situation Recognition**  
   *Yonatan Bitton et al.* — AAAI 2023 · [paper](https://arxiv.org/abs/2212.04542)
@@ -506,7 +506,7 @@
   > Identifies heads that complete patterns by copying from earlier context, and shows they appear exactly when in-context learning does — the concrete circuit behind pattern completion.
 
 - ⭐ **Locating and Editing Factual Associations in GPT**  
-  *Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-1262)  
+  *Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-1262) · [code](https://github.com/kmeng01/rome)  
   > Not an analogy paper, but the methodological template this section borrows: relations can be localised to specific parameters and causally intervened on, which is what makes "is the relation explicitly represented?" testable.
 
 - **A Benchmark for Compositional Visual Reasoning** `PROPOSED · P3`  
@@ -590,7 +590,7 @@
   *Hongjing Lu, Ying Nian Wu and Keith J. Holyoak* — PNAS 2019 · [paper](https://doi.org/10.1073/pnas.1814779116)
 
 - **RAVEN: A Dataset for Relational and Analogical Visual Reasoning**  
-  *Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu* — CVPR 2019 · [paper](https://doi.org/10.1109/cvpr.2019.00546)
+  *Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu* — CVPR 2019 · [paper](https://doi.org/10.1109/cvpr.2019.00546) · [code](https://github.com/WellyZhang/RAVEN)
 
 - **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision**  
   *Jiayuan Mao et al.* — ICLR 2019 · [paper](https://arxiv.org/abs/1904.12584)

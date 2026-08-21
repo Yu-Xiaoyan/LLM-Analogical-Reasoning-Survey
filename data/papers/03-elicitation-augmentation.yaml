@@ -39,7 +39,7 @@
   tags: [must-read]
   links:
     paper: https://arxiv.org/abs/2310.03965
-    code:
+    code: https://github.com/Samyu0304/thought-propagation
   in_survey: true
   tldr: >
     Solves analogous sub-problems first and propagates their solutions back to
@@ -208,7 +208,7 @@
   tags: [must-read, benchmark]
   links:
     paper: https://aclanthology.org/2024.acl-long.68/
-    code:
+    code: https://github.com/siyuyuan/analogykb
   in_survey: true
   tldr: >
     A million-scale analogy KB mined from existing knowledge graphs, used as

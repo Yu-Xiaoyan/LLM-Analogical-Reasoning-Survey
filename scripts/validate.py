@@ -18,11 +18,61 @@ import sys
 import urllib.error
 import urllib.request
 
-from common import load_benchmarks, load_papers, load_taxonomy, section_index, ssl_context
+from common import (
+    load_benchmarks,
+    load_difficulty,
+    load_papers,
+    load_results,
+    load_taxonomy,
+    section_index,
+    ssl_context,
+)
 
 REQUIRED = ("id", "title", "year", "subsection")
 ID_RE = re.compile(r"^[a-z][a-z0-9]*\d{4}[a-z0-9]+$")
 UA = {"User-Agent": "awesome-analogical-reasoning-linkcheck/1.0"}
+
+
+def check_difficulty_and_results(papers, difficulty, results) -> list[str]:
+    """Keep the §3 tables honest about what they point at.
+
+    These two files cite paper ids and failure-mode keys by hand. Without this
+    the tables would silently render a broken link, or claim a number
+    demonstrates a failure mode that no longer exists.
+    """
+    errors: list[str] = []
+    ids = {p["id"] for p in papers}
+    modes = set((difficulty or {}).get("failure_modes") or {})
+    subs = {p["subsection"] for p in papers}
+
+    for level in (difficulty or {}).get("levels") or []:
+        where = f"difficulty.yaml: {level.get('task_type')}"
+        if level.get("subsection") not in subs:
+            errors.append(f"{where}: unknown subsection `{level.get('subsection')}`")
+        if not 1 <= int(level.get("difficulty", 0)) <= 5:
+            errors.append(f"{where}: difficulty must be 1-5, got {level.get('difficulty')}")
+        for mode in level.get("failure_modes") or []:
+            if mode not in modes:
+                errors.append(f"{where}: unknown failure mode `{mode}`")
+        for pid in level.get("evidence") or []:
+            if pid not in ids:
+                errors.append(f"{where}: evidence `{pid}` is not a paper in data/papers/")
+
+    for entry in results or []:
+        where = f"results.yaml: {entry.get('benchmark')}"
+        if entry.get("paper_id") not in ids:
+            errors.append(f"{where}: paper_id `{entry.get('paper_id')}` does not resolve")
+        if entry.get("demonstrates") and entry["demonstrates"] not in modes:
+            errors.append(f"{where}: unknown failure mode `{entry['demonstrates']}`")
+        if not entry.get("source"):
+            errors.append(
+                f"{where}: no `source` — every transcribed number must say where "
+                "in the paper it came from"
+            )
+        for row in entry.get("rows") or []:
+            if row.get("score") is None:
+                errors.append(f"{where}: row {row.get('model')} has no score")
+    return errors
 
 
 def check_structure(papers, benchmarks, taxonomy) -> list[str]:
@@ -185,6 +235,7 @@ def main() -> int:
     benchmarks = load_benchmarks()
 
     errors = check_structure(papers, benchmarks, taxonomy)
+    errors += check_difficulty_and_results(papers, load_difficulty(), load_results())
     warnings = check_links(papers, benchmarks) if args.check_links else []
 
     for error in errors:

@@ -15,6 +15,8 @@ import urllib.parse
 from common import (
     ROOT,
     load_benchmarks,
+    load_difficulty,
+    load_results,
     load_papers,
     load_taxonomy,
     section_index,
@@ -92,6 +94,7 @@ def build_toc(taxonomy: dict, papers: list[dict]) -> list[str]:
             if n:
                 out.append(f"  - [{sub['title']}](#{anchor(sub['title'])}) — {n}")
     out.append("- [Benchmarks](#benchmarks)")
+    out.append("- [Reported results](#reported-results)")
     out.append("- [Contributing](#contributing)")
     out.append("")
     return out
@@ -191,7 +194,79 @@ def build_proposed(taxonomy: dict, papers: list[dict]) -> list[str]:
     return out
 
 
-def build_sections(taxonomy: dict, papers: list[dict]) -> list[str]:
+def build_difficulty(difficulty: dict, papers: list[dict], taxonomy: dict) -> list[str]:
+    """The §3 difficulty overview, with the failure-mode links made clickable.
+
+    A static table would say the same words; the point of generating it is that
+    the "why difficult" column resolves to the failure modes in §3.5 and to
+    entries that actually demonstrate the difficulty, so a reader can follow the
+    claim to its evidence.
+    """
+    levels = (difficulty or {}).get("levels") or []
+    if not levels:
+        return []
+
+    modes = (difficulty or {}).get("failure_modes") or {}
+    by_id = {p["id"]: p for p in papers}
+    counts: dict[str, int] = {}
+    for paper in papers:
+        counts[paper["subsection"]] = counts.get(paper["subsection"], 0) + 1
+    sub_title = {}
+    for section in taxonomy["sections"]:
+        for sub in section["subsections"]:
+            sub_title[sub["key"]] = sub["title"]
+
+    out = [
+        "### Task Difficulty Overview",
+        "",
+        "How the four categories scale in difficulty, and which structural "
+        "property makes each hard. Stars are an editorial judgement about "
+        "structural demand, not a measured score — no metric compares across "
+        "these categories, which is itself part of the problem.",
+        "",
+        "| Task type | Description | Difficulty | Why difficult (structural property) | Dominant failure modes | Evidence |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for level in sorted(levels, key=lambda x: x.get("difficulty", 0)):
+        stars = "★" * level["difficulty"] + "☆" * (5 - level["difficulty"])
+        title = sub_title.get(level["subsection"], level["task_type"])
+        n = counts.get(level["subsection"], 0)
+        fms = " · ".join(
+            modes.get(m, {}).get("title", m) for m in (level.get("failure_modes") or [])
+        )
+        cites = []
+        for pid in (level.get("evidence") or [])[:4]:
+            paper = by_id.get(pid)
+            if not paper:
+                continue
+            url = (paper.get("links") or {}).get("paper") or fallback_link(paper)
+            first = str(paper.get("authors", "")).split(",")[0].split(" and ")[0]
+            surname = first.replace(" et al.", "").split()[-1] if first else pid
+            cites.append(f"[{surname} {paper.get('year','')}]({url})")
+        out.append(
+            f"| **[{level['task_type']}](#{anchor(title)})**<br><sub>{n} papers</sub> "
+            f"| {' '.join(level['description'].split())} "
+            f"| {stars} "
+            f"| {' '.join(level['structural_property'].split())} "
+            f"| {fms} "
+            f"| {', '.join(cites)} |"
+        )
+    out.append("")
+    if modes:
+        out.append("<sub>")
+        out.append(
+            " · ".join(
+                f"**{m['title']}** — {' '.join(m['blurb'].split())}" for m in modes.values()
+            )
+        )
+        out.append("</sub>")
+        out.append("")
+    return out
+
+
+def build_sections(
+    taxonomy: dict, papers: list[dict], difficulty: dict | None = None
+) -> list[str]:
     by_sub: dict[str, list[dict]] = {}
     for paper in papers:
         by_sub.setdefault(paper["subsection"], []).append(paper)
@@ -203,6 +278,8 @@ def build_sections(taxonomy: dict, papers: list[dict]) -> list[str]:
         if section.get("blurb"):
             out.append(f"> {' '.join(section['blurb'].split())}")
             out.append("")
+        if section["key"] == "capability-evaluation":
+            out += build_difficulty(difficulty or {}, papers, taxonomy)
         for sub in section["subsections"]:
             entries = sorted(by_sub.get(sub["key"], []), key=sort_key)
             if not entries:
@@ -215,6 +292,59 @@ def build_sections(taxonomy: dict, papers: list[dict]) -> list[str]:
             for paper in entries:
                 out += render_paper(paper)
                 out.append("")
+    return out
+
+
+def build_results(results: list[dict], papers: list[dict], difficulty: dict) -> list[str]:
+    """Reported numbers, attached to the failure mode each one demonstrates.
+
+    The survey argues qualitatively that models take surface shortcuts. These
+    are the measurements that argument rests on, transcribed so a reader can
+    check the claim rather than accept it.
+    """
+    if not results:
+        return []
+    by_id = {p["id"]: p for p in papers}
+    modes = (difficulty or {}).get("failure_modes") or {}
+
+    out = [
+        "## Reported results",
+        "",
+        "Numbers transcribed from the source papers, each tied to the failure "
+        "mode it demonstrates. Every figure here is quoted, never estimated; "
+        "the `source` field in [`data/results.yaml`](data/results.yaml) says "
+        "where in the paper it came from.",
+        "",
+    ]
+    for entry in results:
+        paper = by_id.get(entry.get("paper_id"), {})
+        links = paper.get("links") or {}
+        url = links.get("paper")
+        name = f"[{entry['benchmark']}]({url})" if url else entry["benchmark"]
+        mode = modes.get(entry.get("demonstrates"), {})
+        out.append(f"### {name} — {entry.get('task','')}")
+        out.append("")
+        if entry.get("setting"):
+            out.append(f"_{' '.join(entry['setting'].split())}_")
+            out.append("")
+        if mode:
+            out.append(
+                f"**Demonstrates:** {mode.get('title')} — "
+                f"{' '.join(mode.get('blurb','').split())}"
+            )
+            out.append("")
+        out.append(f"| Model | Condition | {entry.get('metric','score').title()} | |")
+        out.append("| --- | --- | --: | --- |")
+        for row in entry.get("rows") or []:
+            note = row.get("note", "")
+            out.append(
+                f"| {row.get('model','')} | {row.get('condition','')} "
+                f"| {row.get('score','')} | {note} |"
+            )
+        out.append("")
+        if links.get("code"):
+            out.append(f"Official code: {links['code']}")
+            out.append("")
     return out
 
 
@@ -356,6 +486,8 @@ def main() -> None:
     taxonomy = load_taxonomy()
     papers = load_papers()
     benchmarks = load_benchmarks()
+    difficulty = load_difficulty()
+    results = load_results()
 
     index = section_index(taxonomy)
     unknown = {p["subsection"] for p in papers} - set(index)
@@ -372,10 +504,13 @@ def main() -> None:
     body += build_proposed(taxonomy, papers)
     body.append("---")
     body.append("")
-    body += build_sections(taxonomy, papers)
+    body += build_sections(taxonomy, papers, difficulty)
     body.append("---")
     body.append("")
     body += build_benchmarks(benchmarks)
+    body.append("---")
+    body.append("")
+    body += build_results(results, papers, difficulty)
 
     template = (ROOT / "templates" / "README.head.md").read_text(encoding="utf-8")
     template = template.replace("{{STATS}}", build_stats(papers, benchmarks))

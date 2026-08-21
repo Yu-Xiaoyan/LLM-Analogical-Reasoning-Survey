@@ -137,6 +137,7 @@ If this list or the survey is useful to you, please cite:
   - [Knowledge Graph Enhancement](#knowledge-graph-enhancement) — 3
   - [Visual & Embodied Intelligence](#visual-embodied-intelligence) — 5
 - [Benchmarks](#benchmarks)
+- [Reported results](#reported-results)
 - [Contributing](#contributing)
 
 ---
@@ -361,6 +362,21 @@ _Adjacent surveys on LLM reasoning, abstract visual reasoning, and analogy._
 
 > How well do models actually do it? Organised by level of abstraction and modality, from formal rule manipulation to deep relational understanding.
 
+### Task Difficulty Overview
+
+How the four categories scale in difficulty, and which structural property makes each hard. Stars are an editorial judgement about structural demand, not a measured score — no metric compares across these categories, which is itself part of the problem.
+
+| Task type | Description | Difficulty | Why difficult (structural property) | Dominant failure modes | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| **[Symbolic](#symbolic-analogy)**<br><sub>15 papers</sub> | Formal rule induction — letter-string sequences, arithmetic matrices. | ★★☆☆☆ | Requires exact rule induction while isolating semantic prior knowledge. | Fragile rule generalisation | [Hodel 2023](https://arxiv.org/abs/2308.16118), [Lewis 2024](https://arxiv.org/abs/2411.14215), [Li 2025](https://arxiv.org/abs/2510.03127) |
+| **[Perceptual](#perceptual-analogy)**<br><sub>22 papers</sub> | Pattern recognition from visual stimuli — RAVEN, ARC, Bongard. | ★★★☆☆ | Requires compositional generalisation and decoupling logic from visual noise. | Surface shortcuts · Input–output inconsistency | [Moskvichev 2023](https://arxiv.org/abs/2305.07141), [Yiu 2025](https://arxiv.org/abs/2407.17773), [Yilmaz 2025](https://arxiv.org/abs/2503.00043), [Du 2026](https://arxiv.org/abs/2603.27958) |
+| **[Semantic](#semantic-analogy)**<br><sub>12 papers</sub> | Relational mapping between linguistic concepts — proportional analogies, metaphor. | ★★★★☆ | Requires relational preservation across semantically distant domains. | Surface shortcuts | [Boisson 2024](https://aclanthology.org/2024.conll-1.28/), [Wijesiriwardene 2025](https://arxiv.org/abs/2412.00869), [Xu 2026](https://arxiv.org/abs/2604.19567) |
+| **[Structural](#structural-analogy)**<br><sub>10 papers</sub> | Systematic mapping of causal and narrative structure across domains. | ★★★★★ | Requires higher-order alignment of whole systems while ignoring complex surface noise. | Surface shortcuts · Fragile rule generalisation | [Sourati 2024](https://aclanthology.org/2024.tacl-1.59/), [Yuan 2023](https://aclanthology.org/2023.findings-emnlp.160/), [Combs 2025](https://doi.org/10.1109/tcds.2025.3559771) |
+
+<sub>
+**Surface shortcuts** — Exploiting lexical co-occurrence, texture or position instead of the relation. · **Fragile rule generalisation** — Counterfactual collapse — the rule holds for familiar content and breaks when the symbols change. · **Input–output inconsistency** — Reasoning detached from perception or confidence; explaining a mapping correctly while failing to execute it.
+</sub>
+
 ### Symbolic Analogy
 
 _Zero-shot generalisation over formal rules with semantics stripped out — letter-string analogies, digit matrices, synthetic/counterfactual rule sets._
@@ -382,7 +398,7 @@ _Zero-shot generalisation over formal rules with semantics stripped out — lett
   > Systematic robustness study across letter-strings, digit matrices and story analogies: humans stay flat under counterfactual variants while GPT models degrade sharply — the strongest evidence that the ability is non-robust.
 
 - ⭐ **Emergent Analogical Reasoning in Large Language Models**  
-  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — Nature Human Behaviour 2023 · [paper](https://doi.org/10.1038/s41562-023-01659-w)  
+  *Taylor Webb, Keith J. Holyoak and Hongjing Lu* — Nature Human Behaviour 2023 · [paper](https://doi.org/10.1038/s41562-023-01659-w) · [code](https://github.com/taylorwwebb/emergent_analogies_LLM)  
   > The paper that started the debate — GPT-3 matches or exceeds humans on letter-string analogies, digit matrices and story analogies zero-shot, which the authors read as an emergent capacity for abstract mapping.
 
 - ⭐ **Response: Emergent Analogical Reasoning in Large Language Models**  
@@ -425,7 +441,7 @@ _Inducing logical patterns from non-verbal, multi-modal stimuli — RPM/ARC-styl
   > Extends visual analogy from single pairs to composition over multiple pairs (5.5k samples); Gemini-2.5 Pro reaches 40.4% against 100% human, with failures traced to decomposing visual change into symbolic rules.
 
 - ⭐ **KiVA: Kid-Inspired Visual Analogies for Testing Large Multimodal Models**  
-  *Eunice Yiu et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2407.17773)  
+  *Eunice Yiu et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2407.17773) · [code](https://github.com/ey242/KiVA)  
   > Visual analogies over everyday-object transformations that young children solve easily; large multimodal models lag children badly, and often explain the transformation correctly in text while failing to execute it visually.
 
 - ⭐ **What Is an "Abstract Reasoner"? Revisiting Experiments and Arguments About Large Language Models**  
@@ -437,7 +453,7 @@ _Inducing logical patterns from non-verbal, multi-modal stimuli — RPM/ARC-styl
   > Better prompting lifts GPT-4 well above earlier reported ARC scores yet still far below humans, and GPT-4V underperforms GPT-4 — evidence that vision hurts rather than helps on grid abstraction.
 
 - ⭐ **The ConceptARC Benchmark: Evaluating Understanding and Generalization in the ARC Domain**  
-  *Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell* — TMLR 2023 · [paper](https://arxiv.org/abs/2305.07141)  
+  *Arsenii Kirillovich Moskvichev, Victor Vikram Odouard and Melanie Mitchell* — TMLR 2023 · [paper](https://arxiv.org/abs/2305.07141) · [code](https://github.com/victorvikram/ConceptARC)  
   > Restructures ARC around 16 named spatial/semantic concepts so failures are diagnosable rather than just a score — the standard tool for asking whether a system grasps a concept or just fits its instances.
 
 - **Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans** `🔥 2026-07`  
@@ -490,7 +506,7 @@ _Inducing logical patterns from non-verbal, multi-modal stimuli — RPM/ARC-styl
   *Kian Ahrabian et al.* — COLM 2024 · [paper](https://arxiv.org/abs/2401.12117)
 
 - **RAVEN: A Dataset for Relational and Analogical Visual Reasoning**  
-  *Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu* — CVPR 2019 · [paper](https://doi.org/10.1109/cvpr.2019.00546)
+  *Chi Zhang, Feng Gao, Baoxiong Jia, Yixin Zhu and Song-Chun Zhu* — CVPR 2019 · [paper](https://doi.org/10.1109/cvpr.2019.00546) · [code](https://github.com/WellyZhang/RAVEN)
 
 ### Semantic Analogy
 
@@ -602,7 +618,7 @@ _Resources built specifically to measure analogical ability._
   > Open-ended visual analogy at up to 6.4M items: the model must generate the image completing the analogy. Best model 13–29% against 70% for humans.
 
 - ⭐ **AnaloBench: Benchmarking the Identification of Abstract and Long-Context Analogies**  
-  *Xiao Ye et al.* — EMNLP 2024 · [paper](https://aclanthology.org/2024.emnlp-main.725/)  
+  *Xiao Ye et al.* — EMNLP 2024 · [paper](https://aclanthology.org/2024.emnlp-main.725/) · [code](https://github.com/JHU-CLSP/AnaloBench)  
   > Long-context analogy identification over story sets — scaling model size barely helps, and performance drops sharply as the story pool grows, isolating retrieval-over-structure as the bottleneck.
 
 - ⭐ **E-KAR: A Benchmark for Rationalizing Natural Language Analogical Reasoning**  
@@ -628,7 +644,7 @@ _Resources built specifically to measure analogical ability._
   *Thilini Wijesiriwardene et al.* — ACL Findings 2023 · [paper](https://aclanthology.org/2023.findings-acl.218/)
 
 - **StoryAnalogy: Deriving Story-Level Analogies from Large Language Models to Unlock Analogical Understanding**  
-  *Cheng Jiayang et al.* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12874)
+  *Cheng Jiayang et al.* — EMNLP 2023 · [paper](https://arxiv.org/abs/2310.12874) · [code](https://github.com/loginaway/StoryAnalogy)
 
 - **VASR: Visual Analogies of Situation Recognition**  
   *Yonatan Bitton et al.* — AAAI 2023 · [paper](https://arxiv.org/abs/2212.04542)
@@ -710,7 +726,7 @@ _Whether a mapped relation admits an explicit, localisable representation._
 _Whether the same relation is represented consistently across contexts._
 
 - ⭐ **Locating and Editing Factual Associations in GPT**  
-  *Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-1262)  
+  *Kevin Meng, David Bau, Alex Andonian and Yonatan Belinkov* — NeurIPS 2022 · [paper](https://doi.org/10.52202/068431-1262) · [code](https://github.com/kmeng01/rome)  
   > Not an analogy paper, but the methodological template this section borrows: relations can be localised to specific parameters and causally intervened on, which is what makes "is the relation explicitly represented?" testable.
 
 - ⭐ **Generalization Without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks**  
@@ -761,7 +777,7 @@ _Whether the computation unfolds through decomposable intermediate states._
   *Wes Gurnee et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.15495)
 
 - **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**  
-  *Shunyu Yao et al.* — NeurIPS 2023 · [paper](https://doi.org/10.52202/075280-0517)
+  *Shunyu Yao et al.* — NeurIPS 2023 · [paper](https://doi.org/10.52202/075280-0517) · [code](https://github.com/princeton-nlp/tree-of-thought-llm)
 
 ## Elicitation & Augmentation (§5)
 
@@ -776,7 +792,7 @@ _Injecting temporary structure through exemplars and relational scaffolds._
   > Analogical prompting — have the model self-generate relevant exemplars before solving, removing the need for hand-labelled demonstrations. The single most-cited method paper in this pillar; read alongside Qin et al. (2025), which questions whether the "relevance" is doing the work.
 
 - ⭐ **Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models**  
-  *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.03965)  
+  *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.03965) · [code](https://github.com/Samyu0304/thought-propagation)  
   > Solves analogous sub-problems first and propagates their solutions back to the target — makes the source-problem construction explicit rather than leaving it to the exemplar.
 
 - **CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation** `🔥 2026-04`  
@@ -886,7 +902,7 @@ _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
   > Uses the LLM to produce the abstraction layer and then does explicit structure mapping on top of it — a direct engineering answer to the ARN finding that models default to lexical overlap on narratives.
 
 - ⭐ **AnalogyKB: Unlocking Analogical Reasoning of Language Models with a Million-Scale Knowledge Base**  
-  *Siyu Yuan et al.* — ACL 2024 · [paper](https://aclanthology.org/2024.acl-long.68/)  
+  *Siyu Yuan et al.* — ACL 2024 · [paper](https://aclanthology.org/2024.acl-long.68/) · [code](https://github.com/siyuyuan/analogykb)  
   > A million-scale analogy KB mined from existing knowledge graphs, used as training data rather than as a lookup — the clearest demonstration that the bottleneck in §7.1 (data scarcity) is attackable.
 
 - **Enhancing Multimodal Analogical Reasoning with Logic Augmented Generation**  
@@ -1019,7 +1035,7 @@ _Externalising analogical structure into KBs, symbolic, or neuro-symbolic form._
 ### Knowledge Graph Enhancement
 
 - ⭐ **Multimodal Analogical Reasoning over Knowledge Graphs**  
-  *Ningyu Zhang et al.* — ICLR 2023 · [paper](https://arxiv.org/abs/2210.00312)  
+  *Ningyu Zhang et al.* — ICLR 2023 · [paper](https://arxiv.org/abs/2210.00312) · [code](https://github.com/zjunlp/MKG_Analogy)  
   > Introduces MarT and the multimodal analogical reasoning task over KGs — the main resource connecting the structural-mapping view to graph-shaped data rather than to text or grids.
 
 - **AnRe: Analogical Replay for Temporal Knowledge Graph Forecasting** `PROPOSED · P2`  
@@ -1071,6 +1087,50 @@ Resources built specifically to measure analogical ability (17 total). Full deta
 | **BATS** | 2016 | text | Word-level proportional analogy | 99,200 questions (4 categories, 40 subcategories, 50 pairs each) | — |
 | **WordRep** | 2014 | text | Word-level proportional analogy | 19,544 questions (25 subtasks) | — |
 | **Google Analogy** | 2013 | text | Word-level proportional analogy | 19,544 questions (10,675 morphological; 8,869 semantic) | — |
+
+---
+
+## Reported results
+
+Numbers transcribed from the source papers, each tied to the failure mode it demonstrates. Every figure here is quoted, never estimated; the `source` field in [`data/results.yaml`](data/results.yaml) says where in the paper it came from.
+
+### [ARN](https://aclanthology.org/2024.tacl-1.59/) — Narrative analogy identification (multiple choice)
+
+_Partitions are written (distance of the correct analogy, distance of the distractor). "near" is within-domain, "far" is cross-domain. The (far, near) cell is the adversarial one: the right answer is semantically distant while a surface-similar distractor competes with it._
+
+**Demonstrates:** Surface shortcuts — Exploiting lexical co-occurrence, texture or position instead of the relation.
+
+| Model | Condition | Accuracy | |
+| --- | --- | --: | --- |
+| GPT-4.0 | (near, far) | 94.0 | baseline — semantics and structure agree |
+| GPT-4.0 | (near, near) | 92.5 | −1.5 |
+| GPT-4.0 | (far, far) | 57.1 | −36.9 |
+| GPT-4.0 | (far, near) | 29.1 | −64.9 — surface-similar distractor wins |
+
+### [VOILA](https://arxiv.org/abs/2503.00043) — Open-ended visual analogy completion (generate the image, not select it)
+
+_Open-ended generation rather than multiple choice, which removes the elimination shortcut available in selection formats._
+
+**Demonstrates:** Input–output inconsistency — Reasoning detached from perception or confidence; explaining a mapping correctly while failing to execute it.
+
+| Model | Condition | Accuracy On Text-Based Answers | |
+| --- | --- | --: | --- |
+| Llama 3.2 | challenging split | 13 |  |
+| GPT-4o | simpler split | 29 |  |
+| Human | both splits | 70 |  |
+
+Official code: https://github.com/nlylmz/Voila
+
+### [CARV](https://arxiv.org/abs/2603.27958) — Compositional visual analogy over multiple transformation pairs
+
+_Extends single-pair visual analogy to composition, requiring symbolic rules to be extracted from each pair and then combined._
+
+**Demonstrates:** Surface shortcuts — Exploiting lexical co-occurrence, texture or position instead of the relation.
+
+| Model | Condition | Accuracy | |
+| --- | --- | --: | --- |
+| Gemini-2.5 Pro | full benchmark | 40.4 |  |
+| Human | full benchmark | 100.0 |  |
 
 <!-- END GENERATED -->
 
