@@ -319,7 +319,7 @@ _Involves vision or other non-text modalities._
 - **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision**  
   *Jiayuan Mao et al.* — ICLR 2019 · [paper](https://arxiv.org/abs/1904.12584)
 
-## `must-read` (59)
+## `must-read` (60)
 
 _Papers we would hand to someone entering the field._
 
@@ -362,6 +362,10 @@ _Papers we would hand to someone entering the field._
 - ⭐ **Reason Analogically via Cross-domain Prior Knowledge: An Empirical Study of Cross-domain Knowledge Transfer for In-Context Learning** `🔥 2026-04`  
   *Le Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05396)  
   > Retrieves in-context examples from *other* domains and finds the gains come from repairing the reasoning structure rather than supplying content — the cleanest empirical separation to date of structural from semantic transfer in ICL.
+
+- ⭐ **The Curious Case of Analogies: Investigating Analogical Reasoning in Large Language Models** `PROPOSED · P1`  
+  *Taewhoo Lee, Minju Song, Chanwoong Yoon, Jungwoo Park and Jaewoo Kang* — AAAI 2026 · [paper](https://arxiv.org/abs/2511.20344) · [code](https://github.com/dmis-lab/analogical-reasoning)  
+  > Layer-wise probing plus activation patching on proportional and story analogies: relational information does propagate through mid-upper layers, and failures show it missing there — but models also fail at *applying* a relation they have encoded, which patching hidden states at the right token positions partially repairs. Success correlates with strong structural alignment between the two situations; failure with degraded alignment.
 
 - ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning** `🔥 2026-04`  
   *Philipp Hellwig et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  

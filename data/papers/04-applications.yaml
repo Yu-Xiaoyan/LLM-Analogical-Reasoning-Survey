@@ -537,3 +537,99 @@
   links:
     paper: https://arxiv.org/abs/2606.21378
   in_survey: false
+
+# ---- 2025 pre-cutoff sweep (2026-08-21). The window between the
+# ---- survey's writing and its January 2026 cutoff was blind to both:
+# ---- too new for the survey, earlier than the post-survey sweeps.
+
+- id: guo2025lacmaterial
+  title: "LacMaterial: Large Language Models as Analogical Chemists for Materials Discovery"
+  authors: Hongyu Guo
+  venue: arXiv
+  year: 2025
+  subsection: science
+  links:
+    paper: https://arxiv.org/abs/2510.22312
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    LLMs as analogical reasoners for materials discovery — a worked
+    scientific-discovery application of the kind §6 asserts but thinly
+    evidences.
+
+- id: singhal2025analogydriven
+  title: "Analogy-Driven Financial Chain-of-Thought (AD-FCoT): A Prompting Approach for Financial Sentiment Analysis"
+  authors: Anmol Singhal Navya Singhal
+  venue: arXiv
+  year: 2025
+  subsection: science
+  links:
+    paper: https://arxiv.org/abs/2509.12611
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    §7.2.1 names financial analysis as a target vertical for analogical
+    reasoning; this is that application, already built and evaluated.
+
+- id: shao2025unlocking
+  title: "Unlocking Scientific Concepts: How Effective Are LLM-Generated Analogies for Student Understanding and Classroom Practice?"
+  authors: Zekai Shao et al.
+  venue: arXiv
+  year: 2025
+  subsection: education
+  links:
+    paper: https://arxiv.org/abs/2502.16895
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Measures whether LLM-generated analogies actually improve student
+    understanding — the outcome evidence §6's education subsection is
+    missing.
+
+- id: palattuparambil2025magik
+  title: "MAGIK: Mapping to Analogous Goals via Imagination-enabled Knowledge Transfer"
+  authors: Ajsal Shereef Palattuparambil et al.
+  venue: arXiv
+  year: 2025
+  subsection: visual-embodied
+  links:
+    paper: https://arxiv.org/abs/2506.01623
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Goal transfer by analogical mapping in embodied RL, the concrete form of
+    the transfer claim in §6.
+
+- id: yang2025arvrm
+  title: "AR-VRM: Imitating Human Motions for Visual Robot Manipulation with Analogical Reasoning"
+  authors: Dejie Yang et al.
+  venue: arXiv
+  year: 2025
+  subsection: visual-embodied
+  links:
+    paper: https://arxiv.org/abs/2508.07626
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Robot manipulation by analogy to human motion; extends §6's embodied
+    line beyond navigation.
+
+- id: puranam2025can
+  title: Can LLMs Help Improve Analogical Reasoning For Strategic Decisions? Experimental Evidence from Humans and GPT-4
+  authors: Phanish Puranam et al.
+  venue: arXiv
+  year: 2025
+  subsection: creativity-design
+  links:
+    paper: https://arxiv.org/abs/2505.00603
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Experimental evidence on whether LLMs improve human analogical reasoning
+    in strategic decisions — human-in-the-loop evaluation the survey lacks.

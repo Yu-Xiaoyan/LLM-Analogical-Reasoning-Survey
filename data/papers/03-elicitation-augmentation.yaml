@@ -485,3 +485,23 @@
     Training jointly on instances and their structural abstractions reduces
     catastrophic forgetting and improves relational generalisation, matching
     the human schema-learning prediction from Gick & Holyoak (1983).
+
+# ---- 2025 pre-cutoff sweep (2026-08-21). The window between the
+# ---- survey's writing and its January 2026 cutoff was blind to both:
+# ---- too new for the survey, earlier than the post-survey sweeps.
+
+- id: lin2025metaladder
+  title: "MetaLadder: Ascending Mathematical Solution Quality via Analogical-Problem Reasoning Transfer"
+  authors: Honglin Lin et al.
+  venue: arXiv
+  year: 2025
+  subsection: analogical-prompting
+  links:
+    paper: https://arxiv.org/abs/2503.14891
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    MetaLadder conditions mathematical solutions on analogous problems —
+    analogical prompting evaluated on a verifiable task rather than on
+    analogy benchmarks.

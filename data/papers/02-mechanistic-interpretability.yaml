@@ -391,3 +391,49 @@
   links:
     paper: https://arxiv.org/abs/2603.19066
   in_survey: false
+
+- id: lee2026curious
+  title: "The Curious Case of Analogies: Investigating Analogical Reasoning in Large Language Models"
+  authors: Taewhoo Lee, Minju Song, Chanwoong Yoon, Jungwoo Park and Jaewoo Kang
+  venue: AAAI
+  year: 2026
+  subsection: structural-sensitivity
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2511.20344
+    code: https://github.com/dmis-lab/analogical-reasoning
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Answers all four of §4's guiding questions at once — where relational
+    information lives, whether it transfers, and whether structural alignment
+    distinguishes success from failure. Published November 2025, before the
+    survey was finalised, and missed by it.
+  tldr: >
+    Layer-wise probing plus activation patching on proportional and story
+    analogies: relational information does propagate through mid-upper layers,
+    and failures show it missing there — but models also fail at *applying* a
+    relation they have encoded, which patching hidden states at the right token
+    positions partially repairs. Success correlates with strong structural
+    alignment between the two situations; failure with degraded alignment.
+
+# ---- 2025 pre-cutoff sweep (2026-08-21). The window between the
+# ---- survey's writing and its January 2026 cutoff was blind to both:
+# ---- too new for the survey, earlier than the post-survey sweeps.
+
+- id: korchinski2025emergence
+  title: On the Emergence of Linear Analogies in Word Embeddings
+  authors: Daniel J. Korchinski et al.
+  venue: arXiv
+  year: 2025
+  subsection: relational-representation
+  links:
+    paper: https://arxiv.org/abs/2505.18651
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Explains *why* linear analogy structure emerges in embeddings at all —
+    the theoretical complement to §4.1's empirical account, which currently
+    stops at Allen & Hospedales (2019).

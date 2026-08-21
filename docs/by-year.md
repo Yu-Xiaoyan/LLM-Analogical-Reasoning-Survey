@@ -2,7 +2,7 @@
 
 # Papers by year
 
-## 2026 (55)
+## 2026 (56)
 
 - ⭐ **Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis** `🔥 2026-07`  
   *Yongqiang Chen et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2607.13602)  
@@ -43,6 +43,10 @@
 - ⭐ **Reason Analogically via Cross-domain Prior Knowledge: An Empirical Study of Cross-domain Knowledge Transfer for In-Context Learning** `🔥 2026-04`  
   *Le Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05396)  
   > Retrieves in-context examples from *other* domains and finds the gains come from repairing the reasoning structure rather than supplying content — the cleanest empirical separation to date of structural from semantic transfer in ICL.
+
+- ⭐ **The Curious Case of Analogies: Investigating Analogical Reasoning in Large Language Models** `PROPOSED · P1`  
+  *Taewhoo Lee, Minju Song, Chanwoong Yoon, Jungwoo Park and Jaewoo Kang* — AAAI 2026 · [paper](https://arxiv.org/abs/2511.20344) · [code](https://github.com/dmis-lab/analogical-reasoning)  
+  > Layer-wise probing plus activation patching on proportional and story analogies: relational information does propagate through mid-upper layers, and failures show it missing there — but models also fail at *applying* a relation they have encoded, which patching hidden states at the right token positions partially repairs. Success correlates with strong structural alignment between the two situations; failure with degraded alignment.
 
 - ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning** `🔥 2026-04`  
   *Philipp Hellwig et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
@@ -183,7 +187,7 @@
 - **When Models Know More Than They Say: Probing Analogical Reasoning in LLMs** `🔥 2026-04`  
   *Hope McGovern et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.03877)
 
-## 2025 (39)
+## 2025 (55)
 
 - ⭐ **Analogical Reasoning Inside Large Language Models: Concept Vectors and the Limits of Abstraction**  
   *Gustaw Opiełka, Hannes Rosenbusch and Claire E. Stevenson* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.03666)  
@@ -239,14 +243,26 @@
 - **A Survey of Frontiers in LLM Reasoning: Inference Scaling, Learning to Reason, and Agentic Systems**  
   *Zixuan Ke et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2504.09037)
 
+- **AR-VRM: Imitating Human Motions for Visual Robot Manipulation with Analogical Reasoning** `PROPOSED · P2`  
+  *Dejie Yang et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2508.07626)
+
 - **ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems** `PROPOSED · P2`  
   *François Chollet et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.11831)
 
 - **AnRe: Analogical Replay for Temporal Knowledge Graph Forecasting** `PROPOSED · P2`  
   *Guo Tang et al.* — ACL 2025 · [paper](https://aclanthology.org/2025.acl-long.231/)
 
+- **Analogical Structure, Minimal Contextual Cues and Contrastive Distractors: Input Design for Sample-Efficient Linguistic Rule Induction** `PROPOSED · P2`  
+  *Chunyang Jiang* — arXiv 2025 · [paper](https://arxiv.org/abs/2511.10441)
+
+- **Analogy-Driven Financial Chain-of-Thought (AD-FCoT): A Prompting Approach for Financial Sentiment Analysis** `PROPOSED · P1`  
+  *Anmol Singhal Navya Singhal* — arXiv 2025 · [paper](https://arxiv.org/abs/2509.12611)
+
 - **BioSpark: Beyond Analogical Inspiration to LLM-augmented Transfer** `PROPOSED · P2`  
   *Hyeonsu Kang et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.09838)
+
+- **Can LLMs Help Improve Analogical Reasoning For Strategic Decisions? Experimental Evidence from Humans and GPT-4** `PROPOSED · P2`  
+  *Phanish Puranam et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.00603)
 
 - **Can Large Reasoning Models Do Analogical Reasoning Under Perceptual Uncertainty?**  
   *Giacomo Camposampiero, Michael Hersche, Roger Wattenhofer, Abu Sebastian and Abbas Rahimi* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.11207)
@@ -269,11 +285,26 @@
 - **Exploring Causal and Compositional Reasoning in Large Language Models**  
   *Magnus Gjerde, Vanessa Cheung and David Lagnado* — CogSci 2025 · [search](https://www.semanticscholar.org/search?q=Exploring+Causal+and+Compositional+Reasoning+in+Large+Language+Models)
 
+- **GIFARC: Synthetic Dataset for Leveraging Human-Intuitive Analogies to Elevate AI Reasoning** `PROPOSED · P2`  
+  *Woochang Sim et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.20672)
+
+- **Generalizing Analogical Inference from Boolean to Continuous Domains** `PROPOSED · P2`  
+  *Francisco Cunha et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2511.10416)
+
 - **Generating Case-Based Legal Arguments with LLMs** `PROPOSED · P3`  
   *Morgan A. Gray, Li Zhang and Kevin Ashley* — Symposium on Computer Science and Law 2025 · [paper](https://dl.acm.org/doi/10.1145/3709025.3712216)
 
+- **I-RAVEN-X: Benchmarking Generalization and Robustness of Analogical and Mathematical Reasoning in Large Language and Reasoning Models** `PROPOSED · P1`  
+  *Giacomo Camposampiero et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2510.17496)
+
+- **Is analogy enough to draw novel adjective-noun inferences?** `PROPOSED · P2`  
+  *Hayley Ross et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.24293)
+
 - **KnowledgePrompts: Exploring the Abilities of Large Language Models to Solve Proportional Analogies via Knowledge-Enhanced Prompting**  
   *Thilini Wijesiriwardene et al.* — COLING 2025 · [paper](https://arxiv.org/abs/2412.00869)
+
+- **LacMaterial: Large Language Models as Analogical Chemists for Materials Discovery** `PROPOSED · P1`  
+  *Hongyu Guo* — arXiv 2025 · [paper](https://arxiv.org/abs/2510.22312)
 
 - **Large Language Models Show Signs of Alignment with Human Neurocognition During Abstract Reasoning**  
   *Christopher Pinier et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2508.10057)
@@ -286,6 +317,21 @@
 
 - **Logical Reasoning in Large Language Models: A Survey**  
   *Hanmeng Liu et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2502.09100)
+
+- **MAGIK: Mapping to Analogous Goals via Imagination-enabled Knowledge Transfer** `PROPOSED · P2`  
+  *Ajsal Shereef Palattuparambil et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2506.01623)
+
+- **MetaLadder: Ascending Mathematical Solution Quality via Analogical-Problem Reasoning Transfer** `PROPOSED · P2`  
+  *Honglin Lin et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.14891)
+
+- **Modeling Understanding of Story-Based Analogies Using Large Language Models** `PROPOSED · P1`  
+  *Kalit Inani et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2507.10957)
+
+- **Multilingual LLMs Are Not Multilingual Thinkers: Evidence from Hindi Analogy Evaluation** `PROPOSED · P2`  
+  *Ashray Gupta et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2507.13238)
+
+- **On the Emergence of Linear Analogies in Word Embeddings** `PROPOSED · P1`  
+  *Daniel J. Korchinski et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.18651)
 
 - **ParallelPARC: A Scalable Pipeline for Generating Natural-Language Analogies**  
   *Oren Sultan, Yonatan Bitton, Ron Yosef and Dafna Shahaf* — NAACL 2025 · [paper](https://aclanthology.org/2024.naacl-long.329/)
@@ -304,6 +350,12 @@
 
 - **Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models**  
   *Fengli Xu et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2501.09686)
+
+- **Types of Relations: Defining Analogies with Category Theory** `PROPOSED · P2`  
+  *Claire Ott* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.19792)
+
+- **Unlocking Scientific Concepts: How Effective Are LLM-Generated Analogies for Student Understanding and Classroom Practice?** `PROPOSED · P1`  
+  *Zekai Shao et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2502.16895)
 
 - **Vision-and-Language Navigation with Analogical Textual Descriptions in LLMs**  
   *Yue Zhang, Tianyi Ma, Zun Wang, Yanyuan Qiao and Parisa Kordjamshidi* — EMNLP 2025 · [paper](https://aclanthology.org/2025.emnlp-main.759/)

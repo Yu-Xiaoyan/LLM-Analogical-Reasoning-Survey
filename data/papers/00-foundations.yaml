@@ -322,3 +322,38 @@
   links:
     paper: https://arxiv.org/abs/2605.01359
   in_survey: false
+
+# ---- 2025 pre-cutoff sweep (2026-08-21). The window between the
+# ---- survey's writing and its January 2026 cutoff was blind to both:
+# ---- too new for the survey, earlier than the post-survey sweeps.
+
+- id: ott2025types
+  title: "Types of Relations: Defining Analogies with Category Theory"
+  authors: Claire Ott
+  venue: arXiv
+  year: 2025
+  subsection: theory
+  links:
+    paper: https://arxiv.org/abs/2505.19792
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Defines analogy through category theory, which is the same formal move
+    Minegishi et al. (2026) make mechanistically — citing both connects the
+    theory to the mechanism.
+
+- id: cunha2025generalizing
+  title: Generalizing Analogical Inference from Boolean to Continuous Domains
+  authors: Francisco Cunha et al.
+  venue: arXiv
+  year: 2025
+  subsection: theory
+  links:
+    paper: https://arxiv.org/abs/2511.10416
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Extends analogical proportion from Boolean to continuous domains,
+    generalising the formal machinery §2.1 introduces.

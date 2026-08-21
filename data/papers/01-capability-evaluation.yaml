@@ -1087,3 +1087,100 @@
   links:
     paper: https://arxiv.org/abs/2606.21008
   in_survey: false
+
+# ---- 2025 pre-cutoff sweep (2026-08-21). The window between the
+# ---- survey's writing and its January 2026 cutoff was blind to both:
+# ---- too new for the survey, earlier than the post-survey sweeps.
+
+- id: camposampiero2025iravenx
+  title: "I-RAVEN-X: Benchmarking Generalization and Robustness of Analogical and Mathematical Reasoning in Large Language and Reasoning Models"
+  authors: Giacomo Camposampiero et al.
+  venue: arXiv
+  year: 2025
+  subsection: benchmarks
+  links:
+    paper: https://arxiv.org/abs/2510.17496
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    I-RAVEN-X stress-tests generalisation and robustness on the RPM family
+    the survey leans on in §3.2, and reports where those benchmarks stop
+    discriminating.
+
+- id: inani2025modeling
+  title: Modeling Understanding of Story-Based Analogies Using Large Language Models
+  authors: Kalit Inani et al.
+  venue: arXiv
+  year: 2025
+  subsection: structural
+  links:
+    paper: https://arxiv.org/abs/2507.10957
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Story-analogy comprehension modelled directly; §3.4 argues about
+    narrative mapping while citing mostly identification benchmarks.
+
+- id: ross2025analogy
+  title: Is analogy enough to draw novel adjective-noun inferences?
+  authors: Hayley Ross et al.
+  venue: arXiv
+  year: 2025
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2503.24293
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Asks whether analogy alone supports novel adjective-noun inference — a
+    sharp negative probe for the semantic category.
+
+- id: jiang2025analogical
+  title: "Analogical Structure, Minimal Contextual Cues and Contrastive Distractors: Input Design for Sample-Efficient Linguistic Rule Induction"
+  authors: Chunyang Jiang
+  venue: arXiv
+  year: 2025
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2511.10441
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Isolates how contextual cues and contrastive distractors shape analogy
+    performance, which is the experimental design question behind §3.5's
+    shortcut findings.
+
+- id: gupta2025multilingual
+  title: "Multilingual LLMs Are Not Multilingual Thinkers: Evidence from Hindi Analogy Evaluation"
+  authors: Ashray Gupta et al.
+  venue: arXiv
+  year: 2025
+  subsection: semantic
+  links:
+    paper: https://arxiv.org/abs/2507.13238
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Hindi analogy evaluation showing multilingual models do not transfer
+    analogical ability across languages — the survey is English-only
+    throughout.
+
+- id: sim2025gifarc
+  title: "GIFARC: Synthetic Dataset for Leveraging Human-Intuitive Analogies to Elevate AI Reasoning"
+  authors: Woochang Sim et al.
+  venue: arXiv
+  year: 2025
+  subsection: perceptual
+  links:
+    paper: https://arxiv.org/abs/2505.20672
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    GIFARC builds ARC-style tasks from human-intuitive analogies, addressing
+    the ARC-is-not-analogy objection directly.
