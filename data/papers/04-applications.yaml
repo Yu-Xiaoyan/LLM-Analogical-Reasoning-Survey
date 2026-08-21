@@ -305,12 +305,12 @@
 
 - id: anon2025anre
   title: "AnRe: Analogical Replay for Temporal Knowledge Graph Forecasting"
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Guo Tang et al.
   venue: ACL
   year: 2025
   subsection: knowledge-graph
   links:
-    paper:
+    paper: https://aclanthology.org/2025.acl-long.231/
   in_survey: false
   proposed_addition: true
   priority: P2
@@ -385,4 +385,155 @@
   subsection: science
   links:
     paper: https://arxiv.org/abs/2604.06684
+  in_survey: false
+
+# =========================================================================
+# Applications sweep (2026-08-21). The analogy-word-root facets could not see
+# this body of work: applied fields have their own vocabulary — law says
+# precedent, engineering says TRIZ or bio-inspired, and most of it publishes
+# at ICCBR / ICAIL / Design Science rather than on arXiv.
+# =========================================================================
+
+- id: anon2023analogical
+  tldr: Separates two accounts of common-law reasoning — creating analogies to prior cases versus inducing rules from them — and shows the distinction is testable, which is precisely the source/target mapping question of SMT in a legal setting.
+  title: "Analogical Reasoning, Generalization, and Rule Learning for Common Law Reasoning"
+  authors: Joseph Blass and Kenneth D. Forbus
+  venue: ICAIL
+  year: 2023
+  subsection: science
+  tags: [must-read]
+  links:
+    paper: https://dl.acm.org/doi/10.1145/3594536.3595121
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    §7.2.1 proposes jurisprudence as a future vertical for analogical
+    reasoning, but AI & Law has modelled case-based analogy for three decades.
+    The opportunity should be framed against that work, not as untouched ground.
+
+- id: anon2025legal
+  date: 2025-05
+  title: "Legal Rule Induction: Towards Generalizable Principle Discovery from Analogous Judicial Precedents"
+  authors: Wei Fan et al.
+  venue: arXiv
+  year: 2025
+  subsection: science
+  links:
+    paper: https://arxiv.org/abs/2505.14104
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    LLM-era analogical reasoning over precedent — the concrete form the §7.2.1
+    jurisprudence proposal already takes in the literature.
+
+- id: anon2025generating
+  title: Generating Case-Based Legal Arguments with LLMs
+  authors: Morgan A. Gray, Li Zhang and Kevin Ashley
+  venue: "Symposium on Computer Science and Law"
+  year: 2025
+  subsection: science
+  links:
+    paper: https://dl.acm.org/doi/10.1145/3709025.3712216
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Argument generation by analogy to precedent; complements the rule-induction
+    line above.
+
+- id: anon2025analogical
+  tldr: 'Benchmarks language models on producing analogical stimuli for novice designers:
+  groups given the tool produced higher-rated ideas, and models differ sharply in
+  the creative quality of the analogies they generate.'
+  title: "Analogical Reasoning with Large Language Models: A Co-Creative Framework and Benchmarking of LLMs in Design Ideation"
+  authors: Rutvik Kokate and Prasad Onkar
+  venue: Design Science
+  year: 2025
+  subsection: creativity-design
+  tags: [must-read, benchmark]
+  links:
+    paper: https://www.cambridge.org/core/journals/design-science/article/analogical-reasoning-with-large-language-models-a-cocreative-framework-and-benchmarking-of-llms-in-design-ideation/0B8149CCF53C45E1E1B78C4CA93E5BDC
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Benchmarks LLMs specifically on generating analogical stimuli for designers
+    and measures the effect on idea quality — the applied evaluation §6's
+    creativity subsection asserts but never cites.
+
+- id: anon2025biospark
+  date: 2025-03
+  title: "BioSpark: Beyond Analogical Inspiration to LLM-augmented Transfer"
+  authors: Hyeonsu Kang et al.
+  venue: arXiv
+  year: 2025
+  subsection: creativity-design
+  links:
+    paper: https://arxiv.org/abs/2503.09838
+  in_survey: false
+  proposed_addition: true
+  priority: P2
+  gap_reason: >
+    Bio-inspired design as analogical transfer rather than mere inspiration —
+    the design-side counterpart to the structure-mapping framing in §2.
+
+- id: anon2024sapphire
+  date: 2024-06
+  title: Development and Evaluation of a Retrieval-Augmented Generation Tool for Creating SAPPhIRE Models of Artificial Systems
+  authors: Anubhab Majumder, Kausik Bhattacharya and Amaresh Chakrabarti
+  venue: arXiv
+  year: 2024
+  subsection: creativity-design
+  links:
+    paper: https://arxiv.org/abs/2406.19493
+  in_survey: false
+  proposed_addition: true
+  priority: P3
+  gap_reason: >
+    Builds the structured function representation that design-by-analogy
+    retrieval indexes on — the engineering analogue of §7.2.2's proposal.
+
+- id: anon2025review
+  date: 2025-04
+  tldr: Maps case-based reasoning onto LLM agent architectures — retrieve, reuse, revise, retain. The CBR cycle is analogical transfer with an engineering vocabulary, and it already answers several questions the survey leaves open in §5.1.
+  title: "Review of Case-Based Reasoning for LLM Agents: Theoretical Foundations, Architectural Components, and Cognitive Integration"
+  authors: Kostas Hatalis, Despina Christou and Vyshnavi Kondapalli
+  venue: arXiv
+  year: 2025
+  subsection: generation-mining
+  tags: [must-read]
+  links:
+    paper: https://arxiv.org/abs/2504.06943
+  in_survey: false
+  proposed_addition: true
+  priority: P1
+  gap_reason: >
+    Case-based reasoning is analogical reasoning under another name, with its
+    own conference (ICCBR) and thirty years of results. The survey never
+    mentions it, which leaves §5.1's retrieval discussion detached from the
+    field that formalised case retrieval and adaptation.
+
+- id: anon2026ideaforge
+  title: "IdeaForge: A Knowledge Graph-Grounded Multi-Agent Framework for Cross-Methodology Innovation"
+  authors: Joy Bose
+  venue: arXiv
+  year: 2026
+  date: 2026-05
+  subsection: creativity-design
+  tags: [agentic]
+  links:
+    paper: https://arxiv.org/abs/2605.13311
+  in_survey: false
+
+- id: anon2026triz
+  title: Enhancing Creativity in 3D Generative Design via a TRIZ-Inspired Text-to-CAD Framework
+  authors: Dongeon Lee et al.
+  venue: arXiv
+  year: 2026
+  date: 2026-06
+  subsection: creativity-design
+  links:
+    paper: https://arxiv.org/abs/2606.21378
   in_survey: false

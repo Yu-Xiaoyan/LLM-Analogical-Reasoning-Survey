@@ -44,6 +44,22 @@ FACETS = {
     "arc": 'abs:"ARC-AGI" AND (abs:"abstraction" OR abs:"analogy")',
     "metaphor": 'abs:"metaphor" AND (abs:"language model" OR abs:"LLM")',
     "proportional": 'abs:"proportional analogy" OR abs:"analogical proportion"',
+    # Application-domain vocabulary. Applied work often *does* analogy without
+    # *saying* analogy — law says precedent, medicine says case-based, design
+    # says TRIZ or biomimicry — so an analogy-word-root sweep misses it.
+    "case-based": '(abs:"case-based reasoning" OR abs:"precedent retrieval" OR abs:"prior cases") '
+                  'AND (abs:"language model" OR abs:"LLM")',
+    "design-analogy": '(abs:"design-by-analogy" OR abs:"design by analogy" OR abs:"biomimicry" '
+                      'OR abs:"bio-inspired design" OR abs:"TRIZ" OR abs:"analogical design")',
+    "discovery-analogy": '(abs:"analogy" OR abs:"analogical" OR abs:"analogous") AND '
+                         '(abs:"hypothesis generation" OR abs:"scientific discovery" OR '
+                         'abs:"drug repurposing" OR abs:"innovation" OR abs:"patent")',
+    "historical-analogy": '(abs:"historical analogy" OR abs:"historical analogies" OR '
+                          'abs:"historical precedent") AND (abs:"forecasting" OR '
+                          'abs:"prediction" OR abs:"language model")',
+    "education-analogy": '(abs:"analogy" OR abs:"analogies" OR abs:"metaphor") AND '
+                         '(abs:"education" OR abs:"teaching" OR abs:"tutoring" OR '
+                         'abs:"student" OR abs:"explanation")',
 }
 
 # Categories we care about. Everything else is almost always a false positive

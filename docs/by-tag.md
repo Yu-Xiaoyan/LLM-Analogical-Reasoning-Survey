@@ -2,7 +2,7 @@
 
 # Papers by tag
 
-## `agentic` (2)
+## `agentic` (3)
 
 _Uses agents, program synthesis, or search at inference time._
 
@@ -13,13 +13,20 @@ _Uses agents, program synthesis, or search at inference time._
 - **Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios** `🔥 2026-05`  
   *Zuoyu Zhang and Yancheng Zhu* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.03242)
 
-## `benchmark` (27)
+- **IdeaForge: A Knowledge Graph-Grounded Multi-Agent Framework for Cross-Methodology Innovation** `🔥 2026-05`  
+  *Joy Bose* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.13311)
+
+## `benchmark` (29)
 
 _Introduces a dataset or benchmark._
 
 - ⭐ **CARV: A Diagnostic Benchmark for Compositional Analogical Reasoning in Multimodal LLMs** `🔥 2026-03`  
   *Yongkang Du, Xiaohan Zou, Minhao Cheng and Lu Lin* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.27958)  
   > Extends visual analogy from single pairs to composition over multiple pairs (5.5k samples); Gemini-2.5 Pro reaches 40.4% against 100% human, with failures traced to decomposing visual change into symbolic rules.
+
+- ⭐ **Analogical Reasoning with Large Language Models: A Co-Creative Framework and Benchmarking of LLMs in Design Ideation** `PROPOSED · P1`  
+  *Rutvik Kokate and Prasad Onkar* — Design Science 2025 · [paper](https://www.cambridge.org/core/journals/design-science/article/analogical-reasoning-with-large-language-models-a-cocreative-framework-and-benchmarking-of-llms-in-design-ideation/0B8149CCF53C45E1E1B78C4CA93E5BDC)  
+  > Benchmarks language models on producing analogical stimuli for novice designers: groups given the tool produced higher-rated ideas, and models differ sharply in the creative quality of the analogies they generate.
 
 - ⭐ **KiVA: Kid-Inspired Visual Analogies for Testing Large Multimodal Models**  
   *Eunice Yiu et al.* — ICLR 2025 · [paper](https://arxiv.org/abs/2407.17773)  
@@ -62,6 +69,9 @@ _Introduces a dataset or benchmark._
 
 - **MasalBench: A Benchmark for Contextual and Cross-Cultural Understanding of Persian Proverbs in LLMs** `🔥 2026-01`  
   *Ghazal Kalhor and Behnam Bahrak* — arXiv 2026 · [paper](https://arxiv.org/abs/2601.22050)
+
+- **The Metanym Game: A Self-Contained, Self-Consistent LLM Peer-Community Benchmark for Structural Intelligence** `🔥 2026-06`  
+  *David Nordfors* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.21008)
 
 - **ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems** `PROPOSED · P2`  
   *François Chollet et al.* — arXiv 2025 · [paper](https://arxiv.org/abs/2505.11831)
@@ -108,7 +118,7 @@ _Introduces a dataset or benchmark._
 - **WordRep: A Benchmark for Research on Learning Word Representations**  
   *Bin Gao, Jiang Bian and Tie-Yan Liu* — arXiv 2014 · [paper](https://arxiv.org/abs/1407.1640)
 
-## `cognitive-science` (29)
+## `cognitive-science` (30)
 
 _Draws directly on human data or cognitive theory._
 
@@ -145,6 +155,10 @@ _Draws directly on human data or cognitive theory._
 
 - **Grounding Before Generalizing: How AI Differs from Humans in Causal Transfer** `🔥 2026-04`  
   *Liangru Xiang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.24062)
+
+- **Structural Abstraction as an Inductive Bias for Non-Stationary Language Model Training** `🔥 2026-03`  
+  *Elnaz Rahmati et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2603.17198)  
+  > Training jointly on instances and their structural abstractions reduces catastrophic forgetting and improves relational generalisation, matching the human schema-learning prediction from Gick & Holyoak (1983).
 
 - **Uneven Evolution of Cognition Across Generations of Generative AI Models** `🔥 2026-05`  
   *Isaac Galatzer-Levy et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2605.06815)
@@ -206,7 +220,7 @@ _Draws directly on human data or cognitive theory._
 - **Schema Induction and Analogical Transfer** `PROPOSED · P1`  
   *Mary L. Gick and Keith J. Holyoak* — Cognitive Psychology 1983 · [paper](https://doi.org/10.1016/0010-0285(83)90002-6)
 
-## `multimodal` (28)
+## `multimodal` (29)
 
 _Involves vision or other non-text modalities._
 
@@ -240,6 +254,10 @@ _Involves vision or other non-text modalities._
 
 - **DIRCR: Dual-Inference Rule-Contrastive Reasoning for Solving RAVENs** `🔥 2026-04`  
   *Jiachen Zhang et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.17584)
+
+- **Multi-modal Reasoning with LLMs for Visual Semantic Arithmetic** `🔥 2026-04`  
+  *Chuou Xu, Liya Ji and Qifeng Chen* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.19567)  
+  > Ports A:B::C:D arithmetic to images and shows performance collapses versus the text version — the concept must be extracted from irrelevant visual detail before the relation can be applied.
 
 - **StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning** `🔥 2026-05`  
   *Xixiang He et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2606.00148)
@@ -301,7 +319,7 @@ _Involves vision or other non-text modalities._
 - **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision**  
   *Jiayuan Mao et al.* — ICLR 2019 · [paper](https://arxiv.org/abs/1904.12584)
 
-## `must-read` (55)
+## `must-read` (59)
 
 _Papers we would hand to someone entering the field._
 
@@ -341,6 +359,10 @@ _Papers we would hand to someone entering the field._
   *Molly R. Petersen, Claire E. Stevenson and Lonneke van der Plas* — TACL 2026 · [paper](https://aclanthology.org/2026.tacl-1.32/)  
   > The closest neighbour to this survey — surveys analogy from the cognitive science side and maps those theories onto NLP tasks. Complementary rather than overlapping: it is theory-first, this survey is LLM-first. (Cited as the 2025 preprint in the survey; now published in TACL 2026.)
 
+- ⭐ **Reason Analogically via Cross-domain Prior Knowledge: An Empirical Study of Cross-domain Knowledge Transfer for In-Context Learning** `🔥 2026-04`  
+  *Le Liu et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.05396)  
+  > Retrieves in-context examples from *other* domains and finds the gains come from repairing the reasoning structure rather than supplying content — the cleanest empirical separation to date of structural from semantic transfer in ICL.
+
 - ⭐ **Transformer See, Transformer Do: Copying as an Intermediate Step in Learning Analogical Reasoning** `🔥 2026-04`  
   *Philipp Hellwig et al.* — arXiv 2026 · [paper](https://arxiv.org/abs/2604.06501)  
   > Training-dynamics evidence that analogical behaviour is scaffolded on an earlier-acquired copying circuit — a concrete developmental story for how the capability arises rather than a static probe.
@@ -352,6 +374,10 @@ _Papers we would hand to someone entering the field._
 - ⭐ **Analogical Reasoning Inside Large Language Models: Concept Vectors and the Limits of Abstraction**  
   *Gustaw Opiełka, Hannes Rosenbusch and Claire E. Stevenson* — arXiv 2025 · [paper](https://arxiv.org/abs/2503.03666)  
   > Bridges evaluation and interpretability — LLMs do form reusable concept vectors for relations, but the representations degrade fast when transferred across tasks/domains or when higher-order alignment is needed.
+
+- ⭐ **Analogical Reasoning with Large Language Models: A Co-Creative Framework and Benchmarking of LLMs in Design Ideation** `PROPOSED · P1`  
+  *Rutvik Kokate and Prasad Onkar* — Design Science 2025 · [paper](https://www.cambridge.org/core/journals/design-science/article/analogical-reasoning-with-large-language-models-a-cocreative-framework-and-benchmarking-of-llms-in-design-ideation/0B8149CCF53C45E1E1B78C4CA93E5BDC)  
+  > Benchmarks language models on producing analogical stimuli for novice designers: groups given the tool produced higher-rated ideas, and models differ sharply in the creative quality of the analogies they generate.
 
 - ⭐ **AutoTRIZ: Automating Engineering Innovation with TRIZ and Large Language Models**  
   *Shuo Jiang, Weifeng Li, Yuping Qian, Yangjun Zhang and Jianxi Luo* — Advanced Engineering Informatics 2025 · [paper](https://doi.org/10.2139/ssrn.4973876)  
@@ -376,6 +402,10 @@ _Papers we would hand to someone entering the field._
 - ⭐ **Relevant or Random: Can LLMs Truly Perform Analogical Reasoning?**  
   *Chengwei Qin et al.* — ACL Findings 2025 · [paper](https://aclanthology.org/2025.findings-acl.1230/)  
   > Self-generated "relevant" exemplars help no more than random ones on many tasks — a pointed challenge to the premise behind analogical prompting.
+
+- ⭐ **Review of Case-Based Reasoning for LLM Agents: Theoretical Foundations, Architectural Components, and Cognitive Integration** `PROPOSED · P1`  
+  *Kostas Hatalis, Despina Christou and Vyshnavi Kondapalli* — arXiv 2025 · [paper](https://arxiv.org/abs/2504.06943)  
+  > Maps case-based reasoning onto LLM agent architectures — retrieve, reuse, revise, retain. The CBR cycle is analogical transfer with an engineering vocabulary, and it already answers several questions the survey leaves open in §5.1.
 
 - ⭐ **Step-by-Step Analogical Reasoning in Humans and Neural Networks**  
   *Jacob Russin, Joonhwa Kim, Ellie Pavlick and Michael J. Frank* — n/a 2025 · [paper](https://www.semanticscholar.org/paper/dc42b4eeee05c616335a83d67ac95f323cea49c2)  
@@ -420,6 +450,10 @@ _Papers we would hand to someone entering the field._
 - ⭐ **Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models**  
   *Junchi Yu, Ran He and Zhitao Ying* — ICLR 2024 · [paper](https://arxiv.org/abs/2310.03965)  
   > Solves analogous sub-problems first and propagates their solutions back to the target — makes the source-problem construction explicit rather than leaving it to the exemplar.
+
+- ⭐ **Analogical Reasoning, Generalization, and Rule Learning for Common Law Reasoning** `PROPOSED · P1`  
+  *Joseph Blass and Kenneth D. Forbus* — ICAIL 2023 · [paper](https://dl.acm.org/doi/10.1145/3594536.3595121)  
+  > Separates two accounts of common-law reasoning — creating analogies to prior cases versus inducing rules from them — and shows the distinction is testable, which is precisely the source/target mapping question of SMT in a legal setting.
 
 - ⭐ **Beneath Surface Similarity: Large Language Models Make Reasonable Scientific Analogies After Structure Abduction**  
   *Siyu Yuan, Jiangjie Chen, Xuyang Ge, Yanghua Xiao and Deqing Yang* — EMNLP Findings 2023 · [paper](https://aclanthology.org/2023.findings-emnlp.160/)  

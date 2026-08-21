@@ -57,10 +57,18 @@ measure our own reading. Submissions matching *analogical reasoning* grew about
 eightfold since 2018 **(A)**, but cs.CL+cs.AI grew just as fast, so the topic's
 share of its parent field is flat **(B)**: this is a steady concern, not a
 bandwagon. What did change is where the attention goes **(C)** — indexed to
-2018, elicitation and prompting grew ×17.0 against ×6.2–8.4 for every other
+2018, elicitation and prompting grew ×17.0 against ×6.7–8.4 for every other
 facet, while the mechanism facet's share held constant. The field has shifted
 from *studying* the capability to *using* it, and mechanistic understanding has
 not kept pace.
+
+The applications facet is a floor, not a measurement: applied analogy research
+uses its own vocabulary (precedent, case-based reasoning, TRIZ, bio-inspired
+design) and publishes at ICCBR, ICAIL and Design Science, none of which arXiv
+indexes. Broadening the facet's keywords to cover that vocabulary raised its
+2025 count by 13% but moved its growth only from ×6.2 to ×6.7 — the level
+shifted, the ranking did not, which is what a roughly time-invariant coverage
+bias predicts.
 
 2026 covers January–August only, so its counts are not comparable to a full
 year: in **A** and **C** it is drawn as a hollow marker on a dashed segment

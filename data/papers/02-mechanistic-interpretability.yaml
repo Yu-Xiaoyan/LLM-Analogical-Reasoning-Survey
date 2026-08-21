@@ -315,13 +315,14 @@
     circuit behind pattern completion.
 
 - id: anon2025whichheads
+  date: 2025-02
   title: Which Attention Heads Matter for In-Context Learning?
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Kayo Yin and Jacob Steinhardt
   venue: ICML
   year: 2025
   subsection: relational-representation
   links:
-    paper:
+    paper: https://arxiv.org/abs/2502.14010
   in_survey: false
   proposed_addition: true
   priority: P2
@@ -361,7 +362,7 @@
 
 - id: anon2026structuredreps
   title: Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models
-  authors: "TBD — run scripts/fetch_meta.py"
+  authors: Ningyu Xu et al.
   venue: arXiv
   year: 2026
   date: 2026-02

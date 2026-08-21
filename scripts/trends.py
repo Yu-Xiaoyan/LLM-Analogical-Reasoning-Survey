@@ -45,6 +45,7 @@ from common import ROOT, ssl_context
 
 ARXIV_API = "http://export.arxiv.org/api/query"
 UA = {"User-Agent": "llm-analogical-reasoning-survey/1.0 (bibliometrics)"}
+ATOM = {"a": "http://www.w3.org/2005/Atom"}
 OPENSEARCH = "{http://a9.com/-/spec/opensearch/1.1/}totalResults"
 
 CS = "(cat:cs.CL OR cat:cs.AI OR cat:cs.LG OR cat:cs.CV OR cat:cs.NE)"
@@ -64,14 +65,32 @@ FACETS = {
     "Perceptual / visual analogy": '(abs:"visual analogy" OR abs:"visual analogies" OR abs:"abstract visual reasoning" OR abs:"Raven\'s progressive matrices" OR abs:"Bongard" OR abs:"ARC-AGI")',
     "Mechanism / interpretability": f'{ANALOGY} AND (abs:"interpretability" OR abs:"probing" OR abs:"mechanistic" OR abs:"hidden states" OR abs:"circuit")',
     "Elicitation / prompting": f'{ANALOGY} AND (abs:"prompting" OR abs:"in-context" OR abs:"chain-of-thought" OR abs:"retrieval")',
-    "Applications": f'{ANALOGY} AND (abs:"design" OR abs:"discovery" OR abs:"education" OR abs:"knowledge graph" OR abs:"creativity")',
+    # Applied work often does analogy without saying "analogy": law says
+    # precedent, engineering says TRIZ or bio-inspired, AI-and-design says
+    # case-based. Measuring this facet on the analogy root alone made it look
+    # like the slowest-growing area when the instrument was simply blindest
+    # there. Even so, this remains a LOWER BOUND — much of the applied
+    # literature publishes at ICCBR / ICAIL / Design Science, not on arXiv.
+    "Applications": (
+        f'({ANALOGY} AND (abs:"design" OR abs:"discovery" OR abs:"education" '
+        f'OR abs:"knowledge graph" OR abs:"creativity")) '
+        f'OR (abs:"case-based reasoning" OR abs:"design-by-analogy" '
+        f'OR abs:"design by analogy" OR abs:"TRIZ" OR abs:"biomimicry" '
+        f'OR abs:"bio-inspired design" OR abs:"precedent retrieval")'
+    ),
 }
 
 BASELINE = "(cat:cs.CL OR cat:cs.AI)"
 
 
 def count(query: str, year: int, sleep: float) -> int | None:
-    """Total hits for a query within one calendar year."""
+    """Total hits for a query within one calendar year.
+
+    Reads opensearch:totalResults, which is the server's count of everything
+    matching — it is NOT capped by max_results, so this is immune to the
+    pagination truncation that silently shortened watch_arxiv.py's sweeps.
+    `--selftest` proves that property rather than assuming it.
+    """
     window = f"submittedDate:[{year}01010000 TO {year}12312359]"
     params = urllib.parse.urlencode(
         {"search_query": f"({query}) AND {window}", "start": 0, "max_results": 1}
@@ -81,13 +100,62 @@ def count(query: str, year: int, sleep: float) -> int | None:
         try:
             with urllib.request.urlopen(request, timeout=60, context=ssl_context()) as response:
                 raw = response.read()
-            total = ET.fromstring(raw).findtext(OPENSEARCH)
+            root = ET.fromstring(raw)
+            total = root.findtext(OPENSEARCH)
+            if total is None:
+                raise ValueError(
+                    "arXiv returned no opensearch:totalResults — the response "
+                    "shape changed, and every count from this run is untrustworthy"
+                )
             time.sleep(sleep)
-            return int(total) if total is not None else None
+            return int(total)
+        except ValueError:
+            raise
         except Exception as exc:  # noqa: BLE001
             print(f"    retry {attempt + 1}/4 ({type(exc).__name__})", file=sys.stderr)
             time.sleep(5 * (attempt + 1))
     return None
+
+
+def selftest(sleep: float) -> int:
+    """Verify totalResults equals a full paged enumeration.
+
+    The whole figure rests on totalResults being a true total. A sibling script
+    was silently truncating its results for exactly this kind of unchecked
+    assumption, so it gets tested rather than trusted. Uses a narrow query whose
+    result set is small enough to enumerate.
+    """
+    query = 'abs:"analogical reasoning"'
+    year = 2023
+    window = f"submittedDate:[{year}01010000 TO {year}12312359]"
+    reported = count(query, year, sleep)
+
+    seen, start, page = set(), 0, 100
+    while True:
+        params = urllib.parse.urlencode(
+            {
+                "search_query": f"({query}) AND {window}",
+                "start": start,
+                "max_results": page,
+                "sortBy": "submittedDate",
+                "sortOrder": "descending",
+            }
+        )
+        request = urllib.request.Request(f"{ARXIV_API}?{params}", headers=UA)
+        with urllib.request.urlopen(request, timeout=60, context=ssl_context()) as response:
+            entries = ET.fromstring(response.read()).findall("a:entry", ATOM)
+        seen.update(e.findtext("a:id", default="", namespaces=ATOM) for e in entries)
+        if len(entries) < page:
+            break
+        start += page
+        time.sleep(sleep)
+
+    print(f"selftest: totalResults={reported}, enumerated={len(seen)}")
+    if reported != len(seen):
+        print("FAIL — totalResults disagrees with a full enumeration.", file=sys.stderr)
+        return 1
+    print("PASS — counts are not truncated by max_results.")
+    return 0
 
 
 def main() -> int:
@@ -96,8 +164,13 @@ def main() -> int:
     parser.add_argument("--from", dest="start", type=int, default=2015)
     parser.add_argument("--to", dest="end", type=int, default=today.year)
     parser.add_argument("--sleep", type=float, default=3.0)
+    parser.add_argument("--selftest", action="store_true",
+                        help="check totalResults against a full enumeration, then exit")
     parser.add_argument("--out", default=str(ROOT / "data" / "trends.csv"))
     args = parser.parse_args()
+
+    if args.selftest:
+        return selftest(args.sleep)
 
     years = list(range(args.start, args.end + 1))
     rows = []

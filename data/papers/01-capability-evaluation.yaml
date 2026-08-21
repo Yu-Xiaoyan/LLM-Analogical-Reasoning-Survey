@@ -1058,3 +1058,31 @@
   links:
     paper: https://arxiv.org/abs/2603.19918
   in_survey: false
+
+- id: xu2026multimodal
+  title: Multi-modal Reasoning with LLMs for Visual Semantic Arithmetic
+  authors: Chuou Xu, Liya Ji and Qifeng Chen
+  venue: arXiv
+  year: 2026
+  date: 2026-04
+  subsection: perceptual
+  tags: [multimodal]
+  links:
+    paper: https://arxiv.org/abs/2604.19567
+  in_survey: false
+  tldr: >
+    Ports A:B::C:D arithmetic to images and shows performance collapses versus
+    the text version — the concept must be extracted from irrelevant visual
+    detail before the relation can be applied.
+
+- id: nordfors2026metanym
+  title: "The Metanym Game: A Self-Contained, Self-Consistent LLM Peer-Community Benchmark for Structural Intelligence"
+  authors: David Nordfors
+  venue: arXiv
+  year: 2026
+  date: 2026-06
+  subsection: benchmarks
+  tags: [benchmark]
+  links:
+    paper: https://arxiv.org/abs/2606.21008
+  in_survey: false

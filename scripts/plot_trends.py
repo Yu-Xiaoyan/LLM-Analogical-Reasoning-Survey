@@ -13,7 +13,13 @@ be a lie about their comparability:
               exists to stop A from being over-read; do not drop it.
   C  Growth by facet, indexed to the first year — the real finding. Elicitation
               and prompting breaks away from the pack, meaning the field
-              shifted from studying the capability to exploiting it.
+              shifted from studying the capability to exploiting it. The
+              applications facet is a lower bound: its literature publishes
+              heavily at ICCBR, ICAIL and Design Science, which arXiv cannot
+              see. Broadening its keywords to include TRIZ, case-based
+              reasoning and precedent moved it from x6.2 to x6.7 — the level
+              rose, the rank did not change, which is what a coverage bias
+              that is roughly constant over time predicts.
 
 Windowed from 2018 because the earlier years have single-digit counts, where
 the share estimate is dominated by sampling noise (2014 has n=3).
@@ -60,7 +66,7 @@ SHORT = {
     "Perceptual / visual analogy": "Perceptual",
     "Elicitation / prompting": "Elicitation",
     "Mechanism / interpretability": "Mechanism",
-    "Applications": "Applications",
+    "Applications": "Applications*",
 }
 
 INK = "#1a1a1a"
@@ -184,7 +190,7 @@ def main() -> int:
 
     style()
     fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.45))
-    fig.subplots_adjust(left=0.055, right=0.995, top=0.80, bottom=0.16, wspace=0.42)
+    fig.subplots_adjust(left=0.055, right=0.995, top=0.81, bottom=0.235, wspace=0.42)
 
     head = {y: v for y, v in series[HEADLINE].items() if y >= args.start}
     years = sorted(head)
@@ -290,6 +296,17 @@ def main() -> int:
     # so the locator does not invent a 2028 to fill the gutter.
     ax.set_xlim(min(years) - 0.3, max(years) + 2.5)
     ax.set_xticks([y for y in years if y % 2 == 0])
+    # The asterisk is load-bearing: applied analogy work publishes largely at
+    # ICCBR / ICAIL / Design Science, which arXiv cannot see, so this facet is
+    # a floor rather than a measurement.
+
+
+    fig.text(
+        0.055, 0.045,
+        "* Applications is a lower bound — much applied analogy research "
+        "publishes at ICCBR, ICAIL and Design Science rather than on arXiv.",
+        ha="left", va="bottom", fontsize=6, color=MUTED, style="italic",
+    )
 
     out = pathlib.Path(args.out)
     out.parent.mkdir(exist_ok=True)
